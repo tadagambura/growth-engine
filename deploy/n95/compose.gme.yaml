@@ -1,0 +1,40 @@
+# Engine services, run in the same Compose project as Postiz's official file so they share networks.
+services:
+  gme-postgres:
+    image: postgres:17-alpine
+    container_name: gme-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: gme
+      POSTGRES_PASSWORD: ${GME_DB_PASSWORD:?run render-config.sh first}
+      POSTGRES_DB: gme
+    volumes:
+      - gme-db:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:5433:5432"
+    networks:
+      - gme-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gme -d gme"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Public HTTPS for Postiz (postiz.<domain>) without opening any ports at home.
+  # Protect it with a Cloudflare Access policy that only lets the owner's email in.
+  cloudflared:
+    image: cloudflare/cloudflared:2026.10.7
+    container_name: cloudflared
+    restart: always
+    profiles: ["tunnel"]
+    command: tunnel --no-autoupdate run
+    environment:
+      TUNNEL_TOKEN: ${CLOUDFLARE_TUNNEL_TOKEN:-}
+    networks:
+      - postiz-network
+
+volumes:
+  gme-db:
+
+networks:
+  gme-network:

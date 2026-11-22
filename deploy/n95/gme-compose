@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+# Run Docker Compose for the whole N95 stack (Postiz official file + our override + engine).
+# Usage: gme-compose up -d | ps | logs -f postiz | down
+set -euo pipefail
+GME="${GME_HOME:-/srv/gme}"
+cd "$GME"
+exec docker compose --env-file "$GME/.env" \
+  -f "$GME/postiz/docker-compose.yaml" \
+  -f "$GME/postiz.override.yaml" \
+  -f "$GME/engine/deploy/n95/compose.gme.yaml" "$@"
