@@ -1,6 +1,6 @@
-# Growth Engine: Spec
+# Growth & Maintenance Engine: Spec
 
-One shared, low-cost, largely autonomous marketing system for every app in the
+One shared, low-cost, largely autonomous marketing and maintenance system for every app in the
 portfolio. Apps are added as **config files**, not as new systems.
 
 The full brief is the owner's master prompt (kept in the private portfolio repo as

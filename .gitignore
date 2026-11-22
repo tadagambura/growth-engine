@@ -27,3 +27,7 @@ __pycache__/
 *.swp
 .vscode/
 .idea/
+
+# Python
+*.egg-info/
+.pytest_cache/
