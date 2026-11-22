@@ -1,22 +1,32 @@
-# Growth Engine
+# Growth & Maintenance Engine
 
-Shared, low-cost, largely autonomous marketing and growth system for the app portfolio
+One low-cost, largely autonomous system that **markets and maintains** every app in the
+portfolio. Each app joins as a config file; the engine researches, writes, renders, checks,
+publishes, measures and looks after the apps, and only asks its owner when it matters.
 
 ## Status
 
-Design. Built in phases alongside StackUp, the pilot app. See [`docs/SPEC.md`](docs/SPEC.md).
+Foundation in progress (Phase 0). Design: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md).
+The original brief is summarised in [`docs/SPEC.md`](docs/SPEC.md).
 
-## What it does
+## What's here
 
-Markets every app in the portfolio from one shared system: research, batch content,
-template-rendered creatives, QA, scheduled publishing on official APIs, analytics and a
-weekly owner report. Apps join as config files. Low AI spend, hard budget caps enforced
-in code, paid ads off by default.
+| Path | What |
+|---|---|
+| `gme/config.py` | App config schema and strict validation |
+| `gme/budget.py` | Budget guard: deterministic caps no AI can change |
+| `gme/router.py` | Cheapest-model routing with local GPU fallback |
+| `configs/apps/` | One JSON config per app (StackUp first) |
+| `tests/` | Tests for all of the above |
 
-## Run locally
+## Run the tests
 
-_Added once the app is scaffolded._
+```bash
+python3 -m venv .venv && . .venv/bin/activate
+pip install -e ".[dev]"
+pytest
+```
 
 ---
 
-Part of the App Portfolio. This is the shared marketing system every app uses.
+Part of the App Portfolio. Licence: all rights reserved (see `LICENSE`).
