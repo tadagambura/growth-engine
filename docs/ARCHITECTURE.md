@@ -58,6 +58,7 @@ CI-gated PRs, backend health, platform-token expiry, content-accuracy review dat
 | Budget guard | Built (`gme.budget`), tested |
 | Model router: GPU hours, quiet hours, API fallback | Built (`gme.router`), tested |
 | Database schema, queue, scheduler | Next |
+| N95 deploy kit (Postiz pinned, engine DB, tunnel, backups) | Built (`deploy/n95`), config validated |
 | Postiz integration, Telegram alerts | Next |
 | GPU worker and creative templates | Next |
 | Analytics collectors, weekly report | Phase 2 |
