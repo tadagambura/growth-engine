@@ -1,0 +1,31 @@
+{
+  "app_id": "stackup",
+  "name": "StackUp",
+  "status": "draft",
+  "tagline": "Savings challenges you actually finish",
+  "audience": "Young adults in the UK saving for a holiday, emergency fund, house deposit or a specific purchase",
+  "brand_voice": "Casual, encouraging, practical and non-judgemental. Celebrates small wins. Never preachy, never shames spending.",
+  "tone": "Playful",
+  "pillars": {
+    "Practical saving tips": 0.30,
+    "Savings challenges": 0.20,
+    "Money psychology": 0.15,
+    "Relatable money moments": 0.15,
+    "Interactive questions": 0.10,
+    "Product demo": 0.07,
+    "Direct promotion": 0.03
+  },
+  "platforms": {"tiktok": 7, "instagram": 7, "youtube": 7, "facebook": 7, "pinterest": 21, "threads": 10, "bluesky": 10, "blog": 1},
+  "publishing_mode": "approval",
+  "budgets": {"ai_monthly_gbp": 2.0, "ads_enabled": false, "ads_monthly_gbp": 0},
+  "links": {"web": "", "play": "", "app_store": ""},
+  "approved_claims": [
+    "Free to use, with optional premium",
+    "No bank connection needed: you log deposits yourself",
+    "Your data stays on your phone unless you choose cloud backup"
+  ],
+  "banned_phrases": ["guaranteed", "get rich", "financial advice", "risk-free", "#1 app"],
+  "keywords": ["52 week savings challenge", "savings challenge", "save £1000", "100 envelope challenge", "money saving tips uk"],
+  "competitors": [],
+  "hashtags_max": 3
+}
