@@ -9,8 +9,10 @@ deployment notes are kept privately.
 
 1. **Plain code first.** Scheduling, publishing, analytics, budgets, dedup and links never
    use AI (`gme.router.TIER0`).
-2. **Cheapest model that does the job.** Bulk text uses a cheap API model in batch; stronger
-   models only for strategy and weekly analysis; a local GPU model is the fallback.
+2. **Home GPU first, small API for quality.** The local GPU writes first drafts and checks
+   creatives inside its working hours (09:00–21:00; quiet hours mean no GPU work). A cheap API
+   model checks public posts; stronger models only for strategy and the weekly report. Due jobs
+   outside GPU hours use the API if the budget allows, otherwise they wait.
 3. **Limits live in code, not prompts.** The budget guard (`gme.budget`) decides; models
    can't raise limits, switch on ads, or touch credentials.
 4. **Home hardware is the factory, never the shop.** Apps run on managed cloud hosting;
@@ -21,7 +23,7 @@ deployment notes are kept privately.
 ## Components
 
 ```
-always-on host (low-power mini PC)          GPU worker (desktop, night shift)
+always-on host (low-power mini PC)          GPU worker (desktop, 09:00–21:00)  
 ┌────────────────────────────────────┐      ┌───────────────────────────────────┐
 │ scheduler      research collector  │ jobs │ image generation (local model)    │
 │ content queue  QA (rules + model)  │─────▶│ TTS voiceovers, captions (whisper)│
@@ -54,7 +56,7 @@ CI-gated PRs, backend health, platform-token expiry, content-accuracy review dat
 |---|---|
 | App config schema + validation | Built (`gme.config`), tested |
 | Budget guard | Built (`gme.budget`), tested |
-| Model router with local fallback | Built (`gme.router`), tested |
+| Model router: GPU hours, quiet hours, API fallback | Built (`gme.router`), tested |
 | Database schema, queue, scheduler | Next |
 | Postiz integration, Telegram alerts | Next |
 | GPU worker and creative templates | Next |
