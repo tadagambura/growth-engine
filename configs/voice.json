@@ -5,12 +5,12 @@
   "output_format": "mp3_44100_128",
   "stability": 0.3,
   "similarity_boost": 0.8,
-  "monthly_character_limit": 100000,
+  "monthly_character_limit": 30000,
   "design": {
     "name": "Kaos",
     "description": "A young adult male, quick and over-caffeinated, with a warm, cheeky British accent. Confident and playful, slightly chaotic energy, talks fast and laughs at himself. Friendly and never mean. Clear and punchy for short social videos.",
     "preview_text": "Right, okay so, I ran out of money six days before payday. Again. But then I opened StackUp, and it told me exactly what was safe to spend. Turns out the answer was not another takeaway. Stay chained."
   },
   "voice_name": "Will - Relaxed Optimist (ElevenLabs premade)",
-  "_chosen": "Owner picked this voice on 24 Nov 2026 from 4 auditions (Liam, Charlie, Will, Callum). It is a premade voice, so voice design is not needed. A paid ElevenLabs plan is needed for commercial use before the engine posts."
+  "_chosen": "Owner picked this voice on 24 Nov 2026 from 4 auditions (Liam, Charlie, Will, Callum). It is a premade voice, so voice design is not needed. Paid plan active since 24 Nov 2026 (Starter, yearly)."
 }

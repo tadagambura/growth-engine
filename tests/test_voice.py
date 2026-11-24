@@ -40,7 +40,7 @@ class FakeClient:
 
 
 def test_config_has_the_chosen_kaos_voice():
-    assert CFG.voice_id == "bIHbv24MWmeRgasZH58o" and CFG.model_id == "eleven_v4" and CFG.monthly_character_limit == 100000
+    assert CFG.voice_id == "bIHbv24MWmeRgasZH58o" and CFG.model_id == "eleven_v4" and CFG.monthly_character_limit == 30000
     assert len(CFG.design_preview_text) >= 100 and len(CFG.design_description) >= 20
 
 
