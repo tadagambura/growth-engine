@@ -1,0 +1,126 @@
+{
+ "app_id": "studysprint",
+ "atoms": [
+  {
+   "id": "studysprint:feature-01",
+   "kind": "feature",
+   "title": "Add exams, subjects and topics with confidence levels",
+   "body": "Add exams, subjects and topics with confidence levels",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "studysprint:feature-02",
+   "kind": "feature",
+   "title": "Auto-generated timetable, weighted by how close and how weak",
+   "body": "Auto-generated timetable, weighted by how close and how weak",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "studysprint:feature-03",
+   "kind": "feature",
+   "title": "Focus timer (sprint sessions)",
+   "body": "Focus timer (sprint sessions)",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "studysprint:feature-04",
+   "kind": "feature",
+   "title": "Tick off sessions; progress per subject",
+   "body": "Tick off sessions; progress per subject",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "studysprint:feature-05",
+   "kind": "feature",
+   "title": "Exam countdowns",
+   "body": "Exam countdowns",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "studysprint:moment-01",
+   "kind": "moment",
+   "title": "Sprint complete",
+   "body": "Sprint complete: Kaos bursts through a paper wall",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "studysprint:moment-02",
+   "kind": "moment",
+   "title": "Break time",
+   "body": "Break time: he flops onto a beanbag",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "studysprint:moment-03",
+   "kind": "moment",
+   "title": "Weak topic improved",
+   "body": "Weak topic improved: the brain lifts a dumbbell",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "studysprint:moment-04",
+   "kind": "moment",
+   "title": "Exam day",
+   "body": "Exam day: he suits up like a superhero",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "studysprint:moment-05",
+   "kind": "moment",
+   "title": "Skipped session",
+   "body": "Skipped session: the timetable gives a gentle side-eye, then quietly reschedules itself",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "studysprint:usecase",
+   "kind": "usecase",
+   "title": "A day with StudySprint",
+   "body": "A student enters five exams, marks two weak topics, and gets a daily plan from January to June.",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  }
+ ]
+}

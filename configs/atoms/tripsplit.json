@@ -1,0 +1,126 @@
+{
+ "app_id": "tripsplit",
+ "atoms": [
+  {
+   "id": "tripsplit:feature-01",
+   "kind": "feature",
+   "title": "Trips with participants",
+   "body": "Trips with participants",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "tripsplit:feature-02",
+   "kind": "feature",
+   "title": "Expenses with equal, uneven or percentage splits",
+   "body": "Expenses with equal, uneven or percentage splits",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "tripsplit:feature-03",
+   "kind": "feature",
+   "title": "Simplified debts (fewest transfers)",
+   "body": "Simplified debts (fewest transfers)",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "tripsplit:feature-04",
+   "kind": "feature",
+   "title": "Summary export as an image or PDF",
+   "body": "Summary export as an image or PDF",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "tripsplit:feature-05",
+   "kind": "feature",
+   "title": "Works offline; share by link",
+   "body": "Works offline; share by link",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "tripsplit:moment-01",
+   "kind": "moment",
+   "title": "Settled up",
+   "body": "Settled up: Kaos and a friend shake hands and an 'ALL SQUARE!' stamp lands",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "tripsplit:moment-02",
+   "kind": "moment",
+   "title": "Expense added",
+   "body": "Expense added: the receipt flies into the pot",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "tripsplit:moment-03",
+   "kind": "moment",
+   "title": "Trip complete",
+   "body": "Trip complete: the suitcase stamps itself with a sticker",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "tripsplit:moment-04",
+   "kind": "moment",
+   "title": "Friend joins",
+   "body": "Friend joins: stickmen pile into a tiny car",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "tripsplit:moment-05",
+   "kind": "moment",
+   "title": "Currency switched",
+   "body": "Currency switched: coins spin and change colour",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "tripsplit:usecase",
+   "kind": "usecase",
+   "title": "A day with TripSplit",
+   "body": "Four friends log hotels, taxis, food and tickets, and at the end the app says exactly who pays whom.",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  }
+ ]
+}

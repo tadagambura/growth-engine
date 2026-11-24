@@ -1,0 +1,126 @@
+{
+ "app_id": "keepit",
+ "atoms": [
+  {
+   "id": "keepit:feature-01",
+   "kind": "feature",
+   "title": "Cool-off wishlist with 'still want it?' check-ins and a saved-by-not-buying tota",
+   "body": "Cool-off wishlist with 'still want it?' check-ins and a saved-by-not-buying total",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "keepit:feature-02",
+   "kind": "feature",
+   "title": "Price-per-unit and cost-per-use calculators (also free SEO web pages)",
+   "body": "Price-per-unit and cost-per-use calculators (also free SEO web pages)",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "keepit:feature-03",
+   "kind": "feature",
+   "title": "Photo receipts with return-window and warranty reminders",
+   "body": "Photo receipts with return-window and warranty reminders",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "keepit:feature-04",
+   "kind": "feature",
+   "title": "Consumer-rights clock (UK)",
+   "body": "Consumer-rights clock (UK): what you can still claim and for how long",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "keepit:feature-05",
+   "kind": "feature",
+   "title": "Cost-per-use tracking for things you own",
+   "body": "Cost-per-use tracking for things you own",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "keepit:moment-01",
+   "kind": "moment",
+   "title": "Receipt snapped",
+   "body": "Receipt snapped: it files itself into a folder and salutes",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "keepit:moment-02",
+   "kind": "moment",
+   "title": "Return window closing",
+   "body": "Return window closing: a tiny calendar taps its watch",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "keepit:moment-03",
+   "kind": "moment",
+   "title": "Warranty saves the day",
+   "body": "Warranty saves the day: the receipt does a superhero landing",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "keepit:moment-04",
+   "kind": "moment",
+   "title": "Search",
+   "body": "Search: the magnifying glass sniffs around like a bloodhound",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "keepit:moment-05",
+   "kind": "moment",
+   "title": "Monthly tidy",
+   "body": "Monthly tidy: the folder closes and takes a bow",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "keepit:usecase",
+   "kind": "usecase",
+   "title": "A day with KeepIt",
+   "body": "A user's headphones break at 11 months; KeepIt finds the receipt and shows a month of warranty left.",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  }
+ ]
+}

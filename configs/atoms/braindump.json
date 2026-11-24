@@ -1,0 +1,923 @@
+{
+ "app_id": "braindump",
+ "atoms": [
+  {
+   "id": "braindump:feature-01",
+   "kind": "feature",
+   "title": "One big dump page",
+   "body": "One big dump page: type a line per thought",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "braindump:feature-02",
+   "kind": "feature",
+   "title": "Swipe or tap to sort each thought into Today, Later or Never",
+   "body": "Swipe or tap to sort each thought into Today, Later or Never",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "braindump:feature-03",
+   "kind": "feature",
+   "title": "Today list with gentle ticks; Never is a guilt-free bin",
+   "body": "Today list with gentle ticks; Never is a guilt-free bin",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "braindump:feature-04",
+   "kind": "feature",
+   "title": "5 free pages (Work, Home, Ideas…); unlimited with Premium",
+   "body": "5 free pages (Work, Home, Ideas…); unlimited with Premium",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "braindump:feature-05",
+   "kind": "feature",
+   "title": "Tablet whiteboard for visual thinkers (Premium)",
+   "body": "Tablet whiteboard for visual thinkers (Premium)",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "braindump:feature-06",
+   "kind": "feature",
+   "title": "Learning cards on focus, overwhelm and ADHD-friendly tricks",
+   "body": "Learning cards on focus, overwhelm and ADHD-friendly tricks",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "braindump:moment-01",
+   "kind": "moment",
+   "title": "Dumping",
+   "body": "Dumping: Kaos juggles 99 things at genius-inventor speed",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "braindump:moment-02",
+   "kind": "moment",
+   "title": "Sorted",
+   "body": "Sorted: Kaos's scrambled brain untangles into three neat piles",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "braindump:moment-03",
+   "kind": "moment",
+   "title": "Never",
+   "body": "Never: thoughts get booted into a bin with a satisfying thunk",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "braindump:moment-04",
+   "kind": "moment",
+   "title": "Today done",
+   "body": "Today done: Kaos flops onto a beanbag",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "braindump:moment-05",
+   "kind": "moment",
+   "title": "Big dump (50+ thoughts)",
+   "body": "Big dump (50+ thoughts): Kaos's head steams, then a tiny 'ding'",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "braindump:usecase",
+   "kind": "usecase",
+   "title": "A day with Brain Dump",
+   "body": "At 11pm, a user dumps 23 thoughts in two minutes, sorts them in one more: 4 for Today, 9 for Later, 10 binned. They sleep.",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "braindump:c01",
+   "kind": "card",
+   "title": "Why your head feels full",
+   "body": "Unfinished tasks tend to nag: psychologists call it the Zeigarnik effect. In a 2011 series of studies, Masicampo and Baumeister found unfinished goals caused intrusive thoughts and poorer focus on other tasks. But when people made a specific plan for those goals, the nagging stopped. Getting things out of your head and into a plan really does free up space.",
+   "topic": "Brain dumps",
+   "source": {
+    "name": "Masicampo & Baumeister (2011), Consider it done!, Journal of Personality and Social Psychology",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21688924/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "brain dump",
+    "overwhelm",
+    "research"
+   ],
+   "quiz": {
+    "q": "In Masicampo and Baumeister's studies, what stopped the nagging thoughts from unfinished goals?",
+    "options": [
+     "Finishing every task straight away",
+     "Making a specific plan for them",
+     "Trying hard not to think about them"
+    ],
+    "answer": 1,
+    "explain": "A specific plan was enough to quieten intrusive thoughts, even before the task itself was done."
+   }
+  },
+  {
+   "id": "braindump:c02",
+   "kind": "card",
+   "title": "How to do a brain dump",
+   "body": "Set a timer for ten minutes and write down everything rattling around: tasks, worries, birthdays, the email you promised someone. No sorting, no judging, no neat handwriting. Big and small go on the same page. When the timer stops, you've got a list to work from instead of a fog. The NHS notes a to-do list can really help relieve stress.",
+   "topic": "Brain dumps",
+   "source": {
+    "name": "NHS Every Mind Matters: Stress",
+    "url": "https://www.nhs.uk/every-mind-matters/mental-health-issues/stress/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "brain dump",
+    "lists",
+    "stress"
+   ]
+  },
+  {
+   "id": "braindump:c03",
+   "kind": "card",
+   "title": "Today, later, never",
+   "body": "Once it's all out, give each item one label. Today: the few things that truly need doing now. Later: give it a rough day, because research suggests a plan with a when is what quietens the nagging. Never: things you're allowed to drop. The never pile is where a surprising amount of relief lives.",
+   "topic": "Sorting",
+   "source": {
+    "name": "Masicampo & Baumeister (2011), Consider it done!, Journal of Personality and Social Psychology",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21688924/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "sorting",
+    "prioritising",
+    "brain dump"
+   ],
+   "quiz": {
+    "q": "Why give \"later\" items a rough day or time?",
+    "options": [
+     "It makes the task take less time",
+     "Calendars need filling up",
+     "A plan with a when helps your brain let go"
+    ],
+    "answer": 2,
+    "explain": "Masicampo and Baumeister found that once a plan sets a later time, the mind can stop nagging until then."
+   }
+  },
+  {
+   "id": "braindump:c04",
+   "kind": "card",
+   "title": "The two-minute rule",
+   "body": "David Allen's two-minute rule from Getting Things Done: if something takes less than two minutes, do it now rather than adding it to a list, because tracking it would take longer than doing it. Reply \"Thursday works\", bin the junk mail, book the dentist online. Allen says it's flexible, not a law, so don't let it hijack your whole morning.",
+   "topic": "Quick wins",
+   "source": {
+    "name": "Getting Things Done: When to use GTD's two-minute rule",
+    "url": "https://gettingthingsdone.com/2011/06/when-to-use-gtds-two-minute-rule/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "two-minute rule",
+    "GTD",
+    "productivity"
+   ],
+   "quiz": {
+    "q": "What is the two-minute rule?",
+    "options": [
+     "If it takes under two minutes, do it now",
+     "Spend two minutes planning each task",
+     "Take a two-minute break every hour"
+    ],
+    "answer": 0,
+    "explain": "Tiny tasks are quicker to do than to track, so do them straight away. Allen treats it as a guideline, not a law."
+   }
+  },
+  {
+   "id": "braindump:c05",
+   "kind": "card",
+   "title": "Body doubling",
+   "body": "Body doubling means working alongside someone, in the same room or on a video call, while you each get on with your own tasks. Many people with ADHD say it helps them start and finish things. CHADD, a US ADHD charity, notes the research is thin and support is mostly anecdotal, but it's free and easy to test. Try it for one boring job.",
+   "topic": "Getting started",
+   "source": {
+    "name": "CHADD: Could a body double help you increase your productivity?",
+    "url": "https://chadd.org/adhd-weekly/could-a-body-double-help-you-increase-your-productivity/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "body doubling",
+    "ADHD",
+    "focus"
+   ]
+  },
+  {
+   "id": "braindump:c06",
+   "kind": "card",
+   "title": "Time blindness",
+   "body": "\"Time blindness\" is a popular phrase for losing track of time or misjudging how long things take. A 2023 review of a decade of research found studies on time perception in adults with ADHD are scarce and mixed: some show clear difficulties estimating time, others don't. Either way, if it fits your experience, outside help like clocks and timers is a sensible fix.",
+   "topic": "Time",
+   "source": {
+    "name": "Time Perception in Adult ADHD: Findings from a Decade, a Review (2023)",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9962130/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "time blindness",
+    "ADHD",
+    "research"
+   ],
+   "quiz": {
+    "q": "What did the 2023 review conclude about time perception in adults with ADHD?",
+    "options": [
+     "Every adult with ADHD has time blindness",
+     "It has been proven not to exist",
+     "Studies are few and results are mixed"
+    ],
+    "answer": 2,
+    "explain": "Some studies found difficulties with time estimation and others didn't. More research is needed."
+   }
+  },
+  {
+   "id": "braindump:c07",
+   "kind": "card",
+   "title": "Make time visible",
+   "body": "NHS advice on ADHD in young people suggests splitting tasks into 15 to 20 minute slots with breaks in between, and plenty of adults find the same works. Set a timer, work until it rings, then stand up and stretch. A clock you can see, or an alarm saying \"leave in ten minutes\", takes the guessing out.",
+   "topic": "Time",
+   "source": {
+    "name": "NHS: Living with ADHD (children and young people)",
+    "url": "https://www.nhs.uk/conditions/attention-deficit-hyperactivity-disorder-adhd/living-with/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "timers",
+    "time",
+    "ADHD"
+   ]
+  },
+  {
+   "id": "braindump:c08",
+   "kind": "card",
+   "title": "Shrink the first step",
+   "body": "\"Sort the spare room\" isn't a task, it's a project. The NHS suggests splitting big jobs into smaller, manageable chunks and giving yourself credit as you finish each one. Make the first step tiny and physical, like \"put a bin bag in the spare room\". Starting is often the hardest bit, so make it almost too easy to refuse.",
+   "topic": "Getting started",
+   "source": {
+    "name": "NHS Every Mind Matters: Stress",
+    "url": "https://www.nhs.uk/every-mind-matters/mental-health-issues/stress/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "breaking tasks down",
+    "getting started",
+    "stress"
+   ],
+   "quiz": {
+    "q": "What does the NHS suggest doing with a big task?",
+    "options": [
+     "Wait until you feel motivated",
+     "Split it into manageable chunks and credit yourself",
+     "Do it all in one go"
+    ],
+    "answer": 1,
+    "explain": "Smaller chunks feel less daunting, and noticing each finished piece helps keep you going."
+   }
+  },
+  {
+   "id": "braindump:c09",
+   "kind": "card",
+   "title": "If-then plans",
+   "body": "An if-then plan links a moment to an action: \"If it's 8pm, then I'll lay out tomorrow's clothes.\" Psychologists call these implementation intentions. A 2006 meta-analysis of 94 studies by Gollwitzer and Sheeran found they gave a medium-to-large boost to reaching goals, helping people both get started and stay on track when distractions hit.",
+   "topic": "Getting started",
+   "source": {
+    "name": "National Cancer Institute: Implementation intentions (Gollwitzer & Sheeran meta-analysis)",
+    "url": "https://cancercontrol.cancer.gov/brp/research/constructs/implementation-intentions"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "if-then plans",
+    "habits",
+    "research"
+   ]
+  },
+  {
+   "id": "braindump:c10",
+   "kind": "card",
+   "title": "Rewards, without the hype",
+   "body": "You'll hear a lot about \"dopamine hacks\". The brain science is more complicated than that, but rewards do seem to help. A 2005 review of 22 studies found rewards improved performance and motivation in children with and without ADHD, and children with ADHD preferred rewards that came sooner. So keep treats small, quick and tied to finishing.",
+   "topic": "Motivation",
+   "source": {
+    "name": "Luman, Oosterlaan & Sergeant (2005), The impact of reinforcement contingencies on AD/HD, Clinical Psychology Review",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/15642646/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "rewards",
+    "motivation",
+    "ADHD"
+   ],
+   "quiz": {
+    "q": "In the 2005 review, what kind of reward did children with ADHD tend to prefer?",
+    "options": [
+     "Rewards that came sooner",
+     "Rewards months away",
+     "No rewards at all"
+    ],
+    "answer": 0,
+    "explain": "Children with ADHD preferred immediate over delayed rewards, so small, quick treats may work better than distant ones."
+   }
+  },
+  {
+   "id": "braindump:c11",
+   "kind": "card",
+   "title": "Racing thoughts? Write tomorrow's list",
+   "body": "In a 2018 sleep-lab study, 57 young adults spent five minutes before bed writing either a to-do list for the next few days or a list of things they'd already done. The to-do group fell asleep significantly faster, and the more specific their list, the quicker they dropped off. Keep a notepad by the bed.",
+   "topic": "Sleep",
+   "source": {
+    "name": "Scullin et al. (2018), The effects of bedtime writing on difficulty falling asleep",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29058942/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "sleep",
+    "racing thoughts",
+    "research"
+   ],
+   "quiz": {
+    "q": "In the 2018 study, which bedtime writing helped people fall asleep faster?",
+    "options": [
+     "A diary of what they'd done that day",
+     "A specific to-do list for the next few days",
+     "No writing at all"
+    ],
+    "answer": 1,
+    "explain": "The to-do list group fell asleep faster, and more specific lists were linked to quicker sleep."
+   }
+  },
+  {
+   "id": "braindump:c12",
+   "kind": "card",
+   "title": "NHS sleep basics",
+   "body": "The NHS basics for better sleep: get up at the same time every day, go to bed when you feel sleepy, and give yourself an hour to wind down. Keep the bedroom dark and quiet. Avoid caffeine, alcohol and smoking for six hours before bed, skip big late meals, and put screens away before bedtime, as the light keeps you alert.",
+   "topic": "Sleep",
+   "source": {
+    "name": "NHS: Insomnia",
+    "url": "https://www.nhs.uk/conditions/insomnia/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "sleep",
+    "NHS",
+    "routine"
+   ]
+  },
+  {
+   "id": "braindump:c13",
+   "kind": "card",
+   "title": "When to see a GP about sleep",
+   "body": "If changing your habits hasn't helped, sleep problems have gone on for months, or tiredness is affecting daily life, the NHS suggests seeing a GP. They may offer cognitive behavioural therapy for insomnia, which works on the thoughts and habits that keep you awake. It can be face to face or through an online self-help programme.",
+   "topic": "Sleep",
+   "source": {
+    "name": "NHS: Insomnia",
+    "url": "https://www.nhs.uk/conditions/insomnia/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "sleep",
+    "GP",
+    "CBT"
+   ]
+  },
+  {
+   "id": "braindump:c14",
+   "kind": "card",
+   "title": "When criticism stings hard",
+   "body": "Some people with ADHD describe intense emotional pain at real or imagined criticism or rejection, often called rejection sensitivity. It isn't a diagnosis in its own right, and research is at an early stage. A small 2026 study in PLoS One heard people describe physical sensations, masking their feelings and pulling away from others. If that sounds familiar, you're not alone.",
+   "topic": "Feelings",
+   "source": {
+    "name": "Rowney-Smith et al. (2026), The lived experience of rejection sensitivity in ADHD, PLoS One",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12822938/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "rejection sensitivity",
+    "ADHD",
+    "feelings"
+   ]
+  },
+  {
+   "id": "braindump:c15",
+   "kind": "card",
+   "title": "Could it be ADHD?",
+   "body": "In adults, ADHD can look like being easily distracted or forgetful, struggling to organise time or finish tasks, losing things, restlessness, interrupting, or acting on impulse. Symptoms usually start before age 12, and women are thought to be diagnosed less often. If it's affecting work, study or relationships, the NHS suggests talking to a GP about a specialist assessment.",
+   "topic": "ADHD assessment",
+   "source": {
+    "name": "NHS: ADHD in adults",
+    "url": "https://www.nhs.uk/conditions/adhd-adults/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "ADHD",
+    "assessment",
+    "NHS"
+   ],
+   "quiz": {
+    "q": "Who does the NHS suggest you speak to first if you think you might have ADHD?",
+    "options": [
+     "Your GP",
+     "Your employer",
+     "A pharmacist"
+    ],
+    "answer": 0,
+    "explain": "A GP can talk through your symptoms, check for other conditions and refer you to an ADHD specialist."
+   }
+  },
+  {
+   "id": "braindump:c16",
+   "kind": "card",
+   "title": "NHS Right to Choose",
+   "body": "In England, NHS Right to Choose lets you pick which NHS-contracted provider assesses you, which can mean a shorter wait. You need to be registered with a GP in England, then ask your GP to refer you to your chosen provider. As ADHD UK puts it, the GP decides on the referral and you choose where it goes. It doesn't apply elsewhere in the UK.",
+   "topic": "ADHD assessment",
+   "source": {
+    "name": "ADHD UK: How to use NHS Right to Choose for ADHD",
+    "url": "https://adhduk.co.uk/right-to-choose/right-to-choose-learning-about-nhs-right-to-choose/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "Right to Choose",
+    "ADHD",
+    "England"
+   ],
+   "quiz": {
+    "q": "Where does NHS Right to Choose apply?",
+    "options": [
+     "Everywhere in the UK",
+     "Scotland and Wales only",
+     "England only"
+    ],
+    "answer": 2,
+    "explain": "Right to Choose is an NHS England patient right. Scotland, Wales and Northern Ireland have their own routes."
+   }
+  },
+  {
+   "id": "braindump:c17",
+   "kind": "card",
+   "title": "Right to Choose in 2026",
+   "body": "Right to Choose is under strain. ADHD UK's 2026 survey of NHS areas in England found 14 of 36 were capping how many Right to Choose ADHD assessments they fund, with others adding extra checks before referral. Rules now vary by area, so check yours and ask providers about current waits before you're referred.",
+   "topic": "ADHD assessment",
+   "source": {
+    "name": "ADHD UK: Right to Choose changes 2026",
+    "url": "https://adhduk.co.uk/nhs-right-to-choose-changes/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "Right to Choose",
+    "waiting lists",
+    "ADHD"
+   ]
+  },
+  {
+   "id": "braindump:c18",
+   "kind": "card",
+   "title": "Access to Work",
+   "body": "Access to Work is a government grant for practical support if a health condition or disability makes work harder, and ADHD, autism and dyslexia are all included. You don't need a diagnosis to apply. You must be 16 or over, in paid work or starting soon, and live and work in England, Scotland or Wales. Northern Ireland has its own scheme.",
+   "topic": "Work",
+   "source": {
+    "name": "GOV.UK: Access to Work eligibility",
+    "url": "https://www.gov.uk/access-to-work/eligibility"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "Access to Work",
+    "work",
+    "ADHD"
+   ],
+   "quiz": {
+    "q": "Do you need a formal ADHD diagnosis to apply for Access to Work?",
+    "options": [
+     "Yes, always",
+     "Only if you're self-employed",
+     "No, a diagnosis isn't required"
+    ],
+    "answer": 2,
+    "explain": "GOV.UK says you don't need a diagnosis. What matters is that your condition means you need support at work."
+   }
+  },
+  {
+   "id": "braindump:c19",
+   "kind": "card",
+   "title": "Be kind to yourself",
+   "body": "Beating yourself up rarely gets the washing done. In a 2012 set of experiments, Breines and Chen found people who met a mistake with self-compassion were more motivated to improve, and even studied longer after failing a test, than people given a self-esteem boost. Try talking to yourself as you would a friend: \"That slipped. What's one small thing now?\"",
+   "topic": "Kindness",
+   "source": {
+    "name": "Breines & Chen (2012), Self-compassion increases self-improvement motivation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22645164/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "self-compassion",
+    "kindness",
+    "research"
+   ]
+  },
+  {
+   "id": "braindump:c20",
+   "kind": "card",
+   "title": "You don't have to do this alone",
+   "body": "The NHS points to ADHD UK for information, a self-screening tool and support groups, and to ADHD Adult UK for peer support. Local and online groups can be a real relief: people who just get it. If things ever feel too heavy, Samaritans are there any time, and you can call them free on 116 123.",
+   "topic": "Support",
+   "source": {
+    "name": "NHS: ADHD in adults",
+    "url": "https://www.nhs.uk/conditions/adhd-adults/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "support",
+    "ADHD",
+    "community"
+   ]
+  },
+  {
+   "id": "braindump:c21",
+   "kind": "card",
+   "title": "Reasonable adjustments",
+   "body": "At work or college you can ask for reasonable adjustments. The NHS gives examples like a quiet personal workspace, written as well as spoken instructions, and help planning tasks. Think about what trips you up most, then suggest a specific fix. Clear, practical requests are easier for a manager to say yes to.",
+   "topic": "Work",
+   "source": {
+    "name": "NHS: ADHD in adults",
+    "url": "https://www.nhs.uk/conditions/adhd-adults/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "reasonable adjustments",
+    "work",
+    "ADHD"
+   ],
+   "quiz": {
+    "q": "Which of these is an NHS example of a reasonable adjustment?",
+    "options": [
+     "Written as well as spoken instructions",
+     "Never having deadlines",
+     "Working only at night"
+    ],
+    "answer": 0,
+    "explain": "The NHS lists a quiet workspace, written instructions and help planning tasks as examples."
+   }
+  },
+  {
+   "id": "braindump:c22",
+   "kind": "card",
+   "title": "What Access to Work can pay for",
+   "body": "Access to Work can pay towards things like assistive software, specialist equipment, a support worker or job coach, and some travel costs. Your home counts as a workplace if you work there. The grant doesn't have to be paid back and doesn't affect other benefits. It doesn't cover reasonable adjustments, which are your employer's legal duty.",
+   "topic": "Work",
+   "source": {
+    "name": "GOV.UK: Access to Work",
+    "url": "https://www.gov.uk/access-to-work"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "Access to Work",
+    "work",
+    "support"
+   ]
+  },
+  {
+   "id": "braindump:c23",
+   "kind": "card",
+   "title": "Mental health support at work",
+   "body": "Access to Work also offers mental health support: a tailored plan to help you stay in or get into work, plus one-to-one sessions with a mental health professional. You apply directly to one of two providers, Able Futures or Maximus, and it can only be claimed once. Worth knowing if overwhelm is making work feel wobbly.",
+   "topic": "Work",
+   "source": {
+    "name": "GOV.UK: Access to Work",
+    "url": "https://www.gov.uk/access-to-work"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "Access to Work",
+    "mental health",
+    "work"
+   ],
+   "quiz": {
+    "q": "How many times can you get Access to Work mental health support?",
+    "options": [
+     "Every year",
+     "Once",
+     "As often as you like"
+    ],
+    "answer": 1,
+    "explain": "It's a one-time service, and you choose one of the two providers to apply to."
+   }
+  },
+  {
+   "id": "braindump:c24",
+   "kind": "card",
+   "title": "Move to reset",
+   "body": "Moving your body is one of the NHS's lifestyle tips for adults with ADHD: physical activity you enjoy can also ease anxiety and low mood. It doesn't have to mean the gym. A brisk walk between tasks, a dance in the kitchen or a bike ride to the shops can all help reset a restless brain.",
+   "topic": "Wellbeing",
+   "source": {
+    "name": "NHS: ADHD in adults",
+    "url": "https://www.nhs.uk/conditions/adhd-adults/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "exercise",
+    "wellbeing",
+    "ADHD"
+   ]
+  },
+  {
+   "id": "braindump:c25",
+   "kind": "card",
+   "title": "Why the GP checks other things",
+   "body": "Struggling with focus doesn't automatically mean ADHD, and several conditions can overlap or look alike. When you see a GP about ADHD, the NHS says they'll also check for other conditions such as anxiety, autism or Tourette's. That isn't fobbing you off. It's making sure you get the right support for what's really going on.",
+   "topic": "ADHD assessment",
+   "source": {
+    "name": "NHS: ADHD in adults",
+    "url": "https://www.nhs.uk/conditions/adhd-adults/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "ADHD",
+    "GP",
+    "assessment"
+   ],
+   "quiz": {
+    "q": "Why might a GP check for other conditions when you ask about ADHD?",
+    "options": [
+     "To avoid referring anyone",
+     "Because ADHD can't be diagnosed in adults",
+     "Some conditions can overlap or look similar"
+    ],
+    "answer": 2,
+    "explain": "Checking for things like anxiety or autism helps make sure any referral and support fit what's actually happening."
+   }
+  },
+  {
+   "id": "braindump:c26",
+   "kind": "card",
+   "title": "Body doubling, done well",
+   "body": "No one around? Body doubling works over video too. CHADD mentions people using it for work, studying, essays, chores, bills and tax returns. It doesn't suit everyone: a friend can turn it into a chat, and check-ins can eat into the time. Agree a start and finish time, say your task out loud, then heads down.",
+   "topic": "Getting started",
+   "source": {
+    "name": "CHADD: Could a body double help you increase your productivity?",
+    "url": "https://chadd.org/adhd-weekly/could-a-body-double-help-you-increase-your-productivity/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "body doubling",
+    "focus",
+    "routine"
+   ],
+   "quiz": {
+    "q": "According to CHADD, what's one possible downside of body doubling?",
+    "options": [
+     "It costs a lot of money",
+     "It can turn into socialising",
+     "It only works for exams"
+    ],
+    "answer": 1,
+    "explain": "A session with a friend can drift into chatting. Agreeing a clear task and time limit helps."
+   }
+  },
+  {
+   "id": "braindump:c27",
+   "kind": "card",
+   "title": "Be specific at bedtime",
+   "body": "The detail matters. In the 2018 bedtime-writing study, people who wrote more specific to-do lists fell asleep faster. \"Email Sam about Friday's invoice\" beats \"work stuff\". Writing about things already done didn't help in the same way. Five minutes, specific tasks, then lights off.",
+   "topic": "Sleep",
+   "source": {
+    "name": "Scullin et al. (2018), The effects of bedtime writing on difficulty falling asleep",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/29058942/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "sleep",
+    "lists",
+    "racing thoughts"
+   ]
+  },
+  {
+   "id": "braindump:c28",
+   "kind": "card",
+   "title": "Make 'later' real",
+   "body": "Not just any plan will do. In Masicampo and Baumeister's research, people's nagging thoughts eased most when their plans were earnest: they went on to carry them out. So give each later item a when, a where and a first step. \"Tuesday lunch, ring the garage\" beats a vague \"sort the car\".",
+   "topic": "Brain dumps",
+   "source": {
+    "name": "Masicampo & Baumeister (2011), Consider it done!, Journal of Personality and Social Psychology",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/21688924/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "planning",
+    "brain dump",
+    "research"
+   ]
+  },
+  {
+   "id": "braindump:c29",
+   "kind": "card",
+   "title": "Kindness isn't letting yourself off",
+   "body": "Self-compassion isn't the same as letting yourself off the hook. In Breines and Chen's experiments, people encouraged to be kind to themselves about a weakness were more likely to see it as something they could change, and more motivated to make amends after a mistake. Kindness keeps you in the game long enough to get better.",
+   "topic": "Kindness",
+   "source": {
+    "name": "Breines & Chen (2012), Self-compassion increases self-improvement motivation",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/22645164/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "self-compassion",
+    "motivation",
+    "research"
+   ],
+   "quiz": {
+    "q": "In Breines and Chen's studies, self-compassion was linked to what?",
+    "options": [
+     "More motivation to improve",
+     "Giving up more easily",
+     "Caring less about mistakes"
+    ],
+    "answer": 0,
+    "explain": "Being kind to themselves made people more, not less, motivated to change and to put things right."
+   }
+  },
+  {
+   "id": "braindump:c30",
+   "kind": "card",
+   "title": "While you wait",
+   "body": "NHS waits for an ADHD assessment can run to months or even years. Meanwhile, the NHS suggests looking after the basics: a regular bedtime, exercise you enjoy and regular meals. Talking therapies like CBT may help, and peer support groups can make the wait feel less lonely. If things get harder while you wait, go back to your GP.",
+   "topic": "Support",
+   "source": {
+    "name": "NHS: ADHD in adults",
+    "url": "https://www.nhs.uk/conditions/adhd-adults/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "waiting lists",
+    "support",
+    "ADHD"
+   ]
+  },
+  {
+   "id": "braindump:game-thought-catcher",
+   "kind": "game",
+   "title": "Thought Catcher",
+   "body": "Catch the useful thoughts in your notebook. Dodge the spirals. Write it down to get it out of your head. Not every thought needs acting on.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "braindump:game-brain-sort",
+   "kind": "game",
+   "title": "Brain Sort",
+   "body": "Today, later or never? Sort each thought fast. Most things can wait, and some can go entirely.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "braindump:game-priority-puzzle",
+   "kind": "game",
+   "title": "Priority Puzzle",
+   "body": "Urgent, important or neither? Sort the made-up tasks. Do the important things before they become urgent.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "braindump:game-decision-maker",
+   "kind": "game",
+   "title": "Decision Maker",
+   "body": "Several things at once. What deserves your attention first? When everything feels urgent, pick the thing with a real deadline or real harm.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "braindump:game-to-do-dash",
+   "kind": "game",
+   "title": "To-Do Dash",
+   "body": "Put the steps in a sensible order. Breaking tasks into steps makes them startable.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "braindump:game-clutter-crusher",
+   "kind": "game",
+   "title": "Clutter Crusher",
+   "body": "Keep, donate, recycle or bin? Clear the messy virtual desk. Every item needs a home or an exit.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "braindump:game-day-packer",
+   "kind": "game",
+   "title": "Day Packer",
+   "body": "Fit the tasks into the time you've actually got. Realistic plans beat heroic ones.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "braindump:game-mind-maze",
+   "kind": "game",
+   "title": "Mind Maze",
+   "body": "Watch the path light up, then trace it back from memory. Train your focus a little every day.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  }
+ ]
+}

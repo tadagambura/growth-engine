@@ -1,0 +1,126 @@
+{
+ "app_id": "pawplan",
+ "atoms": [
+  {
+   "id": "pawplan:feature-01",
+   "kind": "feature",
+   "title": "Pet profiles",
+   "body": "Pet profiles",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "pawplan:feature-02",
+   "kind": "feature",
+   "title": "Recurring treatment and vaccination reminders",
+   "body": "Recurring treatment and vaccination reminders",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "pawplan:feature-03",
+   "kind": "feature",
+   "title": "Feeding and walk log",
+   "body": "Feeding and walk log",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "pawplan:feature-04",
+   "kind": "feature",
+   "title": "Vet appointments and medication",
+   "body": "Vet appointments and medication",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "pawplan:feature-05",
+   "kind": "feature",
+   "title": "Weight tracking",
+   "body": "Weight tracking",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "pawplan:moment-01",
+   "kind": "moment",
+   "title": "Fed",
+   "body": "Fed: the pet does a happy wiggle",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "pawplan:moment-02",
+   "kind": "moment",
+   "title": "Walk logged",
+   "body": "Walk logged: the pet drags Kaos along on the lead",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "pawplan:moment-03",
+   "kind": "moment",
+   "title": "Treatment done",
+   "body": "Treatment done: the pet puts on a tiny superhero cape",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "pawplan:moment-04",
+   "kind": "moment",
+   "title": "Pet's birthday",
+   "body": "Pet's birthday: party hat, tail-chasing",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "pawplan:moment-05",
+   "kind": "moment",
+   "title": "Weight logged",
+   "body": "Weight logged: the pet stands proudly on the scale and flexes",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "pawplan:usecase",
+   "kind": "usecase",
+   "title": "A day with PawPlan",
+   "body": "Two flatmates see the dog's breakfast has been logged, and both get the monthly flea-treatment reminder.",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  }
+ ]
+}

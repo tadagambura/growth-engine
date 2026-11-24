@@ -1,0 +1,558 @@
+{
+ "_note": "Standard video formats. Each is a fixed beat sheet: which beats, how long, which Kaos acts, which layout, and which slot a model may fill (null = fixed text). max words per slot = seconds x words_per_second. 'deterministic: true' formats need no model at all.",
+ "formats": [
+  {
+   "id": "explainer",
+   "name": "App explainer",
+   "day_types": [
+    "explainer"
+   ],
+   "kinds": [
+    "feature",
+    "usecase"
+   ],
+   "deterministic": false,
+   "beats": [
+    {
+     "beat": "hook",
+     "seconds": 3,
+     "slot": "hook",
+     "acts": [
+      "talk",
+      "shock"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "problem",
+     "seconds": 7,
+     "slot": "problem",
+     "acts": [
+      "panic"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "turn",
+     "seconds": 4,
+     "slot": "turn",
+     "acts": [
+      "tap_phone"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "demo",
+     "seconds": 13,
+     "slot": "demo",
+     "acts": [
+      "present",
+      "point"
+     ],
+     "layout": "demo"
+    },
+    {
+     "beat": "payoff",
+     "seconds": 6,
+     "slot": "payoff",
+     "acts": [
+      "celebrate"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "cta",
+     "seconds": 4,
+     "slot": null,
+     "acts": [
+      "wave"
+     ],
+     "layout": "endcard"
+    }
+   ]
+  },
+  {
+   "id": "tutorial3",
+   "name": "Three steps",
+   "day_types": [
+    "feature",
+    "explainer"
+   ],
+   "kinds": [
+    "feature",
+    "usecase",
+    "game"
+   ],
+   "deterministic": false,
+   "beats": [
+    {
+     "beat": "hook",
+     "seconds": 3,
+     "slot": "hook",
+     "acts": [
+      "lean_in"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "problem",
+     "seconds": 5,
+     "slot": "problem",
+     "acts": [
+      "shrug"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "turn",
+     "seconds": 3,
+     "slot": "turn",
+     "acts": [
+      "tap_phone"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "demo",
+     "seconds": 16,
+     "slot": "demo",
+     "acts": [
+      "point",
+      "nod"
+     ],
+     "layout": "demo"
+    },
+    {
+     "beat": "payoff",
+     "seconds": 5,
+     "slot": "payoff",
+     "acts": [
+      "sigh",
+      "celebrate"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "cta",
+     "seconds": 4,
+     "slot": null,
+     "acts": [
+      "wave"
+     ],
+     "layout": "endcard"
+    }
+   ]
+  },
+  {
+   "id": "myth_truth",
+   "name": "Myth versus truth",
+   "day_types": [
+    "card",
+    "recap"
+   ],
+   "kinds": [
+    "card",
+    "lesson"
+   ],
+   "deterministic": false,
+   "beats": [
+    {
+     "beat": "hook",
+     "seconds": 3,
+     "slot": "hook",
+     "acts": [
+      "lean_in"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "problem",
+     "seconds": 6,
+     "slot": "problem",
+     "acts": [
+      "nod",
+      "shrug"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "turn",
+     "seconds": 3,
+     "slot": "turn",
+     "acts": [
+      "facepalm"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "demo",
+     "seconds": 12,
+     "slot": "demo",
+     "acts": [
+      "present"
+     ],
+     "layout": "demo"
+    },
+    {
+     "beat": "payoff",
+     "seconds": 6,
+     "slot": "payoff",
+     "acts": [
+      "sigh",
+      "nod"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "cta",
+     "seconds": 4,
+     "slot": null,
+     "acts": [
+      "wave"
+     ],
+     "layout": "endcard"
+    }
+   ]
+  },
+  {
+   "id": "pov",
+   "name": "POV",
+   "day_types": [
+    "kaos_life",
+    "card",
+    "explainer"
+   ],
+   "kinds": [
+    "moment",
+    "usecase",
+    "card",
+    "lesson"
+   ],
+   "deterministic": false,
+   "beats": [
+    {
+     "beat": "hook",
+     "seconds": 3,
+     "slot": "hook",
+     "acts": [
+      "talk"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "problem",
+     "seconds": 8,
+     "slot": "problem",
+     "acts": [
+      "panic",
+      "facepalm"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "turn",
+     "seconds": 3,
+     "slot": "turn",
+     "acts": [
+      "tap_phone"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "demo",
+     "seconds": 8,
+     "slot": "demo",
+     "acts": [
+      "point"
+     ],
+     "layout": "demo"
+    },
+    {
+     "beat": "payoff",
+     "seconds": 6,
+     "slot": "payoff",
+     "acts": [
+      "celebrate",
+      "dance"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "cta",
+     "seconds": 4,
+     "slot": null,
+     "acts": [
+      "wave"
+     ],
+     "layout": "endcard"
+    }
+   ]
+  },
+  {
+   "id": "skit",
+   "name": "Skit",
+   "day_types": [
+    "kaos_life"
+   ],
+   "kinds": [
+    "moment",
+    "usecase"
+   ],
+   "deterministic": false,
+   "beats": [
+    {
+     "beat": "hook",
+     "seconds": 3,
+     "slot": "hook",
+     "acts": [
+      "walk_in",
+      "talk"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "problem",
+     "seconds": 8,
+     "slot": "problem",
+     "acts": [
+      "panic",
+      "shock"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "turn",
+     "seconds": 4,
+     "slot": "turn",
+     "acts": [
+      "think",
+      "tap_phone"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "payoff",
+     "seconds": 8,
+     "slot": "payoff",
+     "acts": [
+      "celebrate",
+      "dance"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "cta",
+     "seconds": 4,
+     "slot": null,
+     "acts": [
+      "wave"
+     ],
+     "layout": "endcard"
+    }
+   ]
+  },
+  {
+   "id": "kaos_tries",
+   "name": "Kaos tries",
+   "day_types": [
+    "games",
+    "feature",
+    "explainer"
+   ],
+   "kinds": [
+    "game",
+    "feature",
+    "activity"
+   ],
+   "deterministic": false,
+   "beats": [
+    {
+     "beat": "hook",
+     "seconds": 3,
+     "slot": "hook",
+     "acts": [
+      "talk",
+      "lean_in"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "problem",
+     "seconds": 4,
+     "slot": "problem",
+     "acts": [
+      "think"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "turn",
+     "seconds": 3,
+     "slot": "turn",
+     "acts": [
+      "tap_phone"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "demo",
+     "seconds": 14,
+     "slot": "demo",
+     "acts": [
+      "point",
+      "nod",
+      "shock"
+     ],
+     "layout": "demo"
+    },
+    {
+     "beat": "payoff",
+     "seconds": 6,
+     "slot": "payoff",
+     "acts": [
+      "celebrate",
+      "facepalm"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "cta",
+     "seconds": 4,
+     "slot": null,
+     "acts": [
+      "wave"
+     ],
+     "layout": "endcard"
+    }
+   ]
+  },
+  {
+   "id": "game_day",
+   "name": "Game day",
+   "day_types": [
+    "games"
+   ],
+   "kinds": [
+    "game"
+   ],
+   "deterministic": false,
+   "beats": [
+    {
+     "beat": "hook",
+     "seconds": 3,
+     "slot": "hook",
+     "acts": [
+      "lean_in"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "problem",
+     "seconds": 4,
+     "slot": "problem",
+     "acts": [
+      "talk"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "demo",
+     "seconds": 16,
+     "slot": "demo",
+     "acts": [
+      "point",
+      "shock",
+      "nod"
+     ],
+     "layout": "demo"
+    },
+    {
+     "beat": "payoff",
+     "seconds": 6,
+     "slot": "payoff",
+     "acts": [
+      "celebrate",
+      "dance"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "cta",
+     "seconds": 4,
+     "slot": null,
+     "acts": [
+      "wave"
+     ],
+     "layout": "endcard"
+    }
+   ]
+  },
+  {
+   "id": "quiz_time",
+   "name": "Quiz time",
+   "day_types": [
+    "recap",
+    "card",
+    "kaos_life"
+   ],
+   "kinds": [
+    "card",
+    "lesson"
+   ],
+   "deterministic": true,
+   "needs": "quiz",
+   "beats": [
+    {
+     "beat": "hook",
+     "seconds": 3,
+     "slot": null,
+     "fixed": "Quiz time. Can you get this one?",
+     "acts": [
+      "talk"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "problem",
+     "seconds": 8,
+     "slot": null,
+     "fixed": "{question}",
+     "acts": [
+      "think"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "demo",
+     "seconds": 10,
+     "slot": null,
+     "fixed": "{options}",
+     "acts": [
+      "point"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "payoff",
+     "seconds": 10,
+     "slot": null,
+     "fixed": "The answer: {answer}. {explain}",
+     "acts": [
+      "celebrate",
+      "nod"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "cta",
+     "seconds": 4,
+     "slot": null,
+     "acts": [
+      "wave"
+     ],
+     "layout": "endcard"
+    }
+   ]
+  }
+ ]
+}

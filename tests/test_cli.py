@@ -33,3 +33,10 @@ def test_voice_commands_exist_and_refuse_without_a_chosen_voice(tmp_path, monkey
     monkeypatch.setattr(voice, "load_voice_config", lambda p: real(p).__class__(**{**real(p).__dict__, "voice_id": ""}))
     assert cli.main(["voice", "say", "hello", "--out", str(tmp_path / "x.mp3")]) == 1
     assert "no voice chosen" in capsys.readouterr().err
+
+
+def test_plan_command_writes_a_calendar(tmp_path, monkeypatch, capsys):
+    monkeypatch.setenv("GME_HOME", str(tmp_path))
+    assert cli.main(["plan", "--days", "10"]) == 0
+    assert "planned 10 videos" in capsys.readouterr().out
+    assert len(json.loads((tmp_path / "calendar.json").read_text())) == 10
