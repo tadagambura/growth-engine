@@ -6,7 +6,7 @@ One command makes, checks and queues the day's video for every platform: `python
 planner → script writer → voice → beat timings → captions → demo footage → render → QA → queue → publish
  (code)     (cheap model)   (ElevenLabs) (code)     (code)     (recorded)    (code)  (code)  (code)  (Postiz*)
 ```
-\* Until Postiz is connected the publisher writes what it would post to `data/outbox.jsonl`.
+\* Until Postiz is connected (`configs/postiz.json` → `enabled: true`) the publisher writes what it would post to `data/outbox.jsonl`.
 
 | Step | Where | Notes |
 |---|---|---|
@@ -19,6 +19,7 @@ planner → script writer → voice → beat timings → captions → demo foota
 | Render | `render/render.mjs`, `render/video.js`, `render/acts.js`, `render/vendor/` | Headless Chrome draws each frame (Kaos, costume, captions, phone), ffmpeg encodes and mixes. |
 | QA | `gme/videoqa.py`, `gme/qa.py` | File checks (size, length, loudness, not blank, not frozen) and script checks. A failure is retried once, then alerted. |
 | Posts | `gme/posts.py` | Per-platform text, one CTA, tracked link, at most 3 hashtags. |
+| Publish | `gme/postiz.py`, `configs/postiz.json` | Uploads the video once, then posts to each connected channel (TikTok, Instagram, YouTube, Facebook, Threads, Bluesky, X, Pinterest). Written from the Postiz docs; needs one live check (`python -m gme postiz channels`). |
 | Run | `gme/daily.py`, `deploy/n95/` | systemd timers: make at 06:30 London, publish every 10 minutes. |
 
 ## Commands
@@ -46,5 +47,5 @@ python -m gme costume --date 2026-12-31
 - Games have no footage yet (they need a recorded journey through the Arcade); game videos use the stage layout.
 - Three apps have footage (StackUp, LoopDay, AfterHours). The rest use the stage layout until recorded.
 - Only New Year has a costume drawn; other days show plain Kaos until each costume is added.
-- Posting is a log until Postiz is connected and the platform apps are approved.
-- If the QA gate fails twice there is no evergreen video to fall back on yet: the day is skipped and the owner is alerted.
+- Posting is a log until Postiz is running, each platform is connected in it, the channel ids are in `configs/postiz.json` and `enabled` is true. TikTok and YouTube may only accept private or draft posts until their API apps are audited.
+- If a video fails QA twice, a third attempt in safe mode (no model, no voice) makes the day's video from the atom's own words; if that fails too the day is skipped and the owner is alerted.
