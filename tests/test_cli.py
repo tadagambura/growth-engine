@@ -29,5 +29,7 @@ def test_voice_commands_exist_and_refuse_without_a_chosen_voice(tmp_path, monkey
     monkeypatch.setenv("GME_HOME", str(tmp_path))
     import gme.voice as voice
     monkeypatch.setattr(voice, "make_client", lambda *_: object())     # no network, no key needed
+    real = voice.load_voice_config
+    monkeypatch.setattr(voice, "load_voice_config", lambda p: real(p).__class__(**{**real(p).__dict__, "voice_id": ""}))
     assert cli.main(["voice", "say", "hello", "--out", str(tmp_path / "x.mp3")]) == 1
     assert "no voice chosen" in capsys.readouterr().err
