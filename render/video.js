@@ -41,7 +41,7 @@
     x.beginPath(); x.roundRect(x0, y0, wd, ht, r); x.clip(); x.fillStyle = fill; x.fillRect(x0, y0, wd, ht); x.restore();
   }
   // The stage is zoomed in on Kaos: a 164 x 90 window of the 220 x 120 world, centred on him.
-  const WIN = { x: 110 - 82, y: 20, w: 164, h: 90 };
+  const WIN = { x: 110 - 82, y: 6, w: 164, h: 104 };
   function stage(x0, y0, scale, fill) {
     const wd = WIN.w * scale, ht = WIN.h * scale;
     card(x0, y0, wd, ht, 34, fill);
@@ -76,7 +76,7 @@
 
     if (layout === "endcard") {
       x.fillStyle = INK; x.fillRect(0, 0, FW, FH);
-      stage(40, 250, 6.1, P.stageColor);
+      stage(40, 220, 6.1, P.stageColor);
       x.textAlign = "center"; x.fillStyle = LIME;
       wrap(b.text, FW - 160, '70px "Bagel Fat One"').forEach((l, i) => { x.font = '70px "Bagel Fat One"'; x.fillStyle = i === 0 ? LIME : PAPER; x.fillText(l, FW / 2, 1020 + i * 86); });
       footer(true);
@@ -94,15 +94,15 @@
       const img = demo.imgs[idx];
       x.save(); x.beginPath(); x.roundRect(px, py, pw, ph, 48); x.clip(); x.fillStyle = "#fff"; x.fillRect(px, py, pw, ph);
       if (img) x.drawImage(img, px, py, pw, ph); x.restore();
-      stage((FW - WIN.w * 3.3) / 2, 1370, 3.3, P.stageColor);
-      const c = capAt(t); if (c) caption(c, 1290, 76);
+      stage((FW - WIN.w * 3.3) / 2, 1340, 3.3, P.stageColor);
+      const c = capAt(t); if (c) caption(c, 1270, 76);
       footer(false);
     } else {
       x.font = '80px "Bagel Fat One"';
       wrap(P.title, FW - 140, '80px "Bagel Fat One"').slice(0, 3).forEach((l, i) => { x.font = '80px "Bagel Fat One"'; x.fillText(l, FW / 2, 250 + i * 92); });
-      stage(40, 560, 6.1, P.stageColor);
-      const c = capAt(t); if (c) caption(c, 1340, 96);
-      pill(P.appName, FW / 2, 1580, P.stageColor);
+      stage(40, 520, 6.1, P.stageColor);
+      const c = capAt(t); if (c) caption(c, 1330, 96);
+      pill(P.appName, FW / 2, 1600, P.stageColor);
       footer(false);
     }
     return cv.toDataURL("image/jpeg", 0.92).slice(23);
