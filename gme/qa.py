@@ -16,10 +16,12 @@ LIMITS = {"x": 280, "bluesky": 300, "threads": 500, "pinterest": 500, "instagram
 ALWAYS_ALLOWED_HOSTS = {"kaoticchainz.com", "www.kaoticchainz.com"}
 URL = re.compile(r"https?://[^\s)]+", re.I)
 HASHTAG = re.compile(r"(?<!\w)#\w+")
+# Hints only, never explicit: these words fail every post for every app (whole words, any case).
+EXPLICIT = re.compile(r"\b(sex|sexy|sexual|nude|nudes|naked|porn|xxx|onlyfans|erotic|kinky|orgasm|horny|nsfw)\b", re.I)
 
 
-def check(text: str, platform: str, cfg: AppConfig) -> list[str]:
-    """Return every problem found (empty list = passes)."""
+def check(text: str, platform: str, cfg: AppConfig, audience: str = "general") -> list[str]:
+    """Return every problem found (empty list = passes). audience is "general" or "teen" (aimed at 14 to 18)."""
     problems: list[str] = []
     body = text.strip()
     if not body:
@@ -28,6 +30,10 @@ def check(text: str, platform: str, cfg: AppConfig) -> list[str]:
         problems.append(f"unknown platform '{platform}'")
     elif len(body) > LIMITS[platform]:
         problems.append(f"{len(body)} characters is over the {platform} limit of {LIMITS[platform]}")
+    if audience == "teen" and cfg.min_age >= 18:
+        problems.append(f"{cfg.app_id} is 18+ and must never be promoted to teens")
+    if EXPLICIT.search(body):
+        problems.append("contains explicit wording (marketing is hints only)")
     lowered = body.lower()
     for phrase in cfg.banned_phrases:
         if phrase.lower() in lowered:

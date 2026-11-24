@@ -49,6 +49,7 @@ class AppConfig:
     keywords: tuple[str, ...] = ()
     competitors: tuple[str, ...] = ()
     hashtags_max: int = 3
+    min_age: int = 0                   # 18 = adult-only app: never aimed at teens, hints only in marketing
 
 
 def _problems(raw: dict) -> list[str]:
@@ -76,6 +77,8 @@ def _problems(raw: dict) -> list[str]:
         p.append(f"unknown platforms {sorted(bad)}")
     if any((not isinstance(v, int)) or v < 0 or v > 70 for v in raw["platforms"].values()):
         p.append("posts per week must be whole numbers between 0 and 70")
+    if not isinstance(raw.get("min_age", 0), int) or not 0 <= raw.get("min_age", 0) <= 21:
+        p.append("min_age must be a whole number from 0 to 21")
     b = raw["budgets"]
     if b.get("ai_monthly_gbp", -1) < 0:
         p.append("budgets.ai_monthly_gbp must be set and not negative")
@@ -103,6 +106,7 @@ def parse(raw: dict) -> AppConfig:
         keywords=tuple(raw.get("keywords", ())),
         competitors=tuple(raw.get("competitors", ())),
         hashtags_max=int(raw.get("hashtags_max", 3)),
+        min_age=int(raw.get("min_age", 0)),
     )
 
 

@@ -109,3 +109,13 @@ def test_pause_skips_everything_and_keeps_posts_queued():
     assert publish_due(q, pub, {"stackup": AUTO}, NOW, paused=True)["skipped"] == [p.id]
     assert pub.sent == [] and q.get(p.id).status == "approved"
     assert publish_due(q, pub, {"stackup": AUTO}, NOW)["published"] == [p.id]
+
+
+def test_adult_app_is_hints_only_and_never_aimed_at_teens():
+    ah = replace(load("configs/apps/afterhours.json"), status="active")
+    assert ah.min_age == 18
+    assert qa.check("Date night question: what's your most useless talent? #AfterHours", "bluesky", ah) == []
+    assert any("explicit" in p for p in qa.check("get naked tonight", "bluesky", ah))
+    assert qa.check("Essex couples, try this", "bluesky", ah) == []        # whole words only
+    assert any("teens" in p for p in qa.check("fun question", "bluesky", ah, audience="teen"))
+    assert not any("teens" in p for p in qa.check("fun question", "bluesky", CFG, audience="teen"))

@@ -45,6 +45,11 @@ def window(rule: dict, year: int) -> tuple[date, date]:
         if end < start:
             end = _md(year + 1, rule["end"])
         return start, end
+    if kind == "dated":      # explicit checked dates per year; no entry means no occurrence that year
+        pair = rule["dates"].get(str(year))
+        if pair is None:
+            return date.max, date.max
+        return date.fromisoformat(pair[0]), date.fromisoformat(pair[1])
     if kind == "easter":
         base = easter(year)
     elif kind == "nth_weekday":
@@ -52,6 +57,14 @@ def window(rule: dict, year: int) -> tuple[date, date]:
     else:
         raise ValueError(f"unknown rule type '{kind}'")
     return base + timedelta(days=rule["start"]), base + timedelta(days=rule["end"])
+
+
+@dataclass(frozen=True)
+class Greeting:
+    id: str
+    name: str
+    text: str
+    day: date
 
 
 @dataclass(frozen=True)
@@ -67,7 +80,7 @@ class Occasion:
 class Calendar:
     def __init__(self, raw: dict):
         self._items = [(e, "event") for e in raw["events"]] + [(s, "season") for s in raw["seasons"]]
-        self.owner_decision = tuple(raw.get("owner_decision", ()))
+        self._greetings = raw.get("greetings", {}).get("items", [])
         ids = [e["id"] for e, _ in self._items]
         if len(ids) != len(set(ids)):
             raise ValueError("duplicate ids in seasons file")
@@ -97,3 +110,16 @@ class Calendar:
         found = [o for y in (day.year, day.year + 1) for o in self._occasions(y)
                  if o.priority >= 50 and day < o.start <= day + timedelta(days=within_days)]
         return sorted(found, key=lambda o: o.start)
+
+    def greeting_for(self, day: date) -> Greeting | None:
+        """The fixed-wording greeting for this day, if it is one we mark (replaces the day's normal video)."""
+        for g in self._greetings:
+            start, end = window(g["rule"], day.year)
+            if start <= day <= end:
+                return Greeting(g["id"], g["name"], g["text"], day)
+        return None
+
+    def years_missing_dates(self, year: int) -> list[str]:
+        """Greetings with a 'dated' rule and no checked date for this year (the engine alerts the owner in September)."""
+        return [g["id"] for g in self._greetings
+                if g["rule"]["type"] == "dated" and str(year) not in g["rule"]["dates"]]
