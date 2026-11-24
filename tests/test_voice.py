@@ -92,3 +92,15 @@ def test_captions_are_short_timed_and_highlight_numbers(tmp_path):
     assert caps[2].emphasis == (1,)                                               # the £14 (second word)
     data = json.loads(json.dumps(captions.to_json(caps)))
     assert data[0]["text"] == "Ran out of" and "00:00:00,000 -->" in captions.to_srt(caps)
+
+
+def test_make_client_loads_the_env_file_before_the_sdk_and_fails_clearly_without_a_key(tmp_path, monkeypatch):
+    import os
+
+    from gme.voice import make_client
+    monkeypatch.delenv("ELEVENLABS_API_KEY", raising=False)
+    with pytest.raises(VoiceError, match="ELEVENLABS_API_KEY not found"):
+        make_client(str(tmp_path / "missing.env"))
+    (tmp_path / ".env").write_text("ELEVENLABS_API_KEY=test-key-123\n")
+    assert make_client(str(tmp_path / ".env")) is not None
+    assert os.environ["ELEVENLABS_API_KEY"] == "test-key-123"
