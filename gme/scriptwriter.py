@@ -15,7 +15,7 @@ from dataclasses import dataclass, field
 from datetime import date
 from typing import Callable
 
-from . import qa
+from . import dates, qa
 from .atoms import Atom
 from .budget import BudgetGuard
 from .config import AppConfig
@@ -132,6 +132,7 @@ def system_prompt(app_name: str, cfg: AppConfig) -> str:
         f"{adult}"
         "Each line is spoken aloud: short sentences, and never more than its max_words. "
         "Use ONLY the facts in ATOM. Never invent numbers, prices, features, results or testimonials. "
+        "Never mention a date, month or year: videos get reused. "
         "No hashtags, emojis, links or all-caps shouting. No advice about the viewer's own money, health or relationships. "
         f"Voice and tone: {cfg.brand_voice} "
         "Return only the JSON object."
@@ -191,6 +192,8 @@ def validate(lines: dict, slots: list[str], limits: dict[str, int], atom: Atom, 
             problems.append(f"{key} is {len(text.split())} words (max {limit})")
         if URL.search(text) or HASHTAG.search(text) or EMOJI.search(text):
             problems.append(f"{key} has a link, hashtag or emoji")
+        if dates.find(text):
+            problems.append(f"{key} mentions a date or year")
         for n in NUM.findall(text):
             if n not in allowed_numbers and n.strip(".,") not in {x.strip(".,") for x in allowed_numbers}:
                 problems.append(f"{key} uses the number {n}, which is not in the atom")

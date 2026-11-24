@@ -22,6 +22,9 @@ planner → script writer → voice → beat timings → captions → demo foota
 | Publish | `gme/postiz.py`, `configs/postiz.json` | Uploads the video once, then posts to each connected channel (TikTok, Instagram, YouTube, Facebook, Threads, Bluesky, X, Pinterest). Written from the Postiz docs; needs one live check (`python -m gme postiz channels`). |
 | Run | `gme/daily.py`, `deploy/n95/` | systemd timers: make at 06:30 London, publish every 10 minutes. |
 
+## No dates
+Videos get reused, so none carries a date: recordings are scrubbed (`render/nodates.js`), scripts and captions are rejected if they name a date or year, and content whose facts depend on a date is skipped (`gme/dates.py`). Tracking links in post text still carry the day.
+
 ## Commands
 ```bash
 python -m gme status                 # what the engine is doing

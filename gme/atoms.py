@@ -9,6 +9,8 @@ import json
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from . import dates
+
 
 @dataclass(frozen=True)
 class Atom:
@@ -28,9 +30,13 @@ class Atom:
 
 def _atom(app: str, raw: dict) -> Atom:
     s = raw.get("source") or {}
-    return Atom(id=raw["id"], app_id=app, kind=raw["kind"], title=raw["title"], body=raw["body"],
+    quiz = raw.get("quiz")
+    if quiz:
+        quiz = {k: [dates.undate(o) for o in v] if isinstance(v, list) else dates.undate(v) if isinstance(v, str) else v
+                for k, v in quiz.items()}
+    return Atom(id=raw["id"], app_id=app, kind=raw["kind"], title=dates.undate(raw["title"]), body=dates.undate(raw["body"]),
                 source_name=s.get("name", ""), source_url=s.get("url", ""), checked=raw.get("checked", ""),
-                reviewed=bool(raw.get("reviewed", False)), quiz=raw.get("quiz"), tags=tuple(raw.get("tags", ())),
+                reviewed=bool(raw.get("reviewed", False)), quiz=quiz, tags=tuple(raw.get("tags", ())),
                 extra={k: raw[k] for k in ("steps", "minutes", "seconds", "topic") if k in raw})
 
 
@@ -43,7 +49,11 @@ def load_atoms(directory: str | Path) -> dict[str, list[Atom]]:
 
 
 def usable(atom: Atom, allow_unreviewed: bool, sensitive_terms: list[str]) -> bool:
-    """Reviewed atoms always pass. Unreviewed ones pass only if allowed and free of sensitive money or legal terms."""
+    """Reviewed atoms pass. Unreviewed ones pass only if allowed and free of sensitive money or legal terms.
+    Nothing with a date in it passes, because videos get reused."""
+    spoken = [atom.title, atom.body] + [str(x) for v in (atom.quiz or {}).values() for x in (v if isinstance(v, list) else [v])]
+    if dates.find(" . ".join(spoken)):
+        return False
     if atom.reviewed:
         return True
     if not allow_unreviewed:
