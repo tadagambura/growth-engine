@@ -56,6 +56,7 @@ CI-gated PRs, backend health, platform-token expiry, content-accuracy review dat
 |---|---|
 | App config schema + validation | Built (`gme.config`), tested |
 | Budget guard | Built (`gme.budget`), tested |
+| Costume calendar (`gme.seasons`), category budgets and revenue tiers (`gme.budget`, `configs/policy.json`), control CLI (`gme.cli`) | Built, tested |
 | Model router: GPU hours, quiet hours, API fallback | Built (`gme.router`), tested |
 | Content queue with enforced approval flow (`gme.queue`), deterministic QA (`gme.qa`) | Built, tested (SQLite; scheduler loop still to do) |
 | N95 deploy kit (Postiz pinned, engine DB, tunnel, backups) | Built (`deploy/n95`), config validated |

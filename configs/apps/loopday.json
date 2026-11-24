@@ -1,0 +1,63 @@
+{
+  "app_id": "loopday",
+  "name": "LoopDay",
+  "status": "active",
+  "tagline": "Tiny habits that forgive you",
+  "audience": "People who tried and quit complicated habit apps, and anyone starting small after a bad streak",
+  "brand_voice": "Warm, playful and forgiving. Celebrates tiny wins. Never guilt-trips about a missed day.",
+  "tone": "Playful",
+  "pillars": {
+    "Tiny habit ideas": 0.3,
+    "Forgiving streak psychology": 0.2,
+    "Relatable habit moments": 0.2,
+    "Interactive questions": 0.1,
+    "Product demo": 0.12,
+    "Direct promotion": 0.08
+  },
+  "platforms": {
+    "tiktok": 7,
+    "instagram": 7,
+    "youtube": 7,
+    "facebook": 7,
+    "pinterest": 7,
+    "threads": 7,
+    "bluesky": 7,
+    "x": 7
+  },
+  "publishing_mode": "automatic",
+  "budgets": {
+    "ai_monthly_gbp": 5.0,
+    "ads_enabled": false,
+    "ads_monthly_gbp": 0
+  },
+  "links": {
+    "web": "https://kaoticchainz.com/loopday",
+    "play": "",
+    "app_store": ""
+  },
+  "approved_claims": [
+    "Free to use with ads; Premium removes them",
+    "Freezes and recovery mode keep a streak alive after a missed day",
+    "Your data stays on your phone",
+    "No social feed, no coaching, no clutter"
+  ],
+  "banned_phrases": [
+    "guaranteed",
+    "cure",
+    "fix your life",
+    "change your life in",
+    "#1 app",
+    "miracle",
+    "burn fat",
+    "lose weight fast"
+  ],
+  "keywords": [
+    "habit tracker",
+    "streak",
+    "tiny habits",
+    "habit tracker no guilt",
+    "simple habit tracker"
+  ],
+  "competitors": [],
+  "hashtags_max": 3
+}
