@@ -6,6 +6,7 @@
   costume  Kaos's costume for a date (default today), plus what's coming up
   plan     Build the content calendar (default 180 days from the start date) and save it to data/calendar.json
   run-day  Make, check, queue and publish today's video (what the timer runs). --date YYYY-MM-DD for another day
+  postiz   `postiz channels` lists the channels connected in Postiz (their ids go in configs/postiz.json)
   voice    Kaos's voice: `voice previews` (makes 3 samples, spends a little credit), `voice save <id>`
            (keeps the one you picked), `voice say "text"` (speaks a line and writes captions)
 
@@ -84,6 +85,7 @@ def main(argv: list[str] | None = None) -> int:
     c = sub.add_parser("costume"); c.add_argument("--date", help="YYYY-MM-DD")
     rd = sub.add_parser("run-day"); rd.add_argument("--date")
     sub.add_parser("publish-due")
+    pz = sub.add_parser("postiz"); pz.add_argument("what", choices=["channels"])
     pl = sub.add_parser("plan"); pl.add_argument("--days", type=int); pl.add_argument("--from", dest="start")
     v = sub.add_parser("voice"); vs = v.add_subparsers(dest="vcmd", required=True)
     vs.add_parser("previews"); vsave = vs.add_parser("save"); vsave.add_argument("generated_voice_id")
@@ -101,6 +103,15 @@ def main(argv: list[str] | None = None) -> int:
         out = run_day(build_env(ROOT, h), date.fromisoformat(a.date) if a.date else date.today())
         print(json.dumps(out, indent=2, default=str))
         return 0 if out["status"] in ("ok", "already done", "nothing planned") else 1
+    elif a.cmd == "postiz":
+        from .daily import read_secrets
+        from .planner import load_json
+        from .postiz import PostizPublisher, http_transport
+        cfg, sec = load_json(ROOT / "configs/postiz.json"), read_secrets()
+        if not sec.get("POSTIZ_API_KEY"):
+            print("POSTIZ_API_KEY is not in the secrets file", file=sys.stderr); return 1
+        for ch in PostizPublisher(cfg, http_transport(cfg["base_url"], sec["POSTIZ_API_KEY"])).channels():
+            print(f'{ch.get("identifier", "?"):12} {ch.get("id")}  {ch.get("name", "")}  {"(disabled)" if ch.get("disabled") else ""}')
     elif a.cmd == "publish-due":
         from datetime import datetime, timezone
         from .daily import build_env

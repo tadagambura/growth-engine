@@ -1,0 +1,10 @@
+{
+  "_note": "Owner-controlled. Postiz is the self-hosted publisher on the N95. 'enabled' stays false until Postiz is running and every channel below is connected; until then the engine only logs what it would post (data/outbox.jsonl). The API key is POSTIZ_API_KEY in the secrets file. Request shapes follow the Postiz public API docs read on 24 Nov 2026 and still need one live check: run `python -m gme postiz channels` once Postiz is up.",
+  "enabled": false,
+  "base_url": "http://127.0.0.1:5000/api/public/v1",
+  "send": "now",
+  "integrations": {"tiktok": "", "instagram": "", "youtube": "", "facebook": "", "threads": "", "bluesky": "", "x": "", "pinterest": ""},
+  "pinterest_board": "",
+  "tiktok_method": "DIRECT_POST",
+  "youtube_visibility": "public"
+}

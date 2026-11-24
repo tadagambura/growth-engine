@@ -19,6 +19,7 @@ from .budget import BudgetGuard, load_policy
 from .config import AppConfig, load_all
 from .planner import Slot, load_json, make_plan
 from .posts import build_post
+from .postiz import PostizPublisher, http_transport as postiz_transport
 from .publisher import DryRunPublisher, publish_due
 from .queue import Queue
 from .scriptwriter import Writer, cta_text, evergreen_lines, http_transport
@@ -91,9 +92,12 @@ def build_env(root: Path = ROOT, home: Path | None = None, secrets: dict | None 
     except Exception:
         client = None
     bot = TelegramBot(sec["TELEGRAM_BOT_TOKEN"], int(sec["TELEGRAM_CHAT_ID"])) if sec.get("TELEGRAM_BOT_TOKEN") and sec.get("TELEGRAM_CHAT_ID") else None
+    pz = load_json(root / "configs/postiz.json")
+    publisher = (PostizPublisher(pz, postiz_transport(pz["base_url"], sec["POSTIZ_API_KEY"]))
+                 if pz.get("enabled") and sec.get("POSTIZ_API_KEY") else LogPublisher(home / "outbox.jsonl"))
     return Env(root, home, content, models, formats, atoms, load_all(root / "configs/apps"), Calendar.load(root / "configs/seasons.json"),
                guard, Writer(models, content, guard, transport), load_voice_config(root / "configs/voice.json"), client,
-               VoiceUsage(home / "voice-usage.json"), Queue(str(home / "queue.db")), LogPublisher(home / "outbox.jsonl"), bot)
+               VoiceUsage(home / "voice-usage.json"), Queue(str(home / "queue.db")), publisher, bot)
 
 
 def post_time(day: date) -> datetime:
