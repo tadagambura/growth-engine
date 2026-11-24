@@ -27,6 +27,7 @@ The original brief is summarised in [`docs/SPEC.md`](docs/SPEC.md).
 | `gme/atoms.py`, `scripts/export_atoms.py` | Content atoms (cards, lessons, features, games...) exported from the master repo |
 | `gme/planner.py` | Deterministic 6-month content calendar: rhythm, spotlight app, least-recently-used atom and format, costume, CTA |
 | `configs/formats.json`, `configs/acts.json`, `configs/content.json` | Standard video formats (beat sheets), Kaos act vocabulary, owner's content policy |
+| `gme/scriptwriter.py`, `configs/models.json` | Fills fixed beat-sheet slots with a cheap model (thinking off, strict JSON, validated, evergreen fallback) |
 | `gme/router.py` | Model routing: home GPU first (09:00–21:00, quiet at night), small API for quality |
 | `configs/apps/` | One JSON config per app (StackUp first) |
 | `tests/` | Tests for all of the above |

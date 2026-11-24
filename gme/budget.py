@@ -45,8 +45,24 @@ class Decision:
 
 @dataclass
 class Ledger:
-    """Spend records: (day, app_id, category, gbp). Persisted by the caller."""
+    """Spend records: (day, app_id, category, gbp). Saved to a JSON file so the caps survive restarts."""
     entries: list[tuple[date, str, str, float]] = field(default_factory=list)
+
+    @classmethod
+    def load(cls, path) -> "Ledger":
+        import json
+        from pathlib import Path
+        p = Path(path)
+        if not p.exists():
+            return cls()
+        return cls([(date.fromisoformat(d), a, c, float(g)) for d, a, c, g in json.loads(p.read_text())])
+
+    def save(self, path) -> None:
+        import json
+        from pathlib import Path
+        p = Path(path)
+        p.parent.mkdir(parents=True, exist_ok=True)
+        p.write_text(json.dumps([[d.isoformat(), a, c, g] for d, a, c, g in self.entries]))
 
     def total(self, *, month: tuple[int, int] | None = None, day: date | None = None,
               app_id: str | None = None, category: str | None = None) -> float:
@@ -65,9 +81,10 @@ class Ledger:
 
 
 class BudgetGuard:
-    def __init__(self, policy: Policy, ledger: Ledger | None = None):
+    def __init__(self, policy: Policy, ledger: Ledger | None = None, path=None):
         self._policy = policy
-        self.ledger = ledger or Ledger()
+        self._path = path
+        self.ledger = ledger or (Ledger.load(path) if path else Ledger())
 
     @property
     def policy(self) -> Policy:
@@ -96,6 +113,8 @@ class BudgetGuard:
 
     def record(self, app_id: str, category: str, actual_gbp: float, today: date) -> None:
         self.ledger.entries.append((today, app_id, category, max(0.0, actual_gbp)))
+        if self._path:
+            self.ledger.save(self._path)
 
     def usage_share(self, today: date) -> float:
         """Share of the monthly portfolio cap used; alerts fire at 0.5, 0.8 and 1.0."""
