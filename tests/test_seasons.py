@@ -35,3 +35,20 @@ def test_every_day_of_two_years_has_a_costume_and_specific_beats_season():
 def test_upcoming_lets_videos_tease_events():
     ids = [o.id for o in CAL.upcoming(date(2026, 10, 15), 21)]
     assert "halloween" in ids and "christmas" not in ids
+
+
+def test_greetings_are_fixed_wording_and_only_on_checked_days():
+    g = CAL.greeting_for(date(2027, 10, 29))
+    assert g and g.id == "diwali" and "Diwali" in g.text
+    assert CAL.greeting_for(date(2027, 6, 1)).id == "pride"
+    assert CAL.greeting_for(date(2026, 10, 10)).id == "mental_health_day"
+    assert "116 123" in CAL.greeting_for(date(2026, 10, 10)).text
+    assert CAL.greeting_for(date(2027, 3, 10)).id == "eid_al_fitr"       # moon sighting can shift a day
+    assert CAL.greeting_for(date(2027, 7, 14)) is None
+    assert CAL.greeting_for(date(2028, 2, 6)) is None                      # 2028 Lunar New Year not checked
+
+
+def test_missing_dates_are_reported_so_the_owner_can_be_alerted():
+    assert "lunar_new_year" in CAL.years_missing_dates(2028)
+    assert "diwali" not in CAL.years_missing_dates(2028)
+    assert "diwali" in CAL.years_missing_dates(2029)

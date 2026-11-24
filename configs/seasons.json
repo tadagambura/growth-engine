@@ -1,29 +1,344 @@
 {
   "_note": "Kaos's costume calendar. Dates are UK-centred. Rule types: fixed (MM-DD, may wrap the new year), easter (day offsets from Easter Sunday), nth_weekday (anchor = nth weekday of a month, then day offsets). The engine resolves these in code; nothing here is asked of a model. Higher priority wins when windows overlap (one-day events are 110 so they beat week-long windows).",
   "events": [
-    {"id": "newyear",       "name": "New Year",             "priority": 100, "costume": "newyear",       "rule": {"type": "fixed", "start": "12-29", "end": "01-06"}},
-    {"id": "valentines",    "name": "Valentine's Day",      "priority": 100, "costume": "valentines",    "rule": {"type": "fixed", "start": "02-07", "end": "02-14"}},
-    {"id": "pancake_day",   "name": "Pancake Day",          "priority": 110, "costume": "pancake",       "rule": {"type": "easter", "start": -48, "end": -46}},
-    {"id": "st_patricks",   "name": "St Patrick's Day",     "priority": 100, "costume": "stpatricks",    "rule": {"type": "fixed", "start": "03-15", "end": "03-17"}},
-    {"id": "mothering_day", "name": "Mothering Sunday (UK)", "priority": 90, "costume": "flowers",       "rule": {"type": "easter", "start": -23, "end": -21}},
-    {"id": "april_fools",   "name": "April Fools",          "priority": 110, "costume": "jester",        "rule": {"type": "fixed", "start": "04-01", "end": "04-01"}},
-    {"id": "easter",        "name": "Easter",               "priority": 100, "costume": "easter",        "rule": {"type": "easter", "start": -7, "end": 1}},
-    {"id": "earth_day",     "name": "Earth Day",            "priority": 90,  "costume": "earth",         "rule": {"type": "fixed", "start": "04-22", "end": "04-22"}},
-    {"id": "exam_season",   "name": "Exam season (GCSE and A level)", "priority": 50, "costume": "exams",  "rule": {"type": "fixed", "start": "05-10", "end": "06-25"}},
-    {"id": "fathers_day",   "name": "Father's Day (UK)",    "priority": 90,  "costume": "dadhat",        "rule": {"type": "nth_weekday", "month": 6, "weekday": 6, "n": 3, "start": -2, "end": 0}},
-    {"id": "back_to_school","name": "Back to school",       "priority": 50,  "costume": "backtoschool",  "rule": {"type": "fixed", "start": "09-01", "end": "09-14"}},
-    {"id": "halloween",     "name": "Halloween",            "priority": 100, "costume": "halloween",     "rule": {"type": "fixed", "start": "10-24", "end": "10-31"}},
-    {"id": "bonfire_night", "name": "Bonfire Night (UK)",   "priority": 100, "costume": "bonfire",       "rule": {"type": "fixed", "start": "11-02", "end": "11-05"}},
-    {"id": "thanksgiving",  "name": "Thanksgiving (US)",    "priority": 100, "costume": "thanksgiving",  "rule": {"type": "nth_weekday", "month": 11, "weekday": 3, "n": 4, "start": -4, "end": 0}},
-    {"id": "black_friday",  "name": "Black Friday weekend", "priority": 100, "costume": "blackfriday",   "rule": {"type": "nth_weekday", "month": 11, "weekday": 3, "n": 4, "start": 1, "end": 4}},
-    {"id": "christmas",     "name": "Christmas",            "priority": 100, "costume": "christmas",     "rule": {"type": "fixed", "start": "12-01", "end": "12-26"}}
+    {
+      "id": "newyear",
+      "name": "New Year",
+      "priority": 100,
+      "costume": "newyear",
+      "rule": {
+        "type": "fixed",
+        "start": "12-29",
+        "end": "01-06"
+      }
+    },
+    {
+      "id": "valentines",
+      "name": "Valentine's Day",
+      "priority": 100,
+      "costume": "valentines",
+      "rule": {
+        "type": "fixed",
+        "start": "02-07",
+        "end": "02-14"
+      }
+    },
+    {
+      "id": "pancake_day",
+      "name": "Pancake Day",
+      "priority": 110,
+      "costume": "pancake",
+      "rule": {
+        "type": "easter",
+        "start": -48,
+        "end": -46
+      }
+    },
+    {
+      "id": "st_patricks",
+      "name": "St Patrick's Day",
+      "priority": 100,
+      "costume": "stpatricks",
+      "rule": {
+        "type": "fixed",
+        "start": "03-15",
+        "end": "03-17"
+      }
+    },
+    {
+      "id": "mothering_day",
+      "name": "Mothering Sunday (UK)",
+      "priority": 90,
+      "costume": "flowers",
+      "rule": {
+        "type": "easter",
+        "start": -23,
+        "end": -21
+      }
+    },
+    {
+      "id": "april_fools",
+      "name": "April Fools",
+      "priority": 110,
+      "costume": "jester",
+      "rule": {
+        "type": "fixed",
+        "start": "04-01",
+        "end": "04-01"
+      }
+    },
+    {
+      "id": "easter",
+      "name": "Easter",
+      "priority": 100,
+      "costume": "easter",
+      "rule": {
+        "type": "easter",
+        "start": -7,
+        "end": 1
+      }
+    },
+    {
+      "id": "earth_day",
+      "name": "Earth Day",
+      "priority": 90,
+      "costume": "earth",
+      "rule": {
+        "type": "fixed",
+        "start": "04-22",
+        "end": "04-22"
+      }
+    },
+    {
+      "id": "exam_season",
+      "name": "Exam season (GCSE and A level)",
+      "priority": 50,
+      "costume": "exams",
+      "rule": {
+        "type": "fixed",
+        "start": "05-10",
+        "end": "06-25"
+      }
+    },
+    {
+      "id": "fathers_day",
+      "name": "Father's Day (UK)",
+      "priority": 90,
+      "costume": "dadhat",
+      "rule": {
+        "type": "nth_weekday",
+        "month": 6,
+        "weekday": 6,
+        "n": 3,
+        "start": -2,
+        "end": 0
+      }
+    },
+    {
+      "id": "back_to_school",
+      "name": "Back to school",
+      "priority": 50,
+      "costume": "backtoschool",
+      "rule": {
+        "type": "fixed",
+        "start": "09-01",
+        "end": "09-14"
+      }
+    },
+    {
+      "id": "halloween",
+      "name": "Halloween",
+      "priority": 100,
+      "costume": "halloween",
+      "rule": {
+        "type": "fixed",
+        "start": "10-24",
+        "end": "10-31"
+      }
+    },
+    {
+      "id": "bonfire_night",
+      "name": "Bonfire Night (UK)",
+      "priority": 100,
+      "costume": "bonfire",
+      "rule": {
+        "type": "fixed",
+        "start": "11-02",
+        "end": "11-05"
+      }
+    },
+    {
+      "id": "thanksgiving",
+      "name": "Thanksgiving (US)",
+      "priority": 100,
+      "costume": "thanksgiving",
+      "rule": {
+        "type": "nth_weekday",
+        "month": 11,
+        "weekday": 3,
+        "n": 4,
+        "start": -4,
+        "end": 0
+      }
+    },
+    {
+      "id": "black_friday",
+      "name": "Black Friday weekend",
+      "priority": 100,
+      "costume": "blackfriday",
+      "rule": {
+        "type": "nth_weekday",
+        "month": 11,
+        "weekday": 3,
+        "n": 4,
+        "start": 1,
+        "end": 4
+      }
+    },
+    {
+      "id": "christmas",
+      "name": "Christmas",
+      "priority": 100,
+      "costume": "christmas",
+      "rule": {
+        "type": "fixed",
+        "start": "12-01",
+        "end": "12-26"
+      }
+    }
   ],
   "seasons": [
-    {"id": "winter", "costume": "winter", "priority": 10, "rule": {"type": "fixed", "start": "12-01", "end": "02-28"}},
-    {"id": "spring", "costume": "spring", "priority": 10, "rule": {"type": "fixed", "start": "03-01", "end": "05-31"}},
-    {"id": "summer", "costume": "summer", "priority": 10, "rule": {"type": "fixed", "start": "06-01", "end": "08-31"}},
-    {"id": "autumn", "costume": "autumn", "priority": 10, "rule": {"type": "fixed", "start": "09-01", "end": "11-30"}}
+    {
+      "id": "winter",
+      "costume": "winter",
+      "priority": 10,
+      "rule": {
+        "type": "fixed",
+        "start": "12-01",
+        "end": "02-28"
+      }
+    },
+    {
+      "id": "spring",
+      "costume": "spring",
+      "priority": 10,
+      "rule": {
+        "type": "fixed",
+        "start": "03-01",
+        "end": "05-31"
+      }
+    },
+    {
+      "id": "summer",
+      "costume": "summer",
+      "priority": 10,
+      "rule": {
+        "type": "fixed",
+        "start": "06-01",
+        "end": "08-31"
+      }
+    },
+    {
+      "id": "autumn",
+      "costume": "autumn",
+      "priority": 10,
+      "rule": {
+        "type": "fixed",
+        "start": "09-01",
+        "end": "11-30"
+      }
+    }
   ],
-  "owner_decision": ["Pride month", "Diwali", "Eid", "Lunar New Year", "Hanukkah", "World Mental Health Day (10 Oct)"],
-  "owner_decision_note": "Religious, cultural and awareness days move on lunar or changing calendars and need a respectful treatment, not a costume gag. The engine does not use them until the owner says how."
+  "greetings": {
+    "_note": "Days we mark with one short, respectful greeting video and nothing else: no sales CTA, no costume gag, no jokes about the occasion, words fixed (not written by a model). Fixed rules recur every year; 'dated' lists only dates that have been checked. A year with no checked date simply has no greeting, and the engine alerts the owner in September.",
+    "items": [
+      {
+        "id": "pride",
+        "name": "Pride Month",
+        "text": "Happy Pride! Be exactly who you are.",
+        "rule": {
+          "type": "fixed",
+          "start": "06-01",
+          "end": "06-01"
+        }
+      },
+      {
+        "id": "mental_health_day",
+        "name": "World Mental Health Day",
+        "text": "It's World Mental Health Day. Be kind to yourself today. If things feel heavy, you're not alone: in the UK you can call Samaritans free on 116 123.",
+        "rule": {
+          "type": "fixed",
+          "start": "10-10",
+          "end": "10-10"
+        }
+      },
+      {
+        "id": "lunar_new_year",
+        "name": "Lunar New Year",
+        "text": "Happy Lunar New Year to everyone celebrating!",
+        "rule": {
+          "type": "dated",
+          "dates": {
+            "2027": [
+              "2027-02-06",
+              "2027-02-06"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eid_al_fitr",
+        "name": "Eid al-Fitr",
+        "text": "Eid Mubarak to everyone celebrating!",
+        "rule": {
+          "type": "dated",
+          "dates": {
+            "2027": [
+              "2027-03-09",
+              "2027-03-10"
+            ],
+            "2028": [
+              "2028-02-26",
+              "2028-02-27"
+            ]
+          }
+        }
+      },
+      {
+        "id": "eid_al_adha",
+        "name": "Eid al-Adha",
+        "text": "Eid Mubarak to everyone celebrating!",
+        "rule": {
+          "type": "dated",
+          "dates": {
+            "2027": [
+              "2027-05-16",
+              "2027-05-17"
+            ],
+            "2028": [
+              "2028-05-05",
+              "2028-05-06"
+            ]
+          }
+        }
+      },
+      {
+        "id": "diwali",
+        "name": "Diwali",
+        "text": "Happy Diwali to everyone celebrating! Wishing you light and joy.",
+        "rule": {
+          "type": "dated",
+          "dates": {
+            "2027": [
+              "2027-10-29",
+              "2027-10-29"
+            ],
+            "2028": [
+              "2028-10-17",
+              "2028-10-17"
+            ]
+          }
+        }
+      },
+      {
+        "id": "hanukkah",
+        "name": "Hanukkah",
+        "text": "Happy Hanukkah to everyone celebrating!",
+        "rule": {
+          "type": "dated",
+          "dates": {
+            "2027": [
+              "2027-12-24",
+              "2027-12-25"
+            ],
+            "2028": [
+              "2028-12-12",
+              "2028-12-13"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "dates_checked": "Lunar and religious dates verified 24 Nov 2026 from published multifaith calendars. Eid dates depend on moon sighting and can shift by a day (the window covers both). Lunar New Year 2028 was left out because sources disagreed."
 }

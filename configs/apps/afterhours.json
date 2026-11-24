@@ -1,0 +1,62 @@
+{
+  "app_id": "afterhours",
+  "name": "AfterHours",
+  "status": "active",
+  "tagline": "Better questions for couples and friends",
+  "audience": "Adult couples, long-distance partners and friend groups (18+) who dislike small talk and want better date nights",
+  "brand_voice": "Flirty, cheeky and warm, always hints and never explicit. Teasing, playful, confident. Never crude, never about bodies. Full drama, like the app.",
+  "tone": "Full drama",
+  "pillars": {
+    "Questions to ask your partner": 0.3,
+    "Date night ideas": 0.2,
+    "Relatable couple moments": 0.2,
+    "The wheel and games": 0.15,
+    "Product demo": 0.1,
+    "Direct promotion": 0.05
+  },
+  "platforms": {
+    "tiktok": 7,
+    "instagram": 7,
+    "youtube": 7,
+    "facebook": 7,
+    "threads": 7,
+    "bluesky": 7,
+    "x": 7,
+    "pinterest": 7
+  },
+  "publishing_mode": "automatic",
+  "budgets": {
+    "ai_monthly_gbp": 5.0,
+    "ads_enabled": false,
+    "ads_monthly_gbp": 0
+  },
+  "links": {
+    "web": "https://kaoticchainz.com/",
+    "play": "",
+    "app_store": ""
+  },
+  "approved_claims": [
+    "Free starter decks, with ads",
+    "Answer privately, then reveal together",
+    "Adult decks sit behind an age check inside the app",
+    "Swipeable question cards for first dates, couples, friends and road trips"
+  ],
+  "banned_phrases": [
+    "guaranteed",
+    "save your relationship",
+    "fix your relationship",
+    "will make them love you",
+    "compatibility proves",
+    "#1 app"
+  ],
+  "keywords": [
+    "questions to ask your partner",
+    "date night questions",
+    "couples card game",
+    "first date questions",
+    "long distance relationship questions"
+  ],
+  "competitors": [],
+  "hashtags_max": 3,
+  "min_age": 18
+}
