@@ -1,0 +1,14 @@
+{
+  "_note": "Owner-controlled model settings and prices (USD per million tokens, from the Anthropic pricing page on 24 Nov 2026: Haiku 5.5 is $0.10 in / $0.50 out for prompts up to 100k tokens). Switching model is a one-line change here; the spend caps in policy.json decide how much can be used.",
+  "gbp_per_usd": 0.80,
+  "api_version": "2026-10-21",
+  "scripting": {
+    "model": "claude-haiku-5-5",
+    "input_per_mtok_usd": 0.10,
+    "output_per_mtok_usd": 0.50,
+    "effort": "medium",
+    "thinking": "disabled",
+    "max_tokens": 900,
+    "max_attempts": 3
+  }
+}

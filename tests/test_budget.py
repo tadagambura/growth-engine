@@ -70,3 +70,12 @@ def test_revenue_tiers_only_raise_caps_and_never_lower_them():
     assert mid.category_monthly == {"ai": 25.0, "video": 30.0} and mid.portfolio_monthly >= 55
     assert p.at_revenue(5000).category_monthly["video"] == 80.0
     assert p.at_revenue(0).category_monthly == p.category_monthly      # the base policy is untouched
+
+
+def test_ledger_survives_a_restart(tmp_path):
+    path = tmp_path / "ledger.json"
+    g = BudgetGuard(Policy(portfolio_monthly=10, portfolio_daily=100, default_app_monthly=100), path=path)
+    g.record("stackup", "ai", 9.5, TODAY)
+    g2 = BudgetGuard(Policy(portfolio_monthly=10, portfolio_daily=100, default_app_monthly=100), path=path)
+    assert g2.ledger.total(month=(2026, 11)) == 9.5
+    assert not g2.check("stackup", "ai", 1.0, TODAY).allowed
