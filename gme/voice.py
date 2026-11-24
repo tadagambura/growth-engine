@@ -104,13 +104,17 @@ def words_from_alignment(characters: list[str], starts: list[float], ends: list[
 
 def make_client(env_path: str = ".env"):
     """A real ElevenLabs client. Needs the `voice` extra and ELEVENLABS_API_KEY (loaded from .env)."""
+    import os
     try:
         from dotenv import load_dotenv
-        from elevenlabs import ElevenLabs
     except ImportError as e:  # pragma: no cover
         raise VoiceError('install the voice extra: pip install -e ".[voice]"') from e
-    load_dotenv(env_path)
-    return ElevenLabs()
+    load_dotenv(env_path)            # first: the SDK reads the environment when it is imported
+    key = os.environ.get("ELEVENLABS_API_KEY", "")
+    if not key:
+        raise VoiceError(f"ELEVENLABS_API_KEY not found (looked in the environment and {env_path})")
+    from elevenlabs import ElevenLabs
+    return ElevenLabs(api_key=key)
 
 
 def synthesize(text: str, out_path: str | Path, cfg: VoiceConfig, client, usage: VoiceUsage,
