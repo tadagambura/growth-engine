@@ -13,6 +13,7 @@ pytest.importorskip("elevenlabs")
 TODAY = date(2026, 12, 1)
 CFG = load_voice_config("configs/voice.json")
 CHOSEN = CFG.__class__(**{**CFG.__dict__, "voice_id": "voice123"})
+NO_VOICE = CFG.__class__(**{**CFG.__dict__, "voice_id": ""})
 TEXT = "Ran out of money? Check £14 before payday."
 
 
@@ -38,8 +39,8 @@ class FakeClient:
         return SimpleNamespace(previews=[p(1), p(2), p(3)])
 
 
-def test_config_is_owner_controlled_and_starts_with_no_voice():
-    assert CFG.voice_id == "" and CFG.model_id == "eleven_v4" and CFG.monthly_character_limit == 100000
+def test_config_has_the_chosen_kaos_voice():
+    assert CFG.voice_id == "bIHbv24MWmeRgasZH58o" and CFG.model_id == "eleven_v4" and CFG.monthly_character_limit == 100000
     assert len(CFG.design_preview_text) >= 100 and len(CFG.design_description) >= 20
 
 
@@ -64,7 +65,7 @@ def test_synthesize_writes_audio_returns_timings_and_counts_characters(tmp_path)
 def test_refuses_without_a_voice_over_the_limit_or_when_empty(tmp_path):
     usage = VoiceUsage(tmp_path / "u.json")
     with pytest.raises(VoiceError, match="no voice chosen"):
-        synthesize(TEXT, tmp_path / "a.mp3", CFG, FakeClient(), usage, TODAY)
+        synthesize(TEXT, tmp_path / "a.mp3", NO_VOICE, FakeClient(), usage, TODAY)
     with pytest.raises(VoiceError, match="nothing to say"):
         synthesize("  ", tmp_path / "a.mp3", CHOSEN, FakeClient(), usage, TODAY)
     with pytest.raises(VoiceError, match="over the"):
