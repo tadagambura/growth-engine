@@ -4,6 +4,8 @@
   pause    stop all publishing (a flag file; the scheduler checks it before every run)
   resume   start publishing again
   costume  Kaos's costume for a date (default today), plus what's coming up
+  voice    Kaos's voice: `voice previews` (makes 3 samples, spends a little credit), `voice save <id>`
+           (keeps the one you picked), `voice say "text"` (speaks a line and writes captions)
 
 Data lives in $GME_HOME (default ./data): the queue database and the PAUSED flag.
 The CLI cannot change spending limits or the constitution: those are files changed by reviewed commits.
@@ -48,11 +50,39 @@ def status(h: Path, today: date) -> dict:
             "queue": counts}
 
 
+def _voice(a, h: Path) -> int:
+    from . import captions
+    from .voice import (VoiceError, VoiceUsage, design_previews, load_voice_config, make_client, save_voice,
+                        synthesize)
+    cfg = load_voice_config(ROOT / "configs/voice.json")
+    try:
+        client = make_client(str(ROOT / ".env"))
+        if a.vcmd == "previews":
+            for gid, path, secs in design_previews(cfg, client, h / "voice-previews"):
+                print(f"{gid}  {secs:.1f}s  {path}")
+            print("Listen, pick one, then: python -m gme voice save <id>")
+        elif a.vcmd == "save":
+            print("voice_id:", save_voice(cfg, client, a.generated_voice_id))
+            print("Put it in configs/voice.json and commit it (the engine never writes that file).")
+        else:
+            r = synthesize(a.text, a.out, cfg, client, VoiceUsage(h / "voice-usage.json"), date.today())
+            Path(a.out).with_suffix(".captions.json").write_text(
+                json.dumps(captions.to_json(captions.chunk(r.words)), indent=2))
+            print(f"{a.out}  {r.duration:.1f}s  {r.characters} characters")
+    except VoiceError as e:
+        print(f"voice: {e}", file=sys.stderr)
+        return 1
+    return 0
+
+
 def main(argv: list[str] | None = None) -> int:
     ap = argparse.ArgumentParser(prog="gme", description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("status"); sub.add_parser("pause"); sub.add_parser("resume")
     c = sub.add_parser("costume"); c.add_argument("--date", help="YYYY-MM-DD")
+    v = sub.add_parser("voice"); vs = v.add_subparsers(dest="vcmd", required=True)
+    vs.add_parser("previews"); vsave = vs.add_parser("save"); vsave.add_argument("generated_voice_id")
+    vsay = vs.add_parser("say"); vsay.add_argument("text"); vsay.add_argument("--out", default="kaos-line.mp3")
     a = ap.parse_args(argv)
     h = home()
     if a.cmd == "pause":
@@ -61,6 +91,8 @@ def main(argv: list[str] | None = None) -> int:
     elif a.cmd == "resume":
         (h / "PAUSED").unlink(missing_ok=True)
         print("resumed")
+    elif a.cmd == "voice":
+        return _voice(a, h)
     elif a.cmd == "costume":
         day = date.fromisoformat(a.date) if a.date else date.today()
         cal = Calendar.load(ROOT / "configs/seasons.json")
