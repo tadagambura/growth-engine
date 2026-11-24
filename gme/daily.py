@@ -144,9 +144,12 @@ def run_day(env: Env, day: date, now: datetime | None = None, producer=video.pro
     occasion = (env.cal.active(day)[0].name if env.cal.active(day) and env.cal.active(day)[0].priority >= 90 else None)
 
     result, problems = None, []
-    for attempt in (1, 2):
+    safe_writer = Writer(env.models, env.content, None, None)          # no model: the atom's own words
+    for attempt in (1, 2, 3):
+        # attempts 1 and 2 are the normal path; attempt 3 is safe mode (evergreen script, silent), so a day is never skipped
+        writer, client = (env.writer, env.voice_client) if attempt < 3 else (safe_writer, None)
         try:
-            result = producer(slot, fmt, atom, cfg, env.writer, env.voice_cfg, env.voice_client, env.usage, env.content, day,
+            result = producer(slot, fmt, atom, cfg, writer, env.voice_cfg, client, env.usage, env.content, day,
                               env.home / "videos", env.home / "work" / day.isoformat(), occasion=occasion)
         except Exception as e:
             problems = [f"production failed: {type(e).__name__}: {e}"[:300]]
@@ -158,7 +161,7 @@ def run_day(env: Env, day: date, now: datetime | None = None, producer=video.pro
             break
         result = None
     if result is None:
-        _alert(env, f"Daily video for {day} failed twice, nothing posted today.\n" + "\n".join(problems[:5]))
+        _alert(env, f"Daily video for {day} failed three times (including safe mode), nothing posted today.\n" + "\n".join(problems[:5]))
         return {"status": "failed", "day": day.isoformat(), "problems": problems}
 
     posts = []
@@ -181,6 +184,8 @@ def run_day(env: Env, day: date, now: datetime | None = None, producer=video.pro
                "posts": posts, "published": published, "paused": paused}
     done_marker.write_text(json.dumps(summary, indent=1))
     bad = [p for p in posts if p.get("error") or p.get("status") == "qa_failed"]
+    if attempt == 3:
+        result.notes.append("made in safe mode (no model, no voice) after two failed attempts")
     if bad or result.notes:
         _alert(env, f"{day}: video made, with notes.\n" + "\n".join(result.notes + [json.dumps(b) for b in bad])[:900])
     return summary

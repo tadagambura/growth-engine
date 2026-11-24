@@ -43,14 +43,14 @@ def test_a_day_is_planned_queued_for_every_platform_published_and_not_repeated(t
     assert nxt["atom"] != out["atom"]                                                              # history keeps atoms from repeating
 
 
-def test_a_failing_video_retries_once_alerts_and_posts_nothing(tmp_path, monkeypatch):
+def test_a_failing_video_retries_then_safe_mode_then_alerts_and_posts_nothing(tmp_path, monkeypatch):
     env = make_env(tmp_path, monkeypatch)
     sent = []
     env.bot = SimpleNamespace(send=lambda t: sent.append(t))
     prod, calls = fake_producer()
     monkeypatch.setattr(daily.videoqa, "check_file", lambda *a, **k: ["the picture looks frozen"])
     out = daily.run_day(env, date(2026, 12, 1), NOW, producer=prod)
-    assert out["status"] == "failed" and len(calls) == 2 and sent and "frozen" in sent[0]
+    assert out["status"] == "failed" and len(calls) == 3 and sent and "frozen" in sent[0]
     assert env.queue.pending() == [] and env.queue.due(NOW) == []
 
 
@@ -75,3 +75,22 @@ def test_greeting_day_uses_the_brand_account_fixed_words_and_no_sales(tmp_path, 
 def test_post_time_is_after_work_on_weekdays_and_mid_morning_at_weekends():
     assert daily.post_time(date(2026, 12, 1)).hour == 17          # winter: London = UTC
     assert daily.post_time(date(2026, 12, 5)).hour == 10
+
+
+def test_safe_mode_rescues_the_day_with_no_model_and_no_voice(tmp_path, monkeypatch):
+    env = make_env(tmp_path, monkeypatch)
+    sent = []
+    env.bot = SimpleNamespace(send=lambda t: sent.append(t))
+    good, calls = fake_producer()
+    seen = []
+
+    def producer(slot, fmt, atom, cfg, writer, voice_cfg, client, usage, content, today, out_dir, work_dir, occasion=None, last_demo=None):
+        seen.append((writer.transport, client))
+        if len(seen) < 3:
+            raise RuntimeError("render crashed")
+        return good(slot, fmt, atom, cfg, writer, voice_cfg, client, usage, content, today, out_dir, work_dir, occasion)
+
+    monkeypatch.setattr(daily.videoqa, "check_file", lambda *a, **k: [])
+    out = daily.run_day(env, date(2026, 12, 1), NOW, producer=producer)
+    assert out["status"] == "ok" and seen[2] == (None, None)                 # third attempt: no model, no voice
+    assert any("safe mode" in n for n in out["notes"]) and sent
