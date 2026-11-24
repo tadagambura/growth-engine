@@ -1,0 +1,3052 @@
+{
+ "app_id": "kidquest",
+ "atoms": [
+  {
+   "id": "kidquest:feature-01",
+   "kind": "feature",
+   "title": "Filters",
+   "body": "Filters: age, indoor/outdoor, time, energy, cost, materials",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "kidquest:feature-02",
+   "kind": "feature",
+   "title": "Activity cards with simple steps",
+   "body": "Activity cards with simple steps",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "kidquest:feature-03",
+   "kind": "feature",
+   "title": "Favourites and 'done today'",
+   "body": "Favourites and 'done today'",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "kidquest:feature-04",
+   "kind": "feature",
+   "title": "Weekly activity planner",
+   "body": "Weekly activity planner",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "kidquest:feature-05",
+   "kind": "feature",
+   "title": "Saved activities available offline",
+   "body": "Saved activities available offline",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "kidquest:moment-01",
+   "kind": "moment",
+   "title": "Pick an activity",
+   "body": "Pick an activity: a giant dice rolls across the screen",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "kidquest:moment-02",
+   "kind": "moment",
+   "title": "Done today",
+   "body": "Done today: a sticker slaps onto the chart",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "kidquest:moment-03",
+   "kind": "moment",
+   "title": "Rainy-day mode",
+   "body": "Rainy-day mode: The Kaos family in raincoats jumps in puddles",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "kidquest:moment-04",
+   "kind": "moment",
+   "title": "Week planned",
+   "body": "Week planned: a cardboard rocket launches",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "kidquest:moment-05",
+   "kind": "moment",
+   "title": "Seasonal pack",
+   "body": "Seasonal pack: pumpkins or snowmen roll in",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "kidquest:usecase",
+   "kind": "usecase",
+   "title": "A day with KidQuest",
+   "body": "A parent with 30 minutes and two bored children gets three indoor ideas using what's in the kitchen.",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "kidquest:a001",
+   "kind": "activity",
+   "title": "Posting Box",
+   "body": "Turn a shoebox into a letterbox and post cards through the slot.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "sensory",
+    "quiet-time",
+    "maths"
+   ],
+   "steps": [
+    "Cut a letterbox-sized slot in the shoebox lid.",
+    "Put the lid back on and hand over a pile of cards.",
+    "Show your child how to post a card through the slot.",
+    "Open the box together and count the cards once they're all in.",
+    "Cut a second, narrower slot to make it trickier."
+   ],
+   "minutes": 15
+  },
+  {
+   "id": "kidquest:a002",
+   "kind": "activity",
+   "title": "Pots and Pans Band",
+   "body": "Raid the kitchen cupboards for a noisy, joyful marching band.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "music",
+    "active",
+    "rainy-day"
+   ],
+   "steps": [
+    "Set out a few pans and tubs upside down on the floor.",
+    "Hand out wooden spoons as drumsticks.",
+    "Play loud, then quiet, then fast, then slow, and copy each other.",
+    "March round the room playing along to a favourite song.",
+    "Finish with one big crash and a bow."
+   ],
+   "minutes": 15
+  },
+  {
+   "id": "kidquest:a003",
+   "kind": "activity",
+   "title": "Sock Matching Game",
+   "body": "Make laundry a game by hunting for pairs in a pile of clean socks.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "maths",
+    "sensory",
+    "quiet-time"
+   ],
+   "steps": [
+    "Tip a basket of clean socks onto the floor.",
+    "Pick up one sock and ask your child to find its partner.",
+    "Talk about colours, stripes and spots as you go.",
+    "Line the pairs up and count them together.",
+    "Roll up each pair and toss it into the basket."
+   ],
+   "minutes": 10
+  },
+  {
+   "id": "kidquest:a004",
+   "kind": "activity",
+   "title": "Colour Hunt Walk",
+   "body": "Pick a colour and see how many things you can spot on a walk.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "nature",
+    "sensory"
+   ],
+   "steps": [
+    "Choose a colour together before you set off.",
+    "Walk round the garden or to the park looking for that colour.",
+    "Point to and name each thing you find, like a red door or a green leaf.",
+    "Collect a few fallen bits, such as leaves or petals, in a bag.",
+    "Switch to a new colour on the way home."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a005",
+   "kind": "activity",
+   "title": "Water Painting",
+   "body": "Paint walls, fences and paving with plain water and watch it vanish.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "summer",
+    "creative",
+    "sensory",
+    "science"
+   ],
+   "steps": [
+    "Fill a small bucket with water.",
+    "Hand over a brush and point to a wall, fence or paving slab.",
+    "Paint shapes, lines and pictures with the water.",
+    "Watch together as the sun dries the marks away.",
+    "Paint it all again before it disappears."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a006",
+   "kind": "activity",
+   "title": "Animal Walk Races",
+   "body": "Waddle, hop and stomp across the room like your favourite animals.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "active",
+    "games",
+    "rainy-day"
+   ],
+   "steps": [
+    "Mark a start and a finish line with cushions or shoes.",
+    "Call out an animal, such as a frog, a penguin or an elephant.",
+    "Race to the finish moving just like that animal.",
+    "Let your child choose the next animal and its sound.",
+    "Finish with a slow sloth race to calm down."
+   ],
+   "minutes": 10
+  },
+  {
+   "id": "kidquest:a007",
+   "kind": "activity",
+   "title": "Teddy Bears' Picnic",
+   "body": "Pack a pretend picnic for soft toys, indoors or out.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "pretend-play",
+    "quiet-time"
+   ],
+   "steps": [
+    "Choose which toys are invited and say their names on a guest list.",
+    "Pack a bag with plates, cups and a snack.",
+    "Spread the blanket in the garden, the park or the living room.",
+    "Serve each toy and chat about what they like to eat.",
+    "Tidy up together and tuck the toys in for a nap."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a008",
+   "kind": "activity",
+   "title": "Cushion Obstacle Course",
+   "body": "Build a squishy course of cushions to climb, crawl and balance on.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "active",
+    "rainy-day",
+    "building"
+   ],
+   "steps": [
+    "Clear a space on the floor and move anything breakable.",
+    "Lay cushions in a line to make stepping stones.",
+    "Drape a blanket over a table to make a tunnel.",
+    "Show your child the route, then cheer them round it.",
+    "Change the order of the obstacles to keep it fresh."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a009",
+   "kind": "activity",
+   "title": "Toy Car Wash",
+   "body": "Set up a bubbly wash station for plastic toys and cars.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "summer",
+    "sensory",
+    "pretend-play"
+   ],
+   "steps": [
+    "Fill a bowl with a little warm water and a squirt of washing-up liquid.",
+    "Line up the dirty toys in a queue for the car wash.",
+    "Scrub each toy with a sponge or toothbrush.",
+    "Rinse them and lay them on the towel to dry.",
+    "Count how many sparkling toys you have at the end."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a010",
+   "kind": "activity",
+   "title": "Nature Bracelet",
+   "body": "Wear a sticky bracelet on a walk and decorate it with nature finds.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "nature",
+    "creative",
+    "sensory"
+   ],
+   "steps": [
+    "Wrap a loose loop of masking tape round your child's wrist, sticky side out.",
+    "Head into the garden or the park.",
+    "Look for fallen leaves, petals, grass and seeds.",
+    "Press each find onto the tape to build up the bracelet.",
+    "Talk about the colours and textures when you get home."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a011",
+   "kind": "activity",
+   "title": "Puddle Jumping",
+   "body": "Pull on wellies and find the best splashes after a rain shower.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "rainy-day",
+    "active",
+    "nature"
+   ],
+   "steps": [
+    "Wrap up in waterproofs and wellies.",
+    "Head out after a shower and look for puddles.",
+    "Poke each puddle with a stick to check it's shallow.",
+    "Jump in and compare which puddle makes the biggest splash.",
+    "Come home, hang everything up and warm up with a drink."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a012",
+   "kind": "activity",
+   "title": "Homemade Playdough",
+   "body": "Mix soft, squishy playdough from store-cupboard ingredients.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "sensory",
+    "creative",
+    "messy",
+    "rainy-day"
+   ],
+   "steps": [
+    "Mix the flour and salt in a large bowl.",
+    "Add a few drops of food colouring to the warm water.",
+    "Pour in the water and oil a little at a time, stirring as you go.",
+    "Knead on a floured surface until smooth, adding flour if it's sticky.",
+    "Roll, squash and cut shapes with cutters or a blunt knife.",
+    "Store it in a sealed bag or tub for next time."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a013",
+   "kind": "activity",
+   "title": "Bubble Wrap Prints",
+   "body": "Paint bubble wrap and press paper on top for bumpy, bubbly prints.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "creative",
+    "messy",
+    "sensory"
+   ],
+   "steps": [
+    "Cover the table and put on an apron.",
+    "Tape a square of bubble wrap to the table, bubbles facing up.",
+    "Brush paint over the bubbles in one or more colours.",
+    "Press paper on top, rub gently and peel it off.",
+    "Make a few prints and hang them up to dry."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a014",
+   "kind": "activity",
+   "title": "Mud Kitchen",
+   "body": "Cook up mud pies and leaf soup with old pots in the garden.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "messy",
+    "nature",
+    "pretend-play",
+    "sensory"
+   ],
+   "steps": [
+    "Pick a patch of garden where mess is welcome.",
+    "Set out old pots, spoons and a jug of water.",
+    "Mix soil and water to make mud batter.",
+    "Decorate pies and cakes with leaves and petals.",
+    "Open your café and serve pretend dishes to the family.",
+    "Hose everything down and scrub hands well."
+   ],
+   "minutes": 45
+  },
+  {
+   "id": "kidquest:a015",
+   "kind": "activity",
+   "title": "Shape Hunt",
+   "body": "Search the house for circles, squares, triangles and rectangles.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "maths",
+    "games",
+    "rainy-day"
+   ],
+   "steps": [
+    "Draw a circle, a square, a triangle and a rectangle on a piece of paper.",
+    "Choose one shape to hunt for first.",
+    "Walk round the house pointing to everything that matches, like a clock or a window.",
+    "Make a tick next to the shape each time you find one.",
+    "See which shape wins by being found the most."
+   ],
+   "minutes": 15
+  },
+  {
+   "id": "kidquest:a016",
+   "kind": "activity",
+   "title": "Car Ramp Races",
+   "body": "Prop up a board and race toy cars to see which goes furthest.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "science",
+    "maths",
+    "rainy-day"
+   ],
+   "steps": [
+    "Lean the board on a stack of books to make a ramp.",
+    "Let two cars go from the top at the same time.",
+    "Mark where each one stops with a sock or a scrap of paper.",
+    "Add another book to make the ramp steeper and race again.",
+    "Guess before each race which car will win, then check."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a017",
+   "kind": "activity",
+   "title": "Ice Rescue",
+   "body": "Free toys from a block of ice with warm water and spoons (freeze it the night before).",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "science",
+    "sensory",
+    "summer"
+   ],
+   "steps": [
+    "The night before, put a few toys in a tub of water and freeze it.",
+    "Turn the ice block out onto a tray.",
+    "Explain that the toys are trapped and need rescuing.",
+    "Pour on warm water, drip it from spoons and chip away with blunt tools.",
+    "Cheer each toy as it's freed and talk about why the ice melts."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a018",
+   "kind": "activity",
+   "title": "Cardboard Tube Binoculars",
+   "body": "Make binoculars from two tubes, then go spotting birds and bugs.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "creative",
+    "nature",
+    "pretend-play"
+   ],
+   "steps": [
+    "Tape two tubes together side by side.",
+    "Decorate them with pens or crayons.",
+    "Head to a window, the garden or the park.",
+    "Take turns spotting birds, bugs and planes and describing them.",
+    "Keep a tally of everything you see."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a019",
+   "kind": "activity",
+   "title": "Animal Stretch Story",
+   "body": "Tell a slow, calm story where everyone stretches like the animals in it.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "quiet-time",
+    "pretend-play"
+   ],
+   "steps": [
+    "Sit on a mat in a quiet room.",
+    "Start a story about a walk through a forest.",
+    "Pause at each animal and copy its shape, like a tall giraffe or a curled-up hedgehog.",
+    "Hold each stretch for a few slow breaths.",
+    "End the story with everyone curled up asleep like dormice."
+   ],
+   "minutes": 15
+  },
+  {
+   "id": "kidquest:a020",
+   "kind": "activity",
+   "title": "Raindrop Races",
+   "body": "Each pick a raindrop on the window and cheer it down to the bottom.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "rainy-day",
+    "quiet-time",
+    "science"
+   ],
+   "steps": [
+    "Find a window with rain running down it.",
+    "Each choose a raindrop near the top and give it a name.",
+    "Cheer your drop on as it slides down the glass.",
+    "See whose drop reaches the bottom first.",
+    "Talk about why some drops race and others get stuck."
+   ],
+   "minutes": 10
+  },
+  {
+   "id": "kidquest:a021",
+   "kind": "activity",
+   "title": "Leaf Pile Leap",
+   "body": "Rake up a giant pile of autumn leaves and take a running jump.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "autumn",
+    "nature",
+    "active"
+   ],
+   "steps": [
+    "Find a spot in the garden or park with lots of fallen leaves.",
+    "Check the area for sticks, stones and dog mess.",
+    "Rake or scoop the leaves into a big pile.",
+    "Take turns jumping, rolling and throwing leaves in the air.",
+    "Rake it back up and build an even bigger pile."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a022",
+   "kind": "activity",
+   "title": "Sink or Float",
+   "body": "Guess which household objects will float, then test them in a bowl.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "science",
+    "sensory",
+    "rainy-day"
+   ],
+   "steps": [
+    "Fill a bowl with water and stand it on a towel.",
+    "Collect six to eight objects from around the house.",
+    "Hold up each one and guess: sink or float?",
+    "Drop it in and see who was right.",
+    "Sort the objects into a sink pile and a float pile."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a023",
+   "kind": "activity",
+   "title": "Sock Snowball Fight",
+   "body": "Roll socks into snowballs for a giggly indoor snowball fight.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "winter",
+    "rainy-day",
+    "active",
+    "games"
+   ],
+   "steps": [
+    "Roll pairs of socks into tight balls.",
+    "Build a cushion fort on each side of the room.",
+    "Shout 'snow!' to start and throw sock snowballs at each other.",
+    "Stop on the whistle and gather up all the snowballs.",
+    "Play again, or see who can throw one into a basket."
+   ],
+   "minutes": 15
+  },
+  {
+   "id": "kidquest:a024",
+   "kind": "activity",
+   "title": "Musical Statues",
+   "body": "Dance like mad while the music plays, then freeze when it stops.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "music",
+    "active",
+    "games",
+    "rainy-day"
+   ],
+   "steps": [
+    "Clear some space to dance.",
+    "Play a song and get everyone dancing.",
+    "Stop the music without warning and freeze.",
+    "Anyone who wobbles does a silly forfeit, like a chicken dance, then rejoins.",
+    "Let the children take turns being in charge of the music."
+   ],
+   "minutes": 15
+  },
+  {
+   "id": "kidquest:a025",
+   "kind": "activity",
+   "title": "Cloud Spotting",
+   "body": "Lie back and find animals, faces and dragons in the clouds.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "nature",
+    "quiet-time",
+    "creative"
+   ],
+   "steps": [
+    "Spread a blanket in the garden or park.",
+    "Lie back and look up at the sky.",
+    "Take turns describing the shapes you can see in the clouds.",
+    "Make up a story that links all the cloud shapes together.",
+    "Watch how the shapes change as the clouds drift."
+   ],
+   "minutes": 15
+  },
+  {
+   "id": "kidquest:a026",
+   "kind": "activity",
+   "title": "Pretend Café",
+   "body": "Open a family café with a menu, prices in pence and a till.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "maths",
+    "pretend-play",
+    "writing"
+   ],
+   "steps": [
+    "Name your café and write a menu with simple prices, like 5p or 10p.",
+    "Lay a table with plates, cups and a tea towel.",
+    "Take turns being the waiter, the chef and the customer.",
+    "Pay with coins or paper money and work out the change.",
+    "Close up and count how much the café took."
+   ],
+   "minutes": 45
+  },
+  {
+   "id": "kidquest:a027",
+   "kind": "activity",
+   "title": "Number Hunt Walk",
+   "body": "Spot door numbers, bus numbers and signs on a walk round the block.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "maths",
+    "active"
+   ],
+   "steps": [
+    "Pick a target number, such as 7.",
+    "Walk round your street or to the park looking for it on doors, signs and buses.",
+    "Shout it out every time you spot it.",
+    "Switch to finding numbers in order, from 1 to 20.",
+    "Back home, draw the best place you spotted a number."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a028",
+   "kind": "activity",
+   "title": "Chalk Hopscotch",
+   "body": "Draw a hopscotch grid outside and hop your way through the numbers.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "maths",
+    "active",
+    "games"
+   ],
+   "steps": [
+    "Draw a grid of ten numbered squares on a patio or garden path.",
+    "Throw the stone onto square 1.",
+    "Hop through the grid, skipping the square with the stone in it.",
+    "Turn round, hop back and pick up the stone on the way.",
+    "Throw to the next number and keep going until someone reaches 10."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a029",
+   "kind": "activity",
+   "title": "Minibeast Safari",
+   "body": "Hunt for worms, woodlice and snails under logs and leaves.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "nature",
+    "science"
+   ],
+   "steps": [
+    "Head to a garden, park or woodland edge.",
+    "Gently lift logs, stones and leaves to see what's hiding.",
+    "Pop a minibeast in a tub for a closer look.",
+    "Count its legs and draw it.",
+    "Put every creature back exactly where you found it and replace the log."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a030",
+   "kind": "activity",
+   "title": "Story Stones",
+   "body": "Paint pictures on pebbles, then pull them out at random to tell a story.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "creative",
+    "reading",
+    "pretend-play"
+   ],
+   "steps": [
+    "Collect six to ten smooth, flat pebbles and wash them.",
+    "Paint a simple picture on each, like a house, a cat, a key or a moon.",
+    "Leave them to dry completely.",
+    "Put them in a bag and pull one out to start a story.",
+    "Take turns pulling out a new stone and adding the next part."
+   ],
+   "minutes": 45
+  },
+  {
+   "id": "kidquest:a031",
+   "kind": "activity",
+   "title": "Cardboard Box Rocket",
+   "body": "Turn a big box into a rocket, car or boat for imaginary journeys.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "building",
+    "pretend-play",
+    "creative",
+    "rainy-day"
+   ],
+   "steps": [
+    "Decide together what the box will become.",
+    "Cut out a door or a window.",
+    "Decorate it with pens and add paper plate dials and tube boosters.",
+    "Climb in and count down to blast-off.",
+    "Take turns describing where you've landed and what you can see."
+   ],
+   "minutes": 60
+  },
+  {
+   "id": "kidquest:a032",
+   "kind": "activity",
+   "title": "Leaf Rubbings",
+   "body": "Collect leaves and rub crayons over them to reveal their veins.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "autumn",
+    "nature",
+    "creative"
+   ],
+   "steps": [
+    "Collect a few different fallen leaves on a walk.",
+    "Place a leaf under a sheet of paper, bumpy side up.",
+    "Rub the side of a crayon gently over the top.",
+    "Watch the shape and veins appear.",
+    "Try different colours and see if you can name each tree."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a033",
+   "kind": "activity",
+   "title": "Bottle Bowling",
+   "body": "Line up plastic bottles as skittles and bowl them over with a ball.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "maths",
+    "games",
+    "rainy-day"
+   ],
+   "steps": [
+    "Rinse the bottles and stand them in a triangle at the end of a hallway.",
+    "Mark a line to bowl from.",
+    "Roll the ball and count how many bottles fall.",
+    "Add up the scores after each round.",
+    "Put a little water in each bottle to make them harder to knock over."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a034",
+   "kind": "activity",
+   "title": "Balloon Tennis",
+   "body": "Bat a balloon back and forth with paper plate rackets.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "active",
+    "games",
+    "rainy-day",
+    "maths"
+   ],
+   "steps": [
+    "Blow up the balloon and tie it.",
+    "Tape a lolly stick or spoon to each plate to make a racket.",
+    "Bat the balloon to each other and count the hits.",
+    "Try to keep it in the air for 10 hits, then 20.",
+    "Play a match using the sofa or a line of cushions as the net."
+   ],
+   "minutes": 15
+  },
+  {
+   "id": "kidquest:a035",
+   "kind": "activity",
+   "title": "Junk Model Robots",
+   "body": "Build robots from boxes, tubes and pots from the recycling.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "building",
+    "creative",
+    "rainy-day"
+   ],
+   "steps": [
+    "Raid the recycling for clean boxes, tubes and pots.",
+    "Choose a box for the body and smaller pieces for the head, arms and legs.",
+    "Tape or glue the pieces together.",
+    "Draw on buttons, dials and a face.",
+    "Name your robot and decide what job it does."
+   ],
+   "minutes": 60
+  },
+  {
+   "id": "kidquest:a036",
+   "kind": "activity",
+   "title": "Rainbow Fruit Kebabs",
+   "body": "Thread colourful fruit onto sticks to make a rainbow snack.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "cooking",
+    "creative"
+   ],
+   "steps": [
+    "Wash your hands and the fruit.",
+    "Ask an adult to chop the fruit into chunks.",
+    "Sort the pieces into piles by colour.",
+    "Thread them onto skewers in rainbow order.",
+    "Eat them and talk about which colour tastes best."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a037",
+   "kind": "activity",
+   "title": "Cress Heads",
+   "body": "Grow cress hair on a decorated eggshell or yoghurt pot (ready in about a week).",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "science",
+    "nature",
+    "spring"
+   ],
+   "steps": [
+    "Draw a face on the eggshell or pot.",
+    "Fill it with damp cotton wool.",
+    "Sprinkle cress seeds thickly on top.",
+    "Keep it on a sunny windowsill and add a few drops of water each day.",
+    "Check it daily and give your cress head a haircut when the hair has grown."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a038",
+   "kind": "activity",
+   "title": "Fizzing Volcano",
+   "body": "Make a mini volcano erupt with bicarbonate of soda and vinegar.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "science",
+    "messy"
+   ],
+   "steps": [
+    "Stand the bottle on a tray outside.",
+    "Spoon in the bicarbonate of soda and add a squirt of washing-up liquid.",
+    "Add a few drops of food colouring.",
+    "Ask an adult to pour in the vinegar, then stand back and watch it fizz.",
+    "Try different amounts to make a bigger eruption."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a039",
+   "kind": "activity",
+   "title": "Treasure Map Hunt",
+   "body": "Draw a map of the house or garden and follow it to hidden treasure.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "games",
+    "maths",
+    "creative"
+   ],
+   "steps": [
+    "Draw a simple map of the house or garden together.",
+    "Secretly hide a small treasure and mark the spot with an X.",
+    "Add arrows and clues along the route.",
+    "Hand over the map and follow it to the treasure.",
+    "Swap roles so the children hide the treasure and draw the map."
+   ],
+   "minutes": 45
+  },
+  {
+   "id": "kidquest:a040",
+   "kind": "activity",
+   "title": "Indoor Camp-Out",
+   "body": "Pitch a pretend campsite in the living room for stories and snacks.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "rainy-day",
+    "pretend-play",
+    "reading",
+    "quiet-time"
+   ],
+   "steps": [
+    "Build a tent by draping a sheet over chairs or a clothes airer.",
+    "Fill it with pillows, sleeping bags and teddies.",
+    "Turn off the lights and switch on the torches.",
+    "Tell stories, read books and make shadow shapes on the tent wall.",
+    "Finish with a campfire snack and a sing-song."
+   ],
+   "minutes": 90
+  },
+  {
+   "id": "kidquest:a041",
+   "kind": "activity",
+   "title": "Blanket Den",
+   "body": "Build a cosy den from blankets, chairs and cushions.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "building",
+    "rainy-day",
+    "pretend-play"
+   ],
+   "steps": [
+    "Choose a spot between the sofa and some chairs.",
+    "Drape blankets over the top and peg them in place.",
+    "Weigh down the edges with cushions or books.",
+    "Fill the inside with cushions and a favourite toy.",
+    "Name your den and make a sign for the door."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a042",
+   "kind": "activity",
+   "title": "Swamp Gloop",
+   "body": "Mix green cornflour gloop that's runny one moment and solid the next.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "halloween",
+    "messy",
+    "sensory",
+    "science"
+   ],
+   "steps": [
+    "Pour the cornflour into a tray.",
+    "Add a few drops of green food colouring to the water.",
+    "Stir the water in slowly until the mixture goes thick.",
+    "Squeeze a handful into a ball, then open your hand and watch it melt.",
+    "Hide plastic spiders in the swamp and fish them out."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a043",
+   "kind": "activity",
+   "title": "Paper Aeroplane Challenge",
+   "body": "Fold different paper planes and test which design flies furthest.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "science",
+    "maths",
+    "building"
+   ],
+   "steps": [
+    "Each fold a paper plane using your own design.",
+    "Mark a launch line on the floor or ground.",
+    "Throw each plane and measure how far it flies.",
+    "Change one thing, like the wing shape, and test again.",
+    "Write down the results and crown the champion plane."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a044",
+   "kind": "activity",
+   "title": "Cardboard Marble Run",
+   "body": "Tape tubes to a box or door to build a twisting marble run.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "building",
+    "science",
+    "rainy-day"
+   ],
+   "steps": [
+    "Cut some tubes in half lengthways to make open chutes.",
+    "Tape the first tube high up on a large box or a door.",
+    "Add more tubes below, angled so the marble drops from one to the next.",
+    "Test a marble and adjust any tube where it gets stuck.",
+    "Put a cup at the bottom to catch it and time each run."
+   ],
+   "minutes": 60
+  },
+  {
+   "id": "kidquest:a045",
+   "kind": "activity",
+   "title": "Comic Strip Studio",
+   "body": "Plan, draw and write your own comic with a hero, a problem and a twist.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "creative",
+    "writing",
+    "reading",
+    "quiet-time"
+   ],
+   "steps": [
+    "Rule a page into six boxes.",
+    "Invent a hero and a problem they must solve.",
+    "Sketch what happens in each box, saving a twist for the end.",
+    "Add speech bubbles and sound effects like KAPOW.",
+    "Colour it in and read it aloud to the family."
+   ],
+   "minutes": 45
+  },
+  {
+   "id": "kidquest:a046",
+   "kind": "activity",
+   "title": "Paper Fortune Teller",
+   "body": "Fold a paper fortune teller and fill it with funny, kind predictions.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "creative",
+    "games",
+    "writing",
+    "maths"
+   ],
+   "steps": [
+    "Fold all four corners of the square into the middle.",
+    "Turn it over and fold the new corners into the middle again.",
+    "Colour the outside squares, number the inner flaps and write a fortune under each flap.",
+    "Fold it in half, push your thumbs and fingers into the pockets and pinch it into a point.",
+    "Ask someone to pick a number, open and close it that many times, then reveal their fortune."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a047",
+   "kind": "activity",
+   "title": "Invent a Board Game",
+   "body": "Design, draw and play your own board game with homemade rules.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "creative",
+    "maths",
+    "games",
+    "writing"
+   ],
+   "steps": [
+    "Choose a theme, like a jungle escape or a space race.",
+    "Draw a winding path of squares from start to finish.",
+    "Add special squares, such as 'go back 3' or 'swap places'.",
+    "Write down the rules, including how to win.",
+    "Play a test game, then change any rule that isn't fun."
+   ],
+   "minutes": 90
+  },
+  {
+   "id": "kidquest:a048",
+   "kind": "activity",
+   "title": "Egg Drop Challenge",
+   "body": "Build a contraption that protects a raw egg from a big drop.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "science",
+    "building"
+   ],
+   "steps": [
+    "Give each builder one egg, a pile of recycling and a time limit.",
+    "Design and build a case, parachute or cushion to protect the egg.",
+    "Take the contraptions outside.",
+    "Ask an adult to drop each one from the same height, such as from a sturdy step.",
+    "Check the eggs, then improve the designs and try again."
+   ],
+   "minutes": 60
+  },
+  {
+   "id": "kidquest:a049",
+   "kind": "activity",
+   "title": "Paper Bridge Challenge",
+   "body": "Fold one sheet of paper into a bridge and see how many coins it holds.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "science",
+    "maths",
+    "building"
+   ],
+   "steps": [
+    "Place two stacks of books about 20cm apart.",
+    "Lay a flat sheet of paper across and add coins until it collapses.",
+    "Fold a new sheet into a zigzag, a tube or a channel.",
+    "Test each design and count how many coins it holds.",
+    "Talk about why folding makes the paper stronger."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a050",
+   "kind": "activity",
+   "title": "Family Quiz Night",
+   "body": "Children write the questions and host a family quiz with rounds and scores.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "games",
+    "reading",
+    "writing"
+   ],
+   "steps": [
+    "Choose three rounds, such as animals, family facts and music.",
+    "Write five questions for each round, with the answers on a separate sheet.",
+    "Split into teams and hand out answer sheets.",
+    "Read the questions aloud, mark the answers and keep score.",
+    "Announce the winners and award a homemade trophy."
+   ],
+   "minutes": 60
+  },
+  {
+   "id": "kidquest:a051",
+   "kind": "activity",
+   "title": "Nature Journal",
+   "body": "Start a journal of sketches, notes and finds from your garden or park.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "nature",
+    "writing",
+    "science",
+    "quiet-time"
+   ],
+   "steps": [
+    "Find a comfy spot outside and sit quietly for five minutes.",
+    "Write down the date, the weather and what you can hear.",
+    "Sketch one plant, bird or bug in detail.",
+    "Add notes about its colour, size and what it's doing.",
+    "Come back to the same spot each week and compare."
+   ],
+   "minutes": 45
+  },
+  {
+   "id": "kidquest:a052",
+   "kind": "activity",
+   "title": "Secret Code Breakers",
+   "body": "Invent a secret code, write coded messages and crack each other's.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "maths",
+    "writing",
+    "games",
+    "quiet-time"
+   ],
+   "steps": [
+    "Write out the alphabet, then write it again underneath, shifted along by three letters.",
+    "Use your key to write a short secret message.",
+    "Swap messages and try to crack them without the key.",
+    "Invent your own code using numbers or symbols.",
+    "Hide a coded message somewhere for someone to find."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a053",
+   "kind": "activity",
+   "title": "Bake Flapjacks",
+   "body": "Weigh, mix and bake chewy oat flapjacks.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "cooking",
+    "maths"
+   ],
+   "steps": [
+    "Heat the oven to 180°C (160°C fan) and line the tin with baking paper.",
+    "Weigh out the ingredients and read the numbers on the scales.",
+    "Melt the butter, sugar and syrup in a pan over a low heat, with an adult.",
+    "Stir in the oats, then press the mixture into the tin.",
+    "Bake for 20 to 25 minutes until golden, cool in the tin, then cut into squares."
+   ],
+   "minutes": 50
+  },
+  {
+   "id": "kidquest:a054",
+   "kind": "activity",
+   "title": "Woodland Den",
+   "body": "Build a shelter from fallen branches on a woodland walk.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "nature",
+    "building",
+    "active"
+   ],
+   "steps": [
+    "Find a spot in the woods with plenty of fallen branches.",
+    "Lean long branches against a sturdy tree trunk or a low fork.",
+    "Weave smaller sticks between them to fill the gaps.",
+    "Cover the frame with dead leaves.",
+    "Test it for size, then take it apart before you leave."
+   ],
+   "minutes": 90
+  },
+  {
+   "id": "kidquest:a055",
+   "kind": "activity",
+   "title": "Carrier Bag Kite",
+   "body": "Make a simple kite from a carrier bag and garden canes, then fly it.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "active",
+    "science",
+    "building"
+   ],
+   "steps": [
+    "Cut the bag open and trim it into a diamond shape.",
+    "Tape one cane down the middle and the other across it, like a cross.",
+    "Reinforce a spot near the cross with tape, make a small hole and tie on the string.",
+    "Add a tail made from strips of the leftover bag.",
+    "On a breezy day in an open field, stand with your back to the wind and let out the string as it lifts."
+   ],
+   "minutes": 60
+  },
+  {
+   "id": "kidquest:a056",
+   "kind": "activity",
+   "title": "Shadow Sundial",
+   "body": "Use a stick and stones to tell the time by the sun's shadow.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "science",
+    "maths",
+    "summer",
+    "nature"
+   ],
+   "steps": [
+    "On a sunny morning, push a stick upright into the lawn or a pot of soil.",
+    "Mark the tip of its shadow with a stone and note the time.",
+    "Come back every hour and mark the shadow again.",
+    "Notice how the shadow moves and changes length through the day.",
+    "Use your marks on the next sunny day to guess the time."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a057",
+   "kind": "activity",
+   "title": "Straw Rockets",
+   "body": "Make paper rockets that launch with one big puff through a straw.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "science",
+    "maths",
+    "building"
+   ],
+   "steps": [
+    "Wrap a strip of paper round the pencil and tape it to make a tube.",
+    "Fold and tape one end shut to make the nose cone.",
+    "Add small paper fins near the open end.",
+    "Slide the pencil out, put the rocket on a straw and blow hard.",
+    "Measure how far each rocket flies and tweak your design."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a058",
+   "kind": "activity",
+   "title": "Letter to Someone Special",
+   "body": "Write and post a real letter to a grandparent, friend or neighbour.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "writing",
+    "kindness",
+    "reading"
+   ],
+   "steps": [
+    "Choose someone who would love a surprise in the post.",
+    "Plan three things to tell them and one question to ask.",
+    "Write the letter neatly and decorate the edges.",
+    "Address the envelope together and stick on a stamp.",
+    "Walk to the postbox and post it."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a059",
+   "kind": "activity",
+   "title": "Shiny Penny Science",
+   "body": "Clean dull copper coins with vinegar and salt and watch them gleam.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "science",
+    "rainy-day"
+   ],
+   "steps": [
+    "Put a couple of dull coins aside to compare later.",
+    "Stir a teaspoon of salt into a small bowl of vinegar.",
+    "Drop in the rest of the coins and wait five minutes.",
+    "Take them out, rinse them in water and dry them on kitchen roll.",
+    "Compare them with the dull coins and talk about what happened."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a060",
+   "kind": "activity",
+   "title": "Sardines",
+   "body": "Hide-and-seek in reverse: one person hides and every finder squeezes in too.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "games",
+    "active"
+   ],
+   "steps": [
+    "Agree which rooms or areas are in bounds.",
+    "One person hides while everyone else counts to 50.",
+    "Seekers search alone, and anyone who finds the hider quietly squeezes in with them.",
+    "Keep going until the last seeker finds the squashed-in group.",
+    "The first person to find the hider hides next."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a061",
+   "kind": "activity",
+   "title": "Litter Pick Patrol",
+   "body": "Tidy up your street or park and sort what you find for recycling.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "nature",
+    "kindness",
+    "maths",
+    "active"
+   ],
+   "steps": [
+    "Pull on gloves and choose a patch of street or park.",
+    "Pick up litter and sort it into rubbish and recycling.",
+    "Keep a tally of the most common thing you find.",
+    "Bin or recycle everything properly when you get home.",
+    "Look back at your patch and celebrate the difference."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a062",
+   "kind": "activity",
+   "title": "Rain Gauge",
+   "body": "Make a rain gauge from a bottle and record how much rain falls each day.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "science",
+    "maths",
+    "rainy-day",
+    "nature"
+   ],
+   "steps": [
+    "Ask an adult to cut the top third off the bottle.",
+    "Drop a few pebbles in the bottom, add water to just above them and mark that line as zero.",
+    "Use a ruler to mark centimetres up the side from the zero line.",
+    "Turn the cut-off top upside down into the bottle to make a funnel.",
+    "Stand it in an open spot outside, away from trees and walls.",
+    "Check it at the same time each day, write down the reading and tip it back to zero."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a063",
+   "kind": "activity",
+   "title": "Mini Book Club",
+   "body": "Read the same book as your child and chat about it over a snack.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "reading",
+    "quiet-time",
+    "writing"
+   ],
+   "steps": [
+    "Choose a book together, or borrow one from the library.",
+    "Each read a chapter, on your own or aloud together.",
+    "Meet up with a snack and take turns asking a question about it.",
+    "Predict what will happen next and write your guesses down.",
+    "Check your predictions after the next chapter."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a064",
+   "kind": "activity",
+   "title": "Bread Rolls from Scratch",
+   "body": "Knead, shape and bake your own bread rolls (plus about 90 minutes rising).",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "cooking",
+    "science",
+    "maths"
+   ],
+   "steps": [
+    "Mix the flour, yeast and salt in a big bowl.",
+    "Add the water and oil and stir into a soft dough.",
+    "Knead on a floured surface for 10 minutes until smooth and stretchy.",
+    "Cover and leave somewhere warm for about an hour, until doubled in size.",
+    "Shape into 8 rolls, put them on a floured tray and leave to rise for 30 minutes.",
+    "Bake at 200°C (180°C fan) for 15 to 20 minutes until golden."
+   ],
+   "minutes": 60
+  },
+  {
+   "id": "kidquest:a065",
+   "kind": "activity",
+   "title": "Pumpkin Faces",
+   "body": "Scoop out a pumpkin, design a face and light it with an LED tea light.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "halloween",
+    "autumn",
+    "messy",
+    "creative"
+   ],
+   "steps": [
+    "Cover the table with newspaper.",
+    "Ask an adult to cut a lid round the stalk.",
+    "Scoop out the seeds and stringy insides with a big spoon.",
+    "Draw a face on the pumpkin with a felt-tip pen.",
+    "Ask an adult to carve along the lines, then pop an LED tea light inside."
+   ],
+   "minutes": 60
+  },
+  {
+   "id": "kidquest:a066",
+   "kind": "activity",
+   "title": "Mummy Wrap Race",
+   "body": "Race to wrap a grown-up in toilet roll like an Egyptian mummy.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "halloween",
+    "games",
+    "active"
+   ],
+   "steps": [
+    "Split into teams and choose one person in each to be the mummy.",
+    "Give every team a toilet roll.",
+    "Shout 'go' and race to wrap your mummy from feet to shoulders.",
+    "Stop when the first roll runs out.",
+    "Judge the best mummy, then unwrap and gather the paper into a bag."
+   ],
+   "minutes": 15
+  },
+  {
+   "id": "kidquest:a067",
+   "kind": "activity",
+   "title": "Salt Dough Decorations",
+   "body": "Shape, bake and paint salt dough decorations for the tree (plus baking time).",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "christmas",
+    "winter",
+    "creative",
+    "messy"
+   ],
+   "steps": [
+    "Mix the flour, salt and water into a smooth dough.",
+    "Roll it out about 5mm thick and cut out shapes with cutters.",
+    "Make a hole near the top of each shape with a straw.",
+    "Ask an adult to bake them at 100°C for 2 to 3 hours until hard, or leave them to air-dry for a few days.",
+    "Once cool, paint them and thread ribbon through the holes.",
+    "Hang them on the tree or give them as gifts."
+   ],
+   "minutes": 60
+  },
+  {
+   "id": "kidquest:a068",
+   "kind": "activity",
+   "title": "Christmas Lights Walk",
+   "body": "Wrap up warm and go on an evening walk to spot the best lights.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "christmas",
+    "winter",
+    "games"
+   ],
+   "steps": [
+    "Wrap up warm and head out just after dark.",
+    "Write a spotting list, like a star, a reindeer, a snowman and blue lights.",
+    "Tick off each one as you see it.",
+    "Vote for the best-lit house on the way.",
+    "Warm up at home and draw your favourite display."
+   ],
+   "minutes": 45
+  },
+  {
+   "id": "kidquest:a069",
+   "kind": "activity",
+   "title": "Paper Snowflakes",
+   "body": "Fold and snip paper to make one-of-a-kind snowflakes for the windows.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "winter",
+    "christmas",
+    "creative",
+    "maths"
+   ],
+   "steps": [
+    "Cut a sheet of paper into a square.",
+    "Fold it in half corner to corner, then in half again, and once more.",
+    "Snip small shapes out of the edges, without cutting all the way across.",
+    "Unfold it carefully to reveal your snowflake.",
+    "Tape your snowflakes to the windows."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a070",
+   "kind": "activity",
+   "title": "Potato Print Wrapping Paper",
+   "body": "Stamp festive shapes onto brown paper to make your own gift wrap.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "christmas",
+    "creative",
+    "messy"
+   ],
+   "steps": [
+    "Ask an adult to cut a potato in half and carve a simple shape, like a star or a tree, into the cut side.",
+    "Dab the cut side dry with kitchen roll.",
+    "Brush paint onto the shape.",
+    "Press it firmly onto the paper and lift it straight up.",
+    "Repeat in a pattern and leave to dry before wrapping presents."
+   ],
+   "minutes": 45
+  },
+  {
+   "id": "kidquest:a071",
+   "kind": "activity",
+   "title": "Pine Cone Bird Feeders",
+   "body": "Pack pine cones with fat and seed to feed garden birds through winter.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "winter",
+    "nature",
+    "messy"
+   ],
+   "steps": [
+    "Tie a length of string round the top of each pine cone.",
+    "Let the lard soften at room temperature, then mix in the bird seed.",
+    "Press the mixture into the gaps in the cone with your fingers.",
+    "Chill in the fridge for an hour to set.",
+    "Hang them from a branch or fence and watch for visitors."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a072",
+   "kind": "activity",
+   "title": "Ice Suncatchers",
+   "body": "Freeze leaves and petals into icy discs to hang outside on a frosty day.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "winter",
+    "nature",
+    "creative",
+    "science"
+   ],
+   "steps": [
+    "Collect pretty natural bits from the garden or park.",
+    "Arrange them in a shallow tub and pour in a little water.",
+    "Lay a loop of string in the water with the ends hanging over the side.",
+    "Freeze overnight, outside on a frosty night or in the freezer.",
+    "Pop it out and hang it from a branch to catch the light."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a073",
+   "kind": "activity",
+   "title": "Snow Day Sculptures",
+   "body": "Go beyond the snowman and sculpt animals, castles and dragons from snow.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "winter",
+    "creative",
+    "active",
+    "building"
+   ],
+   "steps": [
+    "Wrap up in layers with waterproof gloves.",
+    "Pack snow into buckets to make building blocks.",
+    "Stack and carve the blocks into an animal, a castle or a dragon.",
+    "Decorate with sticks, stones and leaves.",
+    "Head inside to warm up before fingers get too cold."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a074",
+   "kind": "activity",
+   "title": "Easter Egg Clue Hunt",
+   "body": "Follow a trail of paper egg clues to a hidden Easter treat.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "easter",
+    "games",
+    "reading",
+    "active"
+   ],
+   "steps": [
+    "Cut out six to ten paper egg shapes and decorate them.",
+    "Write a clue on each one that leads to the next hiding place.",
+    "Hide the eggs round the house or garden, with the treat at the end.",
+    "Hand over the first clue and let the hunt begin.",
+    "Read clues aloud for younger children, or draw picture clues instead."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a075",
+   "kind": "activity",
+   "title": "Egg Decorating",
+   "body": "Hard-boil eggs and decorate them with pens, paint and stickers.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "easter",
+    "spring",
+    "creative"
+   ],
+   "steps": [
+    "Ask an adult to hard-boil the eggs for about 10 minutes, then cool them in cold water.",
+    "Dry the eggs and stand them in egg cups.",
+    "Draw faces, patterns or bunnies on the shells.",
+    "Leave them to dry in an egg box.",
+    "Line them up for an egg-hibition and give each egg a name."
+   ],
+   "minutes": 45
+  },
+  {
+   "id": "kidquest:a076",
+   "kind": "activity",
+   "title": "Chocolate Crispy Nests",
+   "body": "Mix melted chocolate and cereal into nests (plus an hour to set).",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "easter",
+    "cooking",
+    "messy"
+   ],
+   "steps": [
+    "Break the chocolate into a heatproof bowl.",
+    "Ask an adult to melt it in short bursts in the microwave or over a pan of simmering water.",
+    "Stir in the cereal until it's all coated.",
+    "Spoon the mixture into cake cases and press a dip in the middle.",
+    "Add a few mini eggs and chill for an hour to set."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:a077",
+   "kind": "activity",
+   "title": "Egg and Spoon Race",
+   "body": "A garden classic: race to the finish without dropping your egg.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "easter",
+    "summer",
+    "active",
+    "games"
+   ],
+   "steps": [
+    "Mark a start and finish line in the garden or park.",
+    "Balance an egg or potato on each spoon.",
+    "Race to the finish, and if it drops, stop and pick it up before carrying on.",
+    "Make it harder by walking backwards or using your other hand.",
+    "Hold a grand final and award a medal made from card."
+   ],
+   "minutes": 20
+  },
+  {
+   "id": "kidquest:a078",
+   "kind": "activity",
+   "title": "Homemade Ice Lollies",
+   "body": "Freeze fruit juice and chopped fruit into lollies (ready in about 4 hours).",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "summer",
+    "cooking"
+   ],
+   "steps": [
+    "Wash your hands and chop the soft fruit into small pieces, with an adult helping.",
+    "Drop a few pieces into each mould or cup.",
+    "Pour in fruit juice until almost full.",
+    "Add the sticks and freeze for at least four hours, or overnight.",
+    "Hold the moulds under warm water for a few seconds to free the lollies."
+   ],
+   "minutes": 15
+  },
+  {
+   "id": "kidquest:a079",
+   "kind": "activity",
+   "title": "Garden Sports Day",
+   "body": "Run your own sports day with sack races, relays and homemade medals.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "summer",
+    "active",
+    "games",
+    "maths"
+   ],
+   "steps": [
+    "Plan four or five events, such as a sack race, a relay and a beanbag throw.",
+    "Mark out a track with jumpers, shoes or chalk.",
+    "Run each event and write down the results.",
+    "Make medals from card and string while you rest.",
+    "Hold a medal ceremony with everyone on the podium."
+   ],
+   "minutes": 60
+  },
+  {
+   "id": "kidquest:a080",
+   "kind": "activity",
+   "title": "Sponge Splash Relay",
+   "body": "Race to fill a bucket by running with soaking wet sponges.",
+   "topic": "",
+   "source": {
+    "name": "",
+    "url": ""
+   },
+   "checked": "",
+   "reviewed": false,
+   "tags": [
+    "summer",
+    "active",
+    "games"
+   ],
+   "steps": [
+    "Fill one bucket per team with water and put an empty bucket at the other end of the garden.",
+    "Draw a target line inside each empty bucket.",
+    "Run with a soaked sponge, squeeze it into the empty bucket and run back.",
+    "Pass the sponge to the next runner.",
+    "The first team to reach the line wins, then everyone gets a splash."
+   ],
+   "minutes": 30
+  },
+  {
+   "id": "kidquest:c01",
+   "kind": "card",
+   "title": "Back-and-forth is the magic",
+   "body": "You don't need flashcards. The NSPCC's Look, Say, Sing, Play campaign encourages everyday back-and-forth: your baby coos, you coo back; they look at the dog, you name the dog. Think of it like a game of tennis. The NSPCC says these shared moments help children build skills like focus, self-control and problem-solving. Bathtime, nappy changes and the washing-up all count.",
+   "topic": "Talk and play",
+   "source": {
+    "name": "NSPCC: Look, Say, Sing, Play",
+    "url": "https://www.nspcc.org.uk/advice-for-families/look-say-sing-play/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "talk",
+    "babies",
+    "bonding"
+   ],
+   "quiz": {
+    "q": "What does the NSPCC compare good interaction with a baby to?",
+    "options": [
+     "A lecture",
+     "A game of tennis",
+     "A quiz show"
+    ],
+    "answer": 1,
+    "explain": "Taking a cue from your child and responding, back and forth, is the heart of Look, Say, Sing, Play."
+   }
+  },
+  {
+   "id": "kidquest:c02",
+   "kind": "card",
+   "title": "Under 2s: hold off on screens",
+   "body": "In March 2026 the UK government published its first screen time guidance for under 5s. For under 2s, the advice is to avoid screen time, except for shared activities that encourage bonding and conversation, like a video call with Grandma. It's guidance, not a rulebook, and nobody's checking your living room. It's a helpful default to aim for.",
+   "topic": "Screen time",
+   "source": {
+    "name": "Best Start in Life (UK government): Screen time for under 5s (guidance published March 2026)",
+    "url": "https://www.beststartinlife.gov.uk/screen-time-under-5s"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "screen time",
+    "under 2s",
+    "uk guidance"
+   ],
+   "quiz": {
+    "q": "What does UK guidance say about screens for under 2s?",
+    "options": [
+     "Up to 3 hours a day is fine",
+     "Avoid, except shared activities like family video calls",
+     "Only educational apps, as much as you like"
+    ],
+    "answer": 1,
+    "explain": "The 2026 UK guidance advises avoiding screens for under 2s, apart from shared, interactive moments like video calls with family."
+   }
+  },
+  {
+   "id": "kidquest:c03",
+   "kind": "card",
+   "title": "2 to 5s: about an hour, less if possible",
+   "body": "For children aged 2 to 5, the UK's 2026 guidance suggests keeping screen time to about 1 hour a day, and less if possible. It also says screens shouldn't replace sleep, active play or time with you. Some days will blow the budget. That's life. Aim for the general direction, not perfection.",
+   "topic": "Screen time",
+   "source": {
+    "name": "Best Start in Life (UK government): Screen time for under 5s (guidance published March 2026)",
+    "url": "https://www.beststartinlife.gov.uk/screen-time-under-5s"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "screen time",
+    "under 5s",
+    "uk guidance"
+   ],
+   "quiz": {
+    "q": "What's the UK guidance for 2 to 5-year-olds?",
+    "options": [
+     "About 1 hour a day, less if possible",
+     "No limit at weekends",
+     "At least 2 hours of educational TV"
+    ],
+    "answer": 0,
+    "explain": "The 2026 guidance suggests around an hour a day for 2 to 5s, ideally less, without replacing sleep, play or time together."
+   }
+  },
+  {
+   "id": "kidquest:c04",
+   "kind": "card",
+   "title": "Watch with them, not just near them",
+   "body": "When screens are on, the UK guidance says watching together and chatting about what you see is better than solo viewing. \"Why do you think the rabbit's sad?\" turns a cartoon into a conversation. Co-viewing also means you spot anything unsuitable. Parental controls help too, but they can't ask questions back.",
+   "topic": "Screen time",
+   "source": {
+    "name": "Best Start in Life (UK government): Screen time for under 5s (guidance published March 2026)",
+    "url": "https://www.beststartinlife.gov.uk/screen-time-under-5s"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "screen time",
+    "co-viewing",
+    "talk"
+   ]
+  },
+  {
+   "id": "kidquest:c05",
+   "kind": "card",
+   "title": "Slow and simple beats fast and flashy",
+   "body": "Not all screen time is equal. The UK guidance recommends slow, predictable programmes with simple stories, fewer scene changes and characters who speak slowly, and avoiding fast-paced, social-media-style videos for young children. Think gentle storytelling rather than a frantic stream of clips. If you feel a bit frazzled watching it, they probably do too.",
+   "topic": "Screen time",
+   "source": {
+    "name": "Best Start in Life (UK government): Screen time for under 5s (guidance published March 2026)",
+    "url": "https://www.beststartinlife.gov.uk/screen-time-under-5s"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "screen time",
+    "content",
+    "uk guidance"
+   ],
+   "quiz": {
+    "q": "What kind of content does UK guidance recommend for young children?",
+    "options": [
+     "Fast-paced short videos",
+     "Anything with bright colours",
+     "Slow, predictable shows with simple stories"
+    ],
+    "answer": 2,
+    "explain": "The guidance favours slower, simpler content and advises avoiding fast-paced, social-media-style videos for young children."
+   }
+  },
+  {
+   "id": "kidquest:c06",
+   "kind": "card",
+   "title": "AI toys can wait",
+   "body": "Talking robots, smart speakers and AI chat apps are everywhere. The UK's 2026 guidance says young children shouldn't use AI toys, tools or chatbots until there's more evidence about their effects. That isn't panic, just caution while the research catches up. In the meantime, the best \"smart toy\" is still a grown-up who chats back.",
+   "topic": "AI and tech",
+   "source": {
+    "name": "Best Start in Life (UK government): Screen time for under 5s (guidance published March 2026)",
+    "url": "https://www.beststartinlife.gov.uk/screen-time-under-5s"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "ai",
+    "screen time",
+    "uk guidance"
+   ],
+   "quiz": {
+    "q": "What does the 2026 UK guidance say about AI toys and chatbots for young children?",
+    "options": [
+     "Avoid them until there's more evidence",
+     "Use them instead of reading together",
+     "They're proven to boost development"
+    ],
+    "answer": 0,
+    "explain": "The guidance advises keeping young children away from AI toys, tools and chatbots until their effects are better understood."
+   }
+  },
+  {
+   "id": "kidquest:c07",
+   "kind": "card",
+   "title": "Screen-free meals and bedtimes",
+   "body": "Two easy wins from the UK guidance: keep mealtimes and bedrooms screen-free, and avoid screens in the hour before bed. Swap in stories at bedtime. At the table, try conversation, music, colouring or a round of I Spy. Background TV during play or meals is worth switching off too. Bonus: you might actually find out what happened at nursery.",
+   "topic": "Screen time",
+   "source": {
+    "name": "Best Start in Life (UK government): Screen time for under 5s (guidance published March 2026)",
+    "url": "https://www.beststartinlife.gov.uk/screen-time-under-5s"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "screen time",
+    "sleep",
+    "mealtimes"
+   ]
+  },
+  {
+   "id": "kidquest:c08",
+   "kind": "card",
+   "title": "Little ones copy our phones too",
+   "body": "The UK guidance gently notes that children copy the adults around them, and that long spells on your phone can make it harder to notice what your child needs. Nobody's saying never pick it up. But a phone-in-the-drawer half hour, or a \"no phones at the park\" rule, can make playtime feel like your full attention. They notice.",
+   "topic": "Screen time",
+   "source": {
+    "name": "Best Start in Life (UK government): Screen time for under 5s (guidance published March 2026)",
+    "url": "https://www.beststartinlife.gov.uk/screen-time-under-5s"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "screen time",
+    "parents",
+    "attention"
+   ],
+   "quiz": {
+    "q": "Why does UK guidance mention parents' own phone use?",
+    "options": [
+     "Phones are banned around children",
+     "Children copy adults, and long phone spells can mean missing their cues",
+     "It doesn't mention it"
+    ],
+    "answer": 1,
+    "explain": "The guidance points out children copy our habits, and being absorbed in a phone can make it harder to notice what they need."
+   }
+  },
+  {
+   "id": "kidquest:c09",
+   "kind": "card",
+   "title": "Little ones learn more from you than from video",
+   "body": "A 2021 meta-analysis pulled together 59 reports on children aged 0 to 6 and found they generally learned less from video than from a real person showing them the same thing. The gap shrank as children got older. The authors note the effect may be overestimated, but the direction is clear enough: in the early years, live people are the better teachers.",
+   "topic": "Learning",
+   "source": {
+    "name": "Strouse and Samson (2021), Learning from video: a meta-analysis of the video deficit in children ages 0 to 6, Child Development",
+    "url": "https://red.library.usd.edu/se-fp/3"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "learning",
+    "screen time",
+    "evidence"
+   ],
+   "quiz": {
+    "q": "What did the 2021 meta-analysis find about young children learning from video?",
+    "options": [
+     "Video works better than people",
+     "There's no difference at any age",
+     "They usually learn less from video than from a person"
+    ],
+    "answer": 2,
+    "explain": "Children aged 0 to 6 generally learned less from video than face-to-face, though the gap shrank with age."
+   }
+  },
+  {
+   "id": "kidquest:c10",
+   "kind": "card",
+   "title": "Tummy time, little and often",
+   "body": "For babies who aren't yet crawling, the NHS recommends at least 30 minutes of tummy time spread through the day while they're awake. It doesn't have to be all at once. Lie them on a playmat, or on your chest, and get down to their level with a toy or a silly face. Some babies grumble at first. Short bursts build up.",
+   "topic": "Babies",
+   "source": {
+    "name": "NHS: Physical activity guidelines for children (under 5 years)",
+    "url": "https://www.nhs.uk/live-well/exercise/physical-activity-guidelines-children-under-five-years/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "babies",
+    "movement",
+    "tummy time"
+   ],
+   "quiz": {
+    "q": "How much tummy time does the NHS suggest for babies not yet crawling?",
+    "options": [
+     "At least 30 minutes a day, spread out",
+     "5 minutes a week",
+     "Only once they can sit up"
+    ],
+    "answer": 0,
+    "explain": "The NHS suggests at least 30 minutes a day, spread across awake time. Short, frequent bursts are fine."
+   }
+  },
+  {
+   "id": "kidquest:c11",
+   "kind": "card",
+   "title": "Toddlers: three hours of wriggling",
+   "body": "The NHS says children aged 1 to 2 should be active for at least 180 minutes (3 hours) a day, spread throughout the day, including outdoor play. That sounds a lot until you realise it includes standing, rolling and pottering about, as well as running, climbing and chasing. More is better. Your sofa-loving adult self may be a little jealous.",
+   "topic": "Movement",
+   "source": {
+    "name": "NHS: Physical activity guidelines for children (under 5 years)",
+    "url": "https://www.nhs.uk/live-well/exercise/physical-activity-guidelines-children-under-five-years/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "toddlers",
+    "movement",
+    "outdoor play"
+   ]
+  },
+  {
+   "id": "kidquest:c12",
+   "kind": "card",
+   "title": "Pre-schoolers: get them puffed out",
+   "body": "For 3 and 4-year-olds, the NHS recommends at least 180 minutes of activity a day, including at least 60 minutes of moderate-to-vigorous activity. That's the kind that leaves them a bit puffed: running, jumping, dancing, swimming, climbing, scooting, hide and seek. Playgrounds, parks and kitchen discos all count.",
+   "topic": "Movement",
+   "source": {
+    "name": "NHS: Physical activity guidelines for children (under 5 years)",
+    "url": "https://www.nhs.uk/live-well/exercise/physical-activity-guidelines-children-under-five-years/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "pre-schoolers",
+    "movement",
+    "outdoor play"
+   ],
+   "quiz": {
+    "q": "How much moderate-to-vigorous activity does the NHS suggest for 3 and 4-year-olds daily?",
+    "options": [
+     "10 minutes",
+     "At least 60 minutes",
+     "None, they're too young"
+    ],
+    "answer": 1,
+    "explain": "Pre-schoolers should get at least 180 minutes of activity a day, with at least 60 minutes of more energetic play."
+   }
+  },
+  {
+   "id": "kidquest:c13",
+   "kind": "card",
+   "title": "Out of the buggy, onto the grass",
+   "body": "The NHS advises that under 5s shouldn't be inactive for long periods, except when asleep, and says long stretches in front of the TV, in a car seat or strapped into a buggy aren't good for development. On your next trip out, try letting them walk part of the way, or stop at a patch of grass for a proper run around.",
+   "topic": "Movement",
+   "source": {
+    "name": "NHS: Physical activity guidelines for children (under 5 years)",
+    "url": "https://www.nhs.uk/live-well/exercise/physical-activity-guidelines-children-under-five-years/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "outdoor play",
+    "movement",
+    "touching grass"
+   ]
+  },
+  {
+   "id": "kidquest:c14",
+   "kind": "card",
+   "title": "A bit of risk is good for them",
+   "body": "Climbing a tree, balancing on a wall, rolling down a hill. A 2015 systematic review found risky outdoor play was linked overall with positive effects, especially more physical activity, plus benefits for social behaviour. The authors said better-quality studies are needed. Risky doesn't mean dangerous: you're there, the hazards are sensible, and the scraped knee is part of learning.",
+   "topic": "Risky play",
+   "source": {
+    "name": "Brussoni et al. (2015), What is the relationship between risky outdoor play and health in children? A systematic review",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/26062038/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "risky play",
+    "outdoor play",
+    "evidence"
+   ],
+   "quiz": {
+    "q": "What did the 2015 review find about risky outdoor play?",
+    "options": [
+     "Overall positive effects, especially on physical activity",
+     "It should be banned",
+     "It has no effect at all"
+    ],
+    "answer": 0,
+    "explain": "The review found mainly positive effects, most often more physical activity, while calling for more high-quality studies."
+   }
+  },
+  {
+   "id": "kidquest:c15",
+   "kind": "card",
+   "title": "Green time: promising, not magic",
+   "body": "You'll see big claims about nature and children's brains. A 2022 systematic review of 34 studies found that nearly all showed positive links between green space and things like attention, wellbeing and behaviour. But most studies were observational with a high risk of bias, so they can't prove nature caused the benefits. Fair summary: very likely good, worth doing, no miracles promised.",
+   "topic": "Nature",
+   "source": {
+    "name": "Navigation Guide systematic review (2022): Does exposure to greenness improve children's neuropsychological development and mental health?, Environmental Research",
+    "url": "https://pubmed.ncbi.nlm.nih.gov/34932982/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "nature",
+    "attention",
+    "evidence"
+   ],
+   "quiz": {
+    "q": "Why can't the review say for sure that green space causes better attention?",
+    "options": [
+     "There were no studies",
+     "All the studies found harm",
+     "Most studies were observational with a high risk of bias"
+    ],
+    "answer": 2,
+    "explain": "Observational studies show links, not cause and effect. The findings are encouraging but researchers want stronger, longer-term studies."
+   }
+  },
+  {
+   "id": "kidquest:c16",
+   "kind": "card",
+   "title": "Outdoor time and eyesight",
+   "body": "Here's a less-known reason to get outside: the NHS says spending more time outdoors can help stop short-sightedness getting worse, especially in children. It's not a cure, and regular eye tests still matter. But it's one more nudge to swap an indoor afternoon for the park.",
+   "topic": "Outdoors",
+   "source": {
+    "name": "NHS: Short-sightedness (myopia)",
+    "url": "https://www.nhs.uk/conditions/short-sightedness/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "outdoors",
+    "eyesight",
+    "nhs"
+   ]
+  },
+  {
+   "id": "kidquest:c17",
+   "kind": "card",
+   "title": "Chatting with a tiny baby",
+   "body": "Babies love your face. NHS Best Start in Life suggests getting close so they can watch your mouth, singing songs with sing-song voices and actions, and playing copying games like sticking your tongue out. When your baby makes a sound, respond. That back-and-forth is the very first version of a conversation, long before any words appear.",
+   "topic": "Talking",
+   "source": {
+    "name": "NHS Best Start in Life: First sounds, 0 to 6 months",
+    "url": "https://www.nhs.uk/best-start-in-life/baby/learning-to-talk/first-sounds-0-to-6-months/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "talking",
+    "babies",
+    "language"
+   ],
+   "quiz": {
+    "q": "What's a simple language game NHS Best Start in Life suggests for young babies?",
+    "options": [
+     "Leaving the radio on all day",
+     "Copying faces, like sticking your tongue out",
+     "Showing them word flashcards"
+    ],
+    "answer": 1,
+    "explain": "Copying faces and sounds, face to face, encourages imitation and early turn-taking, the building blocks of talking."
+   }
+  },
+  {
+   "id": "kidquest:c18",
+   "kind": "card",
+   "title": "Toddlers: follow their finger",
+   "body": "When your toddler points at something or turns towards a sound, look where they're looking and talk about it. NHS Best Start in Life also suggests naming everyday things, offering choices (\"apple or banana?\"), describing what you're doing during routines and sharing picture books. Speak whichever language(s) you use at home. It all helps.",
+   "topic": "Talking",
+   "source": {
+    "name": "NHS Best Start in Life: First words and little sentences, 1 to 2 years",
+    "url": "https://www.nhs.uk/best-start-in-life/toddler/learning-to-talk/first-words-and-little-sentences-1-to-2-years/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "talking",
+    "toddlers",
+    "language"
+   ]
+  },
+  {
+   "id": "kidquest:c19",
+   "kind": "card",
+   "title": "How much sleep do little ones need?",
+   "body": "NHS Best Start in Life gives rough guides: after their first birthday, many children sleep around 12 to 15 hours in total; 2-year-olds about 12 to 14 hours including naps; and 3 to 5-year-olds about 12 hours. Every child is different, so treat these as ballparks. A screen-free hour before bed and a calm routine help.",
+   "topic": "Sleep",
+   "source": {
+    "name": "NHS Best Start in Life: Your baby's sleep patterns",
+    "url": "https://www.nhs.uk/best-start-in-life/baby/baby-basics/newborn-and-baby-sleeping-advice-for-parents/your-babys-sleep-patterns/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "sleep",
+    "routine",
+    "under 5s"
+   ],
+   "quiz": {
+    "q": "Roughly how much sleep do 3 to 5-year-olds need, according to NHS Best Start in Life?",
+    "options": [
+     "About 6 hours",
+     "About 12 hours",
+     "About 18 hours"
+    ],
+    "answer": 1,
+    "explain": "NHS Best Start in Life says children aged 3 to 5 need about 12 hours, and some still nap. Every child differs a bit."
+   }
+  },
+  {
+   "id": "kidquest:c20",
+   "kind": "card",
+   "title": "\"I'm bored\" isn't an emergency",
+   "body": "Boredom can be the starting gun for imagination. Psychologist Sandi Mann, whose adult studies found people came up with more creative ideas after a dull task, says she's glad when her own children complain of boredom, because learning to amuse yourself is a skill. The research was with adults, so it's a hint rather than proof. Try a box of odds and ends instead of a screen.",
+   "topic": "Boredom",
+   "source": {
+    "name": "The Psychologist (British Psychological Society): The exciting side of boredom (2015)",
+    "url": "https://bps.org.uk/psychologist/exciting-side-boredom"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "boredom",
+    "creativity",
+    "unstructured play"
+   ],
+   "quiz": {
+    "q": "In Mann's studies, what happened after people did a boring task?",
+    "options": [
+     "They produced more creative ideas",
+     "They gave up on every task",
+     "Nothing changed"
+    ],
+    "answer": 0,
+    "explain": "People who'd done a dull task came up with more creative ideas afterwards. The studies were in adults, so treat it as a hint for kids."
+   }
+  },
+  {
+   "id": "kidquest:c21",
+   "kind": "card",
+   "title": "Splash, pour, repeat",
+   "body": "Water play is a classic sensory activity from birth. The NHS suggests letting little ones pour and splash with plastic bottles, sponges and spoons in the bath or a washing-up bowl. Expect wet floors and big grins. One firm rule: always stay with them, because babies and young children can drown in very little water.",
+   "topic": "Sensory play",
+   "source": {
+    "name": "NHS: Baby and toddler play ideas",
+    "url": "https://www.nhs.uk/conditions/baby/babys-development/play-and-learning/baby-and-toddler-play-ideas/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "sensory play",
+    "water play",
+    "safety"
+   ],
+   "quiz": {
+    "q": "What's the key safety rule for water play with little ones?",
+    "options": [
+     "Only use cold water",
+     "Never leave them unsupervised",
+     "Fill the bath right up"
+    ],
+    "answer": 1,
+    "explain": "The NHS warns babies and young children can drown in very small amounts of water, so always supervise closely."
+   }
+  },
+  {
+   "id": "kidquest:c22",
+   "kind": "card",
+   "title": "Junk modelling: free and brilliant",
+   "body": "From around 30 months, the NHS suggests junk modelling: cardboard boxes, yoghurt pots and bottle tops, plus child-safe glue. A cereal box becomes a rocket, a castle or a very lopsided dog. It uses hands, imagination and problem-solving, and costs nothing but your recycling. Earlier, from about 18 months, crayons and paint on cereal-box card work well.",
+   "topic": "Messy play",
+   "source": {
+    "name": "NHS: Baby and toddler play ideas",
+    "url": "https://www.nhs.uk/conditions/baby/babys-development/play-and-learning/baby-and-toddler-play-ideas/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "messy play",
+    "creativity",
+    "toddlers"
+   ]
+  },
+  {
+   "id": "kidquest:c23",
+   "kind": "card",
+   "title": "The dressing-up box",
+   "body": "Old hats, scarves and bits of fabric make a perfect dressing-up box, and the NHS suggests it from about 2 years. Remove anything with long cords or loose ribbons for safety. Pretend play lets children try out being a doctor, a dragon or a very strict shopkeeper, and you'll get some brilliant conversations out of it.",
+   "topic": "Pretend play",
+   "source": {
+    "name": "NHS: Baby and toddler play ideas",
+    "url": "https://www.nhs.uk/conditions/baby/babys-development/play-and-learning/baby-and-toddler-play-ideas/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "pretend play",
+    "imagination",
+    "toddlers"
+   ]
+  },
+  {
+   "id": "kidquest:c24",
+   "kind": "card",
+   "title": "Shops, rockets and I Spy",
+   "body": "For 3 to 5-year-olds, NHS Best Start in Life suggests games like I Spy and role play: playing shops and taking turns as shopkeeper and customer, or building a rocket out of cushions and blasting off. Making up stories about a favourite toy, and letting your child lead, builds vocabulary and imagination at the same time.",
+   "topic": "Talking",
+   "source": {
+    "name": "NHS Best Start in Life: Learning conversations and telling stories, 3 to 5 years",
+    "url": "https://www.nhs.uk/best-start-in-life/toddler/learning-to-talk/learning-conversations-and-telling-stories-3-to-5-years/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "talking",
+    "role play",
+    "pre-schoolers"
+   ],
+   "quiz": {
+    "q": "Which game does NHS Best Start in Life suggest for building listening and vocabulary at 3 to 5?",
+    "options": [
+     "I Spy",
+     "Silent reading only",
+     "Watching adverts"
+    ],
+    "answer": 0,
+    "explain": "I Spy and role play games encourage listening, new words and turn-taking in a fun, low-pressure way."
+   }
+  },
+  {
+   "id": "kidquest:c25",
+   "kind": "card",
+   "title": "Stories with sound effects",
+   "body": "Reading together gets even better with drama. NHS Best Start in Life suggests adding sounds like rain or birdsong, acting out bits of the story, letting your child fill in words in a favourite book, and asking \"what do you think happens next?\" before you turn the page. Open questions with lots of possible answers get them talking most.",
+   "topic": "Reading",
+   "source": {
+    "name": "NHS Best Start in Life: Learning conversations and telling stories, 3 to 5 years",
+    "url": "https://www.nhs.uk/best-start-in-life/toddler/learning-to-talk/learning-conversations-and-telling-stories-3-to-5-years/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "reading",
+    "stories",
+    "language"
+   ]
+  },
+  {
+   "id": "kidquest:c26",
+   "kind": "card",
+   "title": "Books from day one",
+   "body": "It's never too early for books. The NHS suggests sharing picture books and rhymes from birth, even for a few minutes a day, and points out that many libraries run free story sessions. A free Bookstart Baby pack is usually given in the first year. Chewed corners are a sign of enthusiasm.",
+   "topic": "Reading",
+   "source": {
+    "name": "NHS: Baby and toddler play ideas",
+    "url": "https://www.nhs.uk/conditions/baby/babys-development/play-and-learning/baby-and-toddler-play-ideas/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "reading",
+    "babies",
+    "bonding"
+   ],
+   "quiz": {
+    "q": "When does the NHS suggest you can start sharing books with your baby?",
+    "options": [
+     "From age 3",
+     "Once they can talk",
+     "From birth"
+    ],
+    "answer": 2,
+    "explain": "Sharing picture books and rhymes from birth, even briefly, supports bonding and early language."
+   }
+  },
+  {
+   "id": "kidquest:c27",
+   "kind": "card",
+   "title": "What the WHO says",
+   "body": "The World Health Organization's 2019 guidelines for under 5s say screen time isn't recommended for babies or 1-year-olds, and should be no more than 1 hour a day for 2 to 4-year-olds, with less being better. They also advise not keeping little ones restrained, for example in a pram or buggy, for more than an hour at a time. Same direction as UK advice.",
+   "topic": "Screen time",
+   "source": {
+    "name": "World Health Organization (2019): To grow up healthy, children need to sit less and play more",
+    "url": "https://www.who.int/news/item/24-04-2019-to-grow-up-healthy-children-need-to-sit-less-and-play-more"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "screen time",
+    "who",
+    "guidelines"
+   ]
+  },
+  {
+   "id": "kidquest:c28",
+   "kind": "card",
+   "title": "School-age kids: an hour a day",
+   "body": "Once children reach 5, the NHS guidance is an average of at least 60 minutes of moderate or vigorous activity a day across the week, plus activities that strengthen muscles and bones, like jumping, climbing or gymnastics. Walking to school, playground games, football, dancing and cycling all count. A quick test: moderate means they can talk but not sing.",
+   "topic": "Movement",
+   "source": {
+    "name": "NHS: Physical activity guidelines for children and young people",
+    "url": "https://www.nhs.uk/live-well/exercise/exercise-guidelines/physical-activity-guidelines-children-and-young-people/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "movement",
+    "school age",
+    "nhs"
+   ],
+   "quiz": {
+    "q": "How much activity does the NHS recommend for 5 to 18-year-olds?",
+    "options": [
+     "An average of at least 60 minutes a day",
+     "20 minutes a week",
+     "Only PE lessons"
+    ],
+    "answer": 0,
+    "explain": "Children and young people should average at least 60 minutes a day of moderate or vigorous activity across the week."
+   }
+  },
+  {
+   "id": "kidquest:c29",
+   "kind": "card",
+   "title": "Sing the boring bits",
+   "body": "The NSPCC suggests making up little songs for everyday moments: washing hands, leaving the room, finishing dinner. Sung the same way each time, they add comfort to routines and help children link words with what's happening. You don't need to be a good singer. Toddlers are a famously forgiving audience.",
+   "topic": "Routines",
+   "source": {
+    "name": "NSPCC: Look, Say, Sing, Play",
+    "url": "https://www.nspcc.org.uk/advice-for-families/look-say-sing-play/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "routines",
+    "singing",
+    "language"
+   ]
+  },
+  {
+   "id": "kidquest:c30",
+   "kind": "card",
+   "title": "Screen swaps that actually work",
+   "body": "Pulling the plug is easier with something ready to replace it. The UK guidance suggests swaps like reading together, simple games and back-and-forth chat, and at mealtimes, music, table games, colouring or I Spy. Keep a \"boredom basket\" by the door: chalk, a ball, a magnifying glass, a bag for collecting leaves. Then head outside and touch some grass.",
+   "topic": "Screen time",
+   "source": {
+    "name": "Best Start in Life (UK government): Screen time for under 5s (guidance published March 2026)",
+    "url": "https://www.beststartinlife.gov.uk/screen-time-under-5s"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "screen time",
+    "play ideas",
+    "outdoor play"
+   ]
+  },
+  {
+   "id": "kidquest:game-activity-roulette",
+   "kind": "game",
+   "title": "Activity Roulette",
+   "body": "Spin for a screen-free challenge, then go and do it together. Play builds creativity, movement and confidence.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "kidquest:game-animal-charades",
+   "kind": "game",
+   "title": "Animal Charades",
+   "body": "Spin an animal and act it out. No words allowed! Everyone else guesses. Acting builds imagination and body confidence.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "kidquest:game-riddle-me-this",
+   "kind": "game",
+   "title": "Riddle Me This",
+   "body": "Read the riddle and pick the answer. Grown-ups can read it out. Riddles stretch thinking and wordplay.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "kidquest:game-animal-pairs",
+   "kind": "game",
+   "title": "Animal Pairs",
+   "body": "Flip the cards and match each animal to its baby's name. New words, the fun way.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "kidquest:game-drawing-dash",
+   "kind": "game",
+   "title": "Drawing Dash",
+   "body": "Spin a thing to draw. You've got 60 seconds. Go! Quick drawing builds fine motor skills and imagination.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "kidquest:game-treasure-hunt",
+   "kind": "game",
+   "title": "Treasure Hunt",
+   "body": "Spin a clue and hunt for something that matches around the house or garden. Hunting and noticing builds observation skills.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "kidquest:game-build-it",
+   "kind": "game",
+   "title": "Build It!",
+   "body": "Spin a build challenge using things from around the house. Building teaches problem-solving and patience.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "kidquest:game-story-spinner",
+   "kind": "game",
+   "title": "Story Spinner",
+   "body": "Spin a hero, a place and a problem, then tell the story together. Storytelling grows language and imagination.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "kidquest:game-nature-explorer",
+   "kind": "game",
+   "title": "Nature Explorer",
+   "body": "Spin a nature mission, then head outside with a grown-up. Time outdoors is good for growing bodies and minds.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  }
+ ]
+}

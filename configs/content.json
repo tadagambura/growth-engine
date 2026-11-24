@@ -1,0 +1,117 @@
+{
+  "_note": "Owner-controlled content policy. The planner reads this; nothing here is written by a model.",
+  "start_date": "2026-12-01",
+  "horizon_days": 180,
+  "words_per_second": 2.3,
+  "video_seconds": {
+    "min": 15,
+    "max": 60
+  },
+  "weekday_types": {
+    "0": "explainer",
+    "1": "feature",
+    "2": "card",
+    "3": "explainer",
+    "4": "games",
+    "5": "kaos_life",
+    "6": "recap"
+  },
+  "day_type_kinds": {
+    "explainer": [
+      "feature",
+      "usecase"
+    ],
+    "feature": [
+      "feature",
+      "usecase",
+      "moment"
+    ],
+    "card": [
+      "card",
+      "lesson",
+      "activity"
+    ],
+    "games": [
+      "game"
+    ],
+    "kaos_life": [
+      "moment",
+      "usecase",
+      "card",
+      "lesson"
+    ],
+    "recap": [
+      "card",
+      "lesson",
+      "feature"
+    ]
+  },
+  "promoted": [
+    {
+      "app_id": "stackup",
+      "from": "2026-12-01"
+    },
+    {
+      "app_id": "loopday",
+      "from": "2026-12-01"
+    },
+    {
+      "app_id": "afterhours",
+      "from": "2027-01-18"
+    }
+  ],
+  "spotlight_weeks": 1,
+  "repeat_days": {
+    "atom": 90,
+    "atom_by_kind": {
+      "feature": 14,
+      "usecase": 14,
+      "moment": 21
+    },
+    "format": 6,
+    "_note": "Cards, lessons and games repeat after 90 days. Features, use cases and moments are scarce (about 5 per app) so they come round every 14 to 21 days, always in a different format and with a different angle."
+  },
+  "allow_unreviewed": true,
+  "sensitive_terms_when_unreviewed": [
+    "isa",
+    "lisa",
+    "overdraft",
+    "interest rate",
+    "tax",
+    "hmrc",
+    "mortgage",
+    "pension",
+    "invest",
+    "loan",
+    "credit score",
+    "debt"
+  ],
+  "ctas": [
+    {
+      "id": "waitlist",
+      "text": "Join the waitlist. Link in bio.",
+      "when": "before_store"
+    },
+    {
+      "id": "store",
+      "text": "Search {app} on Google Play.",
+      "when": "after_store"
+    },
+    {
+      "id": "comment",
+      "text": "Comment your answer.",
+      "when": "any"
+    },
+    {
+      "id": "follow",
+      "text": "Follow for tomorrow's one.",
+      "when": "any"
+    },
+    {
+      "id": "try",
+      "text": "Try it free. Link in bio.",
+      "when": "any"
+    }
+  ],
+  "sign_off": "Stay chained."
+}

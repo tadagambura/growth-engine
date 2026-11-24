@@ -1,0 +1,137 @@
+{
+ "app_id": "daymark",
+ "atoms": [
+  {
+   "id": "daymark:feature-01",
+   "kind": "feature",
+   "title": "Countdowns and count-ups ('days since') with themed cards",
+   "body": "Countdowns and count-ups ('days since') with themed cards",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "daymark:feature-02",
+   "kind": "feature",
+   "title": "Recurring events",
+   "body": "Recurring events: payday, bin day, term dates",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "daymark:feature-03",
+   "kind": "feature",
+   "title": "People & birthdays",
+   "body": "People & birthdays: birthdays, anniversaries and a gift-idea note per person, captured year-round",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "daymark:feature-04",
+   "kind": "feature",
+   "title": "Reminders 2 weeks and 2 days before birthdays; budget per person and a 'bought' ",
+   "body": "Reminders 2 weeks and 2 days before birthdays; budget per person and a 'bought' tick",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "daymark:feature-05",
+   "kind": "feature",
+   "title": "Share a countdown card; three free countdowns",
+   "body": "Share a countdown card; three free countdowns",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "daymark:feature-06",
+   "kind": "feature",
+   "title": "Templates with a checklist attached",
+   "body": "Templates with a checklist attached: trip (packing list) and UK house move (council tax, TV licence, DVLA, meter readings)",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "daymark:moment-01",
+   "kind": "moment",
+   "title": "Countdown hits zero",
+   "body": "Countdown hits zero: confetti cannon and the flip clock spins",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "daymark:moment-02",
+   "kind": "moment",
+   "title": "Each new day",
+   "body": "Each new day: a flip-clock digit flips with a satisfying clack",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "daymark:moment-03",
+   "kind": "moment",
+   "title": "Birthday approaching",
+   "body": "Birthday approaching: the gift box shakes a little more each day",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "daymark:moment-04",
+   "kind": "moment",
+   "title": "Marked as bought",
+   "body": "Marked as bought: the ribbon unties itself into confetti",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "daymark:moment-05",
+   "kind": "moment",
+   "title": "Birthday",
+   "body": "Birthday: the cake's candles blow themselves out",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "daymark:usecase",
+   "kind": "usecase",
+   "title": "A day with Daymark",
+   "body": "A worker counts down to payday and a holiday on one widget; in March they note that their sister mentioned a pottery class, and in October Daymark nudges them two weeks before her birthday with the idea and budget ready.",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  }
+ ]
+}

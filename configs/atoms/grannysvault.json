@@ -1,0 +1,912 @@
+{
+ "app_id": "grannysvault",
+ "atoms": [
+  {
+   "id": "grannysvault:feature-01",
+   "kind": "feature",
+   "title": "Locked with Face ID, fingerprint or the phone passcode; re-locks when you leave ",
+   "body": "Locked with Face ID, fingerprint or the phone passcode; re-locks when you leave the app",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "grannysvault:feature-02",
+   "kind": "feature",
+   "title": "Entries for logins, documents, policies, contacts and medical info, stored encry",
+   "body": "Entries for logins, documents, policies, contacts and medical info, stored encrypted on the device",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "grannysvault:feature-03",
+   "kind": "feature",
+   "title": "Emergency info map",
+   "body": "Emergency info map: who to call, where things are, GP, medication and allergies",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "grannysvault:feature-04",
+   "kind": "feature",
+   "title": "Life-admin learning cards",
+   "body": "Life-admin learning cards: protecting passwords, scams targeting older people, power of attorney basics",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "grannysvault:feature-05",
+   "kind": "feature",
+   "title": "Gentle review reminders",
+   "body": "Gentle review reminders: check the vault twice a year",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "grannysvault:moment-01",
+   "kind": "moment",
+   "title": "Unlock",
+   "body": "Unlock: Granny peers over her glasses at the camera and nods",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "grannysvault:moment-02",
+   "kind": "moment",
+   "title": "Forgotten password saved",
+   "body": "Forgotten password saved: Granny scribbles it on a sticky note, then Kaos snatches it and locks it in the vault",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "grannysvault:moment-03",
+   "kind": "moment",
+   "title": "Emergency map complete",
+   "body": "Emergency map complete: Granny puts her feet up with a cup of tea",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "grannysvault:moment-04",
+   "kind": "moment",
+   "title": "Review reminder",
+   "body": "Review reminder: Granny dusts off the vault with a feather duster",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "grannysvault:moment-05",
+   "kind": "moment",
+   "title": "Scam card read",
+   "body": "Scam card read: Granny bonks a scammer's phone with her handbag",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "grannysvault:usecase",
+   "kind": "usecase",
+   "title": "A day with Granny's Vault",
+   "body": "A daughter sets up her dad's vault on a Sunday: his bank's phone number, his GP, his medication, where the will is, and the logins he always forgets. Face ID keeps it private; the emergency map is one tap away.",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "grannysvault:c01",
+   "kind": "card",
+   "title": "Three random words",
+   "body": "The NCSC suggests building passwords from three random words, such as kettlecactusbanjo. Long and unexpected beats short and clever, and it's easier to remember. Skip birthdays, pet names and football teams, which are often on social media. Swapping letters for numbers, like a zero for an o, adds little because criminals know that trick.",
+   "topic": "Passwords",
+   "source": {
+    "name": "NCSC: Three random words",
+    "url": "https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/three-random-words"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "passwords",
+    "NCSC",
+    "security"
+   ],
+   "quiz": {
+    "q": "What does the NCSC say about swapping letters for numbers, like 0 for o?",
+    "options": [
+     "It makes a password uncrackable",
+     "It adds little, as criminals know the trick",
+     "It's required by most banks"
+    ],
+    "answer": 1,
+    "explain": "Simple swaps don't make passwords much stronger, but they do make them harder for you to remember."
+   }
+  },
+  {
+   "id": "grannysvault:c02",
+   "kind": "card",
+   "title": "Guard the email account first",
+   "body": "Email is the master key: it's where password resets go. If a criminal gets in, they can reset other accounts and send messages pretending to be you. The NCSC says to give email its own strong password, used nowhere else, and change it straight away if it's been reused. Then do the same for banking and shopping.",
+   "topic": "Passwords",
+   "source": {
+    "name": "NCSC: Use a strong and separate password for your email",
+    "url": "https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/use-a-strong-and-separate-password-for-email"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "email",
+    "passwords",
+    "NCSC"
+   ]
+  },
+  {
+   "id": "grannysvault:c03",
+   "kind": "card",
+   "title": "Let a password manager remember",
+   "body": "A password manager keeps your passwords behind one main password, so every account can have its own. Many will create strong passwords and only fill them in on the genuine website, which helps against fake sites. The NCSC suggests turning on two-step verification for the manager too, and using passkeys wherever a site offers them.",
+   "topic": "Passwords",
+   "source": {
+    "name": "NCSC: Password managers",
+    "url": "https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/password-managers"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "password manager",
+    "passkeys",
+    "NCSC"
+   ],
+   "quiz": {
+    "q": "Why does a password manager's autofill help protect against phishing?",
+    "options": [
+     "It hides your screen from others",
+     "It changes your password every day",
+     "It only fills in on the correct website"
+    ],
+    "answer": 2,
+    "explain": "A password manager recognises the real site, so it won't fill your details into a lookalike page."
+   }
+  },
+  {
+   "id": "grannysvault:c04",
+   "kind": "card",
+   "title": "A second lock on the door",
+   "body": "Two-step verification, also called 2FA, adds a second check when you sign in, such as a code by text, an authenticator app or a fingerprint. Even if someone has the password, they can't get in without it. The NCSC says start with email, then banking, social media and shopping. You're usually only asked when something looks unusual.",
+   "topic": "Two-step verification",
+   "source": {
+    "name": "NCSC: Turn on 2-step verification",
+    "url": "https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/activate-2-step-verification-on-your-email"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "2SV",
+    "2FA",
+    "NCSC"
+   ]
+  },
+  {
+   "id": "grannysvault:c05",
+   "kind": "card",
+   "title": "Stop, Challenge, Protect",
+   "body": "The Take Five campaign has a simple rhythm. Stop: take a moment before handing over money or details. Challenge: could it be fake? It's fine to refuse, reject or ignore a request, and feeling rushed is a red flag. Protect: if you think you've been scammed, contact your bank straight away and report it.",
+   "topic": "Scams",
+   "source": {
+    "name": "Take Five to Stop Fraud",
+    "url": "https://www.takefive-stopfraud.org.uk/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "scams",
+    "Take Five",
+    "fraud"
+   ],
+   "quiz": {
+    "q": "In Take Five's advice, what's a warning sign that a request could be a scam?",
+    "options": [
+     "It rushes or panics you",
+     "It arrives in the post",
+     "It uses your name"
+    ],
+    "answer": 0,
+    "explain": "Criminals create urgency so you don't stop to think. Genuine organisations won't mind you taking a moment."
+   }
+  },
+  {
+   "id": "grannysvault:c06",
+   "kind": "card",
+   "title": "Hang up and call 159",
+   "body": "Unexpected call about your money? Hang up and dial 159. It connects you to your own bank on a number that can't be faked, and covers customers of more than 99% of UK current accounts. Use it whenever a caller claims to be your bank, the police or a fraud team. A genuine bank won't mind at all.",
+   "topic": "Scams",
+   "source": {
+    "name": "Stop Scams UK: 159",
+    "url": "https://stopscamsuk.org.uk/159"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "159",
+    "scams",
+    "banks"
+   ],
+   "quiz": {
+    "q": "What does dialling 159 do?",
+    "options": [
+     "Reports a crime to the police",
+     "Blocks the caller's number",
+     "Connects you safely to your own bank"
+    ],
+    "answer": 2,
+    "explain": "159 puts you through to your bank so you can check whether an unexpected call about money was genuine."
+   }
+  },
+  {
+   "id": "grannysvault:c07",
+   "kind": "card",
+   "title": "What your bank will never ask",
+   "body": "Age UK's reminders: banks won't ask for your PIN or send a courier for your card. Police won't ask you to help an investigation using your card details. HMRC won't cold-call for bank details. Scammers can keep a landline open after you hang up, so call back on a different phone, or wait 10 to 15 minutes.",
+   "topic": "Scams",
+   "source": {
+    "name": "Age UK: Phone scams and cold calls",
+    "url": "https://www.ageuk.org.uk/information-advice/money-legal/scams-fraud/phone-scams/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "phone scams",
+    "banks",
+    "Age UK"
+   ]
+  },
+  {
+   "id": "grannysvault:c08",
+   "kind": "card",
+   "title": "Courier fraud",
+   "body": "It starts with a call from \"the bank\" or \"the police\" about a problem with your account. Then a courier is sent to collect your card, PIN, cash or gold. Banks and police never do this, and never ask you to lie to your bank. Hang up, keep your valuables, don't open the door, and tell someone you trust.",
+   "topic": "Scams",
+   "source": {
+    "name": "Take Five: Courier scams",
+    "url": "https://www.takefive-stopfraud.org.uk/protect-yourself/courier-fraud/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "courier fraud",
+    "scams",
+    "police"
+   ],
+   "quiz": {
+    "q": "Will a real bank or police force send a courier to collect your card?",
+    "options": [
+     "Yes, if there's fraud on the account",
+     "Never, it's always a scam",
+     "Only if you give them a password first"
+    ],
+    "answer": 1,
+    "explain": "Banks and police never collect cards, PINs, cash or valuables. Hang up and call your bank on a number you trust."
+   }
+  },
+  {
+   "id": "grannysvault:c09",
+   "kind": "card",
+   "title": "Stop, Lock, Chain, Check",
+   "body": "Age UK's routine for an unexpected knock: are you expecting anyone? Lock the back door first, as some scammers work in pairs. Use the chain and peephole. Check ID by ringing the company on a number from a bill, not one they give you. Never sign or pay on the spot, and it's fine to say no.",
+   "topic": "Scams",
+   "source": {
+    "name": "Age UK: Doorstep scams",
+    "url": "https://www.ageuk.org.uk/information-advice/money-legal/scams-fraud/doorstep-scams/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "doorstep scams",
+    "Age UK",
+    "safety"
+   ]
+  },
+  {
+   "id": "grannysvault:c10",
+   "kind": "card",
+   "title": "Romance scams",
+   "body": "Romance scammers often move fast: declaring love within days, wanting to leave the dating site, dodging video calls, and sooner or later needing money for an emergency or a ticket to visit. They may ask you to keep things secret. Age UK's rule is simple: never send money to someone you haven't met in person, whatever the story.",
+   "topic": "Scams",
+   "source": {
+    "name": "Age UK: How to spot a catfish",
+    "url": "https://www.ageuk.org.uk/information-advice/money-legal/scams-fraud/how-to-spot-a-catfish/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "romance scams",
+    "online dating",
+    "Age UK"
+   ],
+   "quiz": {
+    "q": "What is Age UK's rule about sending money to an online love interest?",
+    "options": [
+     "Never send money to someone you haven't met in person",
+     "Only send small amounts",
+     "Send it by bank transfer, not cash"
+    ],
+    "answer": 0,
+    "explain": "However convincing the story, Age UK says never send money to someone you haven't met face to face."
+   }
+  },
+  {
+   "id": "grannysvault:c11",
+   "kind": "card",
+   "title": "HMRC won't text you a rebate",
+   "body": "HMRC never texts about a tax rebate, and won't use social media to offer one or ask for your details. Genuine HMRC emails come from addresses ending hmrc.gov.uk. Forward suspicious HMRC emails to phishing@hmrc.gov.uk and texts to 60599, and report odd calls through GOV.UK. If in doubt, check HMRC's list of genuine contacts.",
+   "topic": "Scams",
+   "source": {
+    "name": "GOV.UK: Report HMRC phishing emails, texts and phone call scams",
+    "url": "https://www.gov.uk/government/organisations/hm-revenue-customs/contact/reporting-fraudulent-emails"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "HMRC",
+    "phishing",
+    "scams"
+   ]
+  },
+  {
+   "id": "grannysvault:c12",
+   "kind": "card",
+   "title": "If it's happened: bank, then report",
+   "body": "Lost money or details to a scam? Contact your bank first, using the number on your card, your banking app or 159. Then report it to Report Fraud on 0300 123 2040, or call 101 in Scotland. If you feel in danger, dial 999. Scammers rely on secrecy, so tell someone you trust. It happens to clever people every day.",
+   "topic": "Scams",
+   "source": {
+    "name": "Take Five: Courier scams",
+    "url": "https://www.takefive-stopfraud.org.uk/protect-yourself/courier-fraud/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "Report Fraud",
+    "scams",
+    "what to do"
+   ]
+  },
+  {
+   "id": "grannysvault:c13",
+   "kind": "card",
+   "title": "LPAs: the two types",
+   "body": "A lasting power of attorney lets someone you trust make decisions if you can't (England and Wales). Property and financial affairs covers bills, bank accounts, pensions and selling a home, and can be used once registered, with permission. Health and welfare covers care, medical treatment and where you live, and only applies when you can't decide yourself.",
+   "topic": "Lasting power of attorney",
+   "source": {
+    "name": "GOV.UK: Lasting power of attorney",
+    "url": "https://www.gov.uk/power-of-attorney"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "LPA",
+    "power of attorney",
+    "planning"
+   ],
+   "quiz": {
+    "q": "When can a health and welfare LPA be used?",
+    "options": [
+     "As soon as it's signed",
+     "Only when the person can't make the decision themselves",
+     "Only after the person has died"
+    ],
+    "answer": 1,
+    "explain": "A health and welfare LPA only applies when the donor lacks capacity. A financial LPA can be used sooner, with permission."
+   }
+  },
+  {
+   "id": "grannysvault:c14",
+   "kind": "card",
+   "title": "Registering an LPA",
+   "body": "An LPA has to be registered with the Office of the Public Guardian before it can be used. As of November 2026 it costs £92 per LPA, so £184 for both types. You may pay less on an income under £12,000, or nothing on certain benefits. Registration takes 8 to 10 weeks if there are no mistakes, so don't leave it late.",
+   "topic": "Lasting power of attorney",
+   "source": {
+    "name": "GOV.UK: Register a lasting power of attorney",
+    "url": "https://www.gov.uk/power-of-attorney/register"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "LPA",
+    "Office of the Public Guardian",
+    "fees"
+   ],
+   "quiz": {
+    "q": "As of November 2026, what does it cost to register one LPA?",
+    "options": [
+     "£92",
+     "£15",
+     "£250"
+    ],
+    "answer": 0,
+    "explain": "GOV.UK lists £92 per LPA, so £184 for both types. Reductions or exemptions may apply on low income or certain benefits."
+   }
+  },
+  {
+   "id": "grannysvault:c15",
+   "kind": "card",
+   "title": "Why sooner beats later",
+   "body": "If someone loses mental capacity without an LPA, family may need to apply to the Court of Protection to become a deputy. That means a court process, a fee, and an annual report to the Office of the Public Guardian about decisions made. An LPA can only be made while the person still has capacity, which is why it's worth doing early.",
+   "topic": "Lasting power of attorney",
+   "source": {
+    "name": "GOV.UK: Become a deputy",
+    "url": "https://www.gov.uk/become-deputy"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "LPA",
+    "deputy",
+    "Court of Protection"
+   ]
+  },
+  {
+   "id": "grannysvault:c16",
+   "kind": "card",
+   "title": "Give your will a check-up",
+   "body": "GOV.UK suggests reviewing a will every five years and after big changes, like separation, a new baby, moving house or an executor dying. In England and Wales, getting married cancels a will made before. A signed will can't be scribbled on: changes need a properly witnessed codicil, or for bigger changes, a new will.",
+   "topic": "Wills",
+   "source": {
+    "name": "GOV.UK: Making a will, update your will",
+    "url": "https://www.gov.uk/make-will/updating-your-will"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "wills",
+    "planning",
+    "England and Wales"
+   ],
+   "quiz": {
+    "q": "In England and Wales, what happens to an existing will when you get married?",
+    "options": [
+     "Nothing, it still stands",
+     "It automatically includes your spouse",
+     "It's cancelled"
+    ],
+    "answer": 2,
+    "explain": "Marriage cancels any will made before it, so it's worth making a new one afterwards."
+   }
+  },
+  {
+   "id": "grannysvault:c17",
+   "kind": "card",
+   "title": "Where's the will?",
+   "body": "A will only helps if someone can find it. GOV.UK says you can keep it at home or store it with a solicitor, your bank, a will storage company or the national probate registry. Whichever you choose, tell your executor and a close friend or relative where it is. Note the location, not the contents, in your family records.",
+   "topic": "Wills",
+   "source": {
+    "name": "GOV.UK: Making a will, write your will",
+    "url": "https://www.gov.uk/make-will/writing-your-will"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "wills",
+    "storage",
+    "executor"
+   ]
+  },
+  {
+   "id": "grannysvault:c18",
+   "kind": "card",
+   "title": "Tell Us Once",
+   "body": "After a death is registered, the registrar can give you a Tell Us Once reference. It lets you tell most government bodies in one go, including HMRC, DWP, the Passport Office, DVLA and the local council. Use it within 28 days. It covers England, Scotland and Wales, and you'll still need to contact banks, insurers and utilities yourself.",
+   "topic": "When someone dies",
+   "source": {
+    "name": "GOV.UK: Tell Us Once",
+    "url": "https://www.gov.uk/after-a-death/organisations-you-need-to-contact-and-tell-us-once"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "Tell Us Once",
+    "bereavement",
+    "admin"
+   ],
+   "quiz": {
+    "q": "How long do you have to use a Tell Us Once reference number?",
+    "options": [
+     "7 days",
+     "6 months",
+     "28 days"
+    ],
+    "answer": 2,
+    "explain": "The reference expires after 28 days, and the registrar may not issue another, so it's worth using promptly."
+   }
+  },
+  {
+   "id": "grannysvault:c19",
+   "kind": "card",
+   "title": "Apple Legacy Contact",
+   "body": "Apple lets you choose a Legacy Contact who can ask for access to things like photos, messages, notes and backups after you die. Set it up in Settings under Sign-In & Security. It creates an access key they'll need, along with a death certificate. They won't get passwords, payment details or purchased films and music. Keep the key with your important papers.",
+   "topic": "Digital legacy",
+   "source": {
+    "name": "Apple Support: How to add a Legacy Contact",
+    "url": "https://support.apple.com/en-gb/102631"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "digital legacy",
+    "Apple",
+    "planning"
+   ]
+  },
+  {
+   "id": "grannysvault:c20",
+   "kind": "card",
+   "title": "Your emergency info sheet",
+   "body": "If paramedics arrived, what would they need? The Message in a Bottle form makes a good template: name, allergies, medical conditions and medication, GP details, two emergency contacts, and anyone you care for. A copy of the repeat prescription list helps too. Keep it to one page, date it, and update it whenever medication changes.",
+   "topic": "Emergency info",
+   "source": {
+    "name": "North East Ambulance Service: Message in a bottle",
+    "url": "https://www.neas.nhs.uk/community-learning/message-bottle"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "emergency info",
+    "medical",
+    "planning"
+   ]
+  },
+  {
+   "id": "grannysvault:c21",
+   "kind": "card",
+   "title": "Google's Inactive Account Manager",
+   "body": "Google's Inactive Account Manager lets you decide what happens if your account goes quiet for a period you choose. You can pick up to 10 trusted people to be told, or to download chosen data like photos or emails. Without a plan, Google may delete an account that's been inactive across Google for at least two years.",
+   "topic": "Digital legacy",
+   "source": {
+    "name": "Google Account Help: Inactive Account Manager",
+    "url": "https://support.google.com/accounts/answer/3036546?hl=en-GB"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "digital legacy",
+    "Google",
+    "planning"
+   ]
+  },
+  {
+   "id": "grannysvault:c22",
+   "kind": "card",
+   "title": "Keep a medication list",
+   "body": "Age UK suggests keeping an up-to-date list of every medicine taken, including over-the-counter and herbal ones, not just prescriptions. Take it to appointments and hospital stays. Don't stop a medicine suddenly without talking to a GP or pharmacist. If someone takes lots of medicines, ask whether they could have a free NHS structured medication review.",
+   "topic": "Medicines",
+   "source": {
+    "name": "Age UK: Getting the most from your medicines",
+    "url": "https://www.ageuk.org.uk/information-advice/health-wellbeing/health-services/getting-the-most-from-your-medicines"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "medication",
+    "health",
+    "Age UK"
+   ],
+   "quiz": {
+    "q": "What should a medication list include, according to Age UK?",
+    "options": [
+     "Prescription, over-the-counter and herbal medicines",
+     "Only prescription medicines",
+     "Only medicines taken daily"
+    ],
+    "answer": 0,
+    "explain": "Over-the-counter and herbal products can interact with prescriptions, so everything taken belongs on the list."
+   }
+  },
+  {
+   "id": "grannysvault:c23",
+   "kind": "card",
+   "title": "Message in a Bottle",
+   "body": "Message in a Bottle is a free scheme run with Lions Clubs. Fill in the form with key medical details and contacts, put it in the bottle and keep it in the fridge door. One sticker goes on the fridge, the other inside the front door, so paramedics know to look. Kits come from GP surgeries, pharmacies and local Lions clubs.",
+   "topic": "Emergency info",
+   "source": {
+    "name": "North East Ambulance Service: Message in a bottle",
+    "url": "https://www.neas.nhs.uk/community-learning/message-bottle"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "Message in a Bottle",
+    "emergency info",
+    "safety"
+   ],
+   "quiz": {
+    "q": "Where should a Message in a Bottle be kept?",
+    "options": [
+     "Under the bed",
+     "In the fridge, ideally the door",
+     "In the car glovebox"
+    ],
+    "answer": 1,
+    "explain": "Emergency crews know to check the fridge when they spot the stickers on the front door and fridge."
+   }
+  },
+  {
+   "id": "grannysvault:c24",
+   "kind": "card",
+   "title": "Cut down cold calls",
+   "body": "Registering with the Telephone Preference Service is free and should cut cold calls, though not every scammer respects it. Age UK also suggests answerphones, your phone's call blocking, or a separate call blocker; some councils provide them. Forward scam texts to 7726. And remember, caller ID can be faked, so a familiar number isn't proof.",
+   "topic": "Scams",
+   "source": {
+    "name": "Age UK: Phone scams and cold calls",
+    "url": "https://www.ageuk.org.uk/information-advice/money-legal/scams-fraud/phone-scams/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "TPS",
+    "cold calls",
+    "Age UK"
+   ],
+   "quiz": {
+    "q": "Does registering with the Telephone Preference Service stop all scam calls?",
+    "options": [
+     "Yes, it blocks every unknown number",
+     "Only on mobiles",
+     "No, it reduces cold calls but not every scammer"
+    ],
+    "answer": 2,
+    "explain": "TPS cuts legitimate cold calls, but criminals ignore it, so stay alert and use call blocking too."
+   }
+  },
+  {
+   "id": "grannysvault:c25",
+   "kind": "card",
+   "title": "Forward the dodgy email",
+   "body": "Don't click links in a suspicious email. Forward it to the NCSC's Suspicious Email Reporting Service at report@phishing.gov.uk. It's free, and you can send as many as you like, even if you're not sure. That isn't the same as reporting a crime, though: if you've lost money, contact your bank and Report Fraud.",
+   "topic": "Scams",
+   "source": {
+    "name": "NCSC: Report a scam email",
+    "url": "https://www.ncsc.gov.uk/collection/phishing-scams/report-scam-email"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "phishing",
+    "email",
+    "NCSC"
+   ]
+  },
+  {
+   "id": "grannysvault:c26",
+   "kind": "card",
+   "title": "Say yes to updates",
+   "body": "Those \"update available\" pop-ups are worth tapping. The NCSC calls installing updates one of the most important and quickest things you can do, because they protect against viruses and malware. Turn on automatic updates, do big ones at home on Wi-Fi with the device plugged in, and watch for older phones that no longer get updates.",
+   "topic": "Devices",
+   "source": {
+    "name": "NCSC: Install the latest software and app updates",
+    "url": "https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/install-the-latest-software-and-app-updates"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "updates",
+    "devices",
+    "NCSC"
+   ],
+   "quiz": {
+    "q": "Why does the NCSC say to install updates promptly?",
+    "options": [
+     "They make the battery last longer",
+     "They protect against viruses and malware",
+     "They delete old photos"
+    ],
+    "answer": 1,
+    "explain": "Updates close security gaps. Devices that no longer receive them miss out on those fixes."
+   }
+  },
+  {
+   "id": "grannysvault:c27",
+   "kind": "card",
+   "title": "Back up the photos",
+   "body": "Phones get lost, laptops die, and ransomware can lock files. The NCSC suggests backing up anything you'd miss, to the cloud, a removable drive, or both. Unplug drives when you're not using them, protect cloud accounts with two-step verification, and now and then check a backup actually restores. For family photos, keep copies in two places.",
+   "topic": "Devices",
+   "source": {
+    "name": "NCSC: Back up your data",
+    "url": "https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online/always-back-up-your-most-important-data"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "backups",
+    "photos",
+    "NCSC"
+   ]
+  },
+  {
+   "id": "grannysvault:c28",
+   "kind": "card",
+   "title": "Choosing attorneys",
+   "body": "Choose attorneys you trust to act in your best interests. They must be 18 or over, and you can appoint more than one, plus replacements. You'll also need a certificate provider, who confirms you understand the LPA and aren't being pressured. Age UK says they must have known you well for two years, or be a professional such as a doctor.",
+   "topic": "Lasting power of attorney",
+   "source": {
+    "name": "Age UK: Power of attorney",
+    "url": "https://www.ageuk.org.uk/information-advice/money-legal/legal-issues/power-of-attorney/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "LPA",
+    "attorneys",
+    "Age UK"
+   ],
+   "quiz": {
+    "q": "What does an LPA certificate provider confirm?",
+    "options": [
+     "That you understand the LPA and aren't under pressure",
+     "That your attorneys are rich enough",
+     "That your will is valid"
+    ],
+    "answer": 0,
+    "explain": "The certificate provider is a safeguard, checking you understand what you're signing and haven't been pushed into it."
+   }
+  },
+  {
+   "id": "grannysvault:c29",
+   "kind": "card",
+   "title": "Ordinary power of attorney",
+   "body": "An ordinary power of attorney isn't the same as an LPA. It only covers financial decisions and only works while you still have mental capacity, so it suits short-term needs like a hospital stay or a long trip. Age UK says an LPA is usually the better choice if you might lose capacity later. Get advice, as there's no standard form.",
+   "topic": "Lasting power of attorney",
+   "source": {
+    "name": "Age UK: Power of attorney",
+    "url": "https://www.ageuk.org.uk/information-advice/money-legal/legal-issues/power-of-attorney/"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "power of attorney",
+    "planning",
+    "Age UK"
+   ]
+  },
+  {
+   "id": "grannysvault:c30",
+   "kind": "card",
+   "title": "One step at a time",
+   "body": "GOV.UK's guide to what to do when someone dies breaks it into steps: register the death, tell government (Tell Us Once helps), arrange the funeral, check for bereavement benefits and help with costs, value the estate, and apply for probate if needed. Nobody has to do it all at once, and bereavement support is there too.",
+   "topic": "When someone dies",
+   "source": {
+    "name": "GOV.UK: What to do when someone dies",
+    "url": "https://www.gov.uk/when-someone-dies"
+   },
+   "checked": "2026-11-23",
+   "reviewed": false,
+   "tags": [
+    "bereavement",
+    "probate",
+    "admin"
+   ]
+  },
+  {
+   "id": "grannysvault:game-phishing-detective",
+   "kind": "game",
+   "title": "Phishing Detective",
+   "body": "Phishing or safe? Sort the made-up messages. Spot scam messages before Granny clicks them. All examples are fictional.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "grannysvault:game-password-master",
+   "kind": "game",
+   "title": "Password Master",
+   "body": "Which made-up password is strongest? Long, random and unique beats clever and short.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "grannysvault:game-memory-lock",
+   "kind": "game",
+   "title": "Memory Lock",
+   "body": "Watch the vault symbols light up, then repeat the code. Memory practice: Granny's secret weapon.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "grannysvault:game-secure-or-not",
+   "kind": "game",
+   "title": "Secure or Not?",
+   "body": "Is this habit safe or risky? Small habits that keep your accounts safe.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "grannysvault:game-document-detective",
+   "kind": "game",
+   "title": "Document Detective",
+   "body": "File each made-up document in the right part of the vault. An organised vault means the family finds things fast in an emergency.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "grannysvault:game-emergency-escape",
+   "kind": "game",
+   "title": "Emergency Escape",
+   "body": "Which number or action is right? UK emergency basics. The numbers everyone in the house should know.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "grannysvault:game-vault-steps",
+   "kind": "game",
+   "title": "Vault Builder",
+   "body": "Put the safety steps in the right order. What to do, in order, when things go wrong online.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  },
+  {
+   "id": "grannysvault:game-scam-word",
+   "kind": "game",
+   "title": "Scam Word",
+   "body": "Guess the five-letter safety word in six tries. Security words, sorted.",
+   "seconds": 45,
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": false
+  }
+ ]
+}

@@ -1,0 +1,126 @@
+{
+ "app_id": "plateweek",
+ "atoms": [
+  {
+   "id": "plateweek:feature-01",
+   "kind": "feature",
+   "title": "Weekly planner",
+   "body": "Weekly planner: drag meals to days",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "plateweek:feature-02",
+   "kind": "feature",
+   "title": "Personal meal library with ingredients",
+   "body": "Personal meal library with ingredients",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "plateweek:feature-03",
+   "kind": "feature",
+   "title": "Auto-generated shopping list",
+   "body": "Auto-generated shopping list",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "plateweek:feature-04",
+   "kind": "feature",
+   "title": "Weekly food budget estimate",
+   "body": "Weekly food budget estimate",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "plateweek:feature-05",
+   "kind": "feature",
+   "title": "Shared shopping list with running total and aisle order (from PlateWeek)",
+   "body": "Shared shopping list with running total and aisle order (from PlateWeek)",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "plateweek:moment-01",
+   "kind": "moment",
+   "title": "Meal planned",
+   "body": "Meal planned: the plate slides onto Tuesday with a clink",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "plateweek:moment-02",
+   "kind": "moment",
+   "title": "Full week planned",
+   "body": "Full week planned: chef's kiss",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "plateweek:moment-03",
+   "kind": "moment",
+   "title": "List made",
+   "body": "List made: the shopping list unrolls itself",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "plateweek:moment-04",
+   "kind": "moment",
+   "title": "Under budget",
+   "body": "Under budget: the trolley pops a wheelie",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "plateweek:moment-05",
+   "kind": "moment",
+   "title": "Leftovers",
+   "body": "Leftovers: the lunchbox does a happy dance",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  },
+  {
+   "id": "plateweek:usecase",
+   "kind": "usecase",
+   "title": "A day with PlateWeek",
+   "body": "On Sunday a user plans five dinners from their library and gets one shopping list grouped by aisle.",
+   "source": {
+    "name": "App spec",
+    "url": ""
+   },
+   "reviewed": true
+  }
+ ]
+}

@@ -24,6 +24,9 @@ The original brief is summarised in [`docs/SPEC.md`](docs/SPEC.md).
 | `configs/policy.json` | Owner's spend caps: £10 AI, £10 video, growth tiers |
 | `gme/voice.py` | Kaos's voice via ElevenLabs: speech with exact word timings, monthly character guard, voice previews (`configs/voice.json`) |
 | `gme/captions.py` | Word timings to 2-4 word captions (JSON for the renderer, SRT for platforms) |
+| `gme/atoms.py`, `scripts/export_atoms.py` | Content atoms (cards, lessons, features, games...) exported from the master repo |
+| `gme/planner.py` | Deterministic 6-month content calendar: rhythm, spotlight app, least-recently-used atom and format, costume, CTA |
+| `configs/formats.json`, `configs/acts.json`, `configs/content.json` | Standard video formats (beat sheets), Kaos act vocabulary, owner's content policy |
 | `gme/router.py` | Model routing: home GPU first (09:00–21:00, quiet at night), small API for quality |
 | `configs/apps/` | One JSON config per app (StackUp first) |
 | `tests/` | Tests for all of the above |

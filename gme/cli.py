@@ -4,6 +4,7 @@
   pause    stop all publishing (a flag file; the scheduler checks it before every run)
   resume   start publishing again
   costume  Kaos's costume for a date (default today), plus what's coming up
+  plan     Build the content calendar (default 180 days from the start date) and save it to data/calendar.json
   voice    Kaos's voice: `voice previews` (makes 3 samples, spends a little credit), `voice save <id>`
            (keeps the one you picked), `voice say "text"` (speaks a line and writes captions)
 
@@ -80,6 +81,7 @@ def main(argv: list[str] | None = None) -> int:
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("status"); sub.add_parser("pause"); sub.add_parser("resume")
     c = sub.add_parser("costume"); c.add_argument("--date", help="YYYY-MM-DD")
+    pl = sub.add_parser("plan"); pl.add_argument("--days", type=int); pl.add_argument("--from", dest="start")
     v = sub.add_parser("voice"); vs = v.add_subparsers(dest="vcmd", required=True)
     vs.add_parser("previews"); vsave = vs.add_parser("save"); vsave.add_argument("generated_voice_id")
     vsay = vs.add_parser("say"); vsay.add_argument("text"); vsay.add_argument("--out", default="kaos-line.mp3")
@@ -91,6 +93,11 @@ def main(argv: list[str] | None = None) -> int:
     elif a.cmd == "resume":
         (h / "PAUSED").unlink(missing_ok=True)
         print("resumed")
+    elif a.cmd == "plan":
+        from .planner import plan_from_files
+        p = plan_from_files(ROOT, date.fromisoformat(a.start) if a.start else None, a.days)
+        (h / "calendar.json").write_text(p.to_json())
+        print(f"planned {len(p.slots)} videos: {p.slots[0].day} to {p.slots[-1].day} -> {h / 'calendar.json'}")
     elif a.cmd == "voice":
         return _voice(a, h)
     elif a.cmd == "costume":

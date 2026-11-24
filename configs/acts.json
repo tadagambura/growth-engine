@@ -1,0 +1,21 @@
+{
+  "_note": "Vocabulary of Kaos acts. Beat sheets may only use these ids; the renderer (render/acts.js) implements every one. Add an act here and in the renderer together.",
+  "acts": {
+    "talk":      "stands facing camera, mouth moves with the voice, small gestures",
+    "shock":     "jaw drops, eyes wide, small jump back",
+    "panic":     "sweat drop, flailing arms, fast shuffle",
+    "think":     "chin on hand, looks up, thought bubble dots",
+    "walk_in":   "walks in from the side to centre",
+    "tap_phone": "pulls out a phone and taps it, expression turns hopeful",
+    "present":   "arm sweeps toward the screen like a presenter",
+    "point":     "points at the screen or at the text",
+    "celebrate": "arms up, confetti, a little hop",
+    "facepalm":  "hand slaps forehead, head shakes",
+    "shrug":     "shoulders up, palms out",
+    "wave":      "friendly wave to camera, goes to the end card",
+    "sigh":      "shoulders drop, relief",
+    "lean_in":   "leans toward camera conspiratorially",
+    "nod":       "nods along",
+    "dance":     "short happy bounce"
+  }
+}
