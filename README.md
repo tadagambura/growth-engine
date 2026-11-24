@@ -19,6 +19,9 @@ The original brief is summarised in [`docs/SPEC.md`](docs/SPEC.md).
 | `gme/queue.py` | SQLite content queue with an enforced approval flow |
 | `gme/telegram.py` | Telegram alerts, Approve/Reject buttons, owner-only decisions |
 | `gme/publisher.py` | Publisher seam, dry-run publisher and `publish_due` |
+| `gme/seasons.py` | Kaos's costume calendar (`configs/seasons.json`), pure date maths |
+| `gme/cli.py` | Control link: `python -m gme status / pause / resume / costume` |
+| `configs/policy.json` | Owner's spend caps: £10 AI, £10 video, growth tiers |
 | `gme/router.py` | Model routing: home GPU first (09:00–21:00, quiet at night), small API for quality |
 | `configs/apps/` | One JSON config per app (StackUp first) |
 | `tests/` | Tests for all of the above |

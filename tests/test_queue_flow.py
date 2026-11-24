@@ -10,7 +10,7 @@ from gme.queue import Queue, QueueError
 from gme.telegram import TelegramBot, apply_decisions
 
 NOW = datetime(2026, 12, 1, 9, 0, tzinfo=timezone.utc)
-CFG = load("configs/apps/stackup.json")
+CFG = replace(load("configs/apps/stackup.json"), status="draft", publishing_mode="approval")
 ACTIVE = replace(CFG, status="active")
 AUTO = replace(ACTIVE, publishing_mode="automatic")
 GOOD = "Week 1 of the 52-week challenge is £1. Start tiny. #StackUp"
@@ -100,3 +100,12 @@ def test_telegram_only_obeys_the_owner_and_applies_decisions():
     assert q.get(p.id).status == "approved"
     assert "could not approve" in notes[1]      # the second tap is reported, not fatal
     assert "TOKEN" not in repr(bot)
+
+
+def test_pause_skips_everything_and_keeps_posts_queued():
+    q = Queue()
+    p = q.add(AUTO, "bluesky", GOOD, NOW, NOW)
+    pub = DryRunPublisher()
+    assert publish_due(q, pub, {"stackup": AUTO}, NOW, paused=True)["skipped"] == [p.id]
+    assert pub.sent == [] and q.get(p.id).status == "approved"
+    assert publish_due(q, pub, {"stackup": AUTO}, NOW)["published"] == [p.id]

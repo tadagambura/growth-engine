@@ -18,6 +18,23 @@ class Policy:
     per_app_monthly: dict[str, float] = field(default_factory=dict)
     default_app_monthly: float = 2.0
     ads_enabled: bool = False
+    # Separate monthly cap per spend category, e.g. {"ai": 10, "video": 10}. A category with no entry
+    # is limited only by the portfolio caps.
+    category_monthly: dict[str, float] = field(default_factory=dict)
+    # Growth tiers: (monthly revenue in GBP at or above which the tier applies, category caps).
+    # The caller passes revenue from a trusted collector; no model can move a tier.
+    tiers: tuple[tuple[float, dict[str, float]], ...] = ()
+
+    def at_revenue(self, monthly_revenue_gbp: float) -> "Policy":
+        """The policy with the highest tier reached by this revenue applied. Caps only ever go up with revenue."""
+        best = dict(self.category_monthly)
+        for threshold, caps in sorted(self.tiers, key=lambda t: t[0]):
+            if monthly_revenue_gbp >= threshold:
+                for cat, cap in caps.items():
+                    best[cat] = max(best.get(cat, 0.0), cap)
+        portfolio = max(self.portfolio_monthly, sum(best.values()))
+        return Policy(portfolio, self.portfolio_daily, dict(self.per_app_monthly), self.default_app_monthly,
+                      self.ads_enabled, best, self.tiers)
 
 
 @dataclass(frozen=True)
@@ -32,9 +49,11 @@ class Ledger:
     entries: list[tuple[date, str, str, float]] = field(default_factory=list)
 
     def total(self, *, month: tuple[int, int] | None = None, day: date | None = None,
-              app_id: str | None = None) -> float:
+              app_id: str | None = None, category: str | None = None) -> float:
         s = 0.0
-        for d, app, _cat, gbp in self.entries:
+        for d, app, cat, gbp in self.entries:
+            if category and cat != category:
+                continue
             if month and (d.year, d.month) != month:
                 continue
             if day and d != day:
@@ -67,6 +86,9 @@ class BudgetGuard:
              self._policy.per_app_monthly.get(app_id, self._policy.default_app_monthly),
              f"{app_id} monthly cap"),
         ]
+        if category in self._policy.category_monthly:
+            checks.append((self.ledger.total(month=month, category=category),
+                           self._policy.category_monthly[category], f"{category} monthly cap"))
         for spent, cap, name in checks:
             if spent + estimated_gbp > cap + 1e-9:
                 return Decision(False, f"{name} reached (£{spent:.2f} of £{cap:.2f})")
@@ -78,3 +100,17 @@ class BudgetGuard:
     def usage_share(self, today: date) -> float:
         """Share of the monthly portfolio cap used; alerts fire at 0.5, 0.8 and 1.0."""
         return self.ledger.total(month=(today.year, today.month)) / self._policy.portfolio_monthly
+
+
+def load_policy(path) -> Policy:
+    """Read the owner's policy file (the engine can read it but never write it)."""
+    import json
+    from pathlib import Path
+    raw = json.loads(Path(path).read_text(encoding="utf-8"))
+    tiers = tuple((float(t["min_monthly_revenue_gbp"]), {k: float(v) for k, v in t["category_monthly"].items()})
+                  for t in raw.get("tiers", ()))
+    return Policy(
+        portfolio_monthly=float(raw["portfolio_monthly"]), portfolio_daily=float(raw["portfolio_daily"]),
+        per_app_monthly={k: float(v) for k, v in raw.get("per_app_monthly", {}).items()},
+        default_app_monthly=float(raw.get("default_app_monthly", 2.0)), ads_enabled=bool(raw.get("ads_enabled", False)),
+        category_monthly={k: float(v) for k, v in raw.get("category_monthly", {}).items()}, tiers=tiers)

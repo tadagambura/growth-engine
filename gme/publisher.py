@@ -27,10 +27,15 @@ class DryRunPublisher:
         return f"dryrun-{post.id}"
 
 
-def publish_due(queue: Queue, publisher: Publisher, apps: dict[str, AppConfig], now: datetime) -> dict[str, list[int]]:
-    """Publish everything due. An app only publishes while it is 'active' and its mode is not 'off'."""
+def publish_due(queue: Queue, publisher: Publisher, apps: dict[str, AppConfig], now: datetime,
+                paused: bool = False) -> dict[str, list[int]]:
+    """Publish everything due. An app only publishes while it is 'active' and its mode is not 'off'.
+    When paused (the owner ran `gme pause`) every due post is skipped and stays queued."""
     result: dict[str, list[int]] = {"published": [], "failed": [], "skipped": []}
     for post in queue.due(now):
+        if paused:
+            result["skipped"].append(post.id)
+            continue
         cfg = apps.get(post.app_id)
         if cfg is None or cfg.status != "active" or cfg.publishing_mode == "off":
             result["skipped"].append(post.id)

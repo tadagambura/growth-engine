@@ -1,0 +1,13 @@
+{
+  "_note": "Owner-set spending limits in GBP. The engine reads this file and can never write it. Changing a cap means the owner (or Claude on the owner's instruction) edits this file in a reviewed commit.",
+  "portfolio_monthly": 20.0,
+  "portfolio_daily": 1.5,
+  "default_app_monthly": 10.0,
+  "ads_enabled": false,
+  "category_monthly": {"ai": 10.0, "video": 10.0},
+  "tiers": [
+    {"min_monthly_revenue_gbp": 100,  "category_monthly": {"ai": 15.0, "video": 15.0}},
+    {"min_monthly_revenue_gbp": 300,  "category_monthly": {"ai": 25.0, "video": 30.0}},
+    {"min_monthly_revenue_gbp": 1000, "category_monthly": {"ai": 50.0, "video": 80.0}}
+  ]
+}

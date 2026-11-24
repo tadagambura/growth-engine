@@ -51,3 +51,22 @@ def test_policy_cannot_be_reassigned():
 
 def test_negative_estimates_rejected():
     assert not guard().check("stackup", "ai", -5, TODAY).allowed
+
+
+def test_category_caps_are_separate_from_each_other():
+    g = guard(portfolio_monthly=20, portfolio_daily=100, default_app_monthly=100, category_monthly={"ai": 10, "video": 10})
+    g.record("stackup", "ai", 9.9, date(2026, 11, 1))
+    assert not g.check("stackup", "ai", 0.5, TODAY).allowed          # ai is full
+    assert g.check("stackup", "video", 5.0, TODAY).allowed           # video is untouched
+    assert "ai monthly cap" in g.check("stackup", "ai", 0.5, TODAY).reason
+
+
+def test_revenue_tiers_only_raise_caps_and_never_lower_them():
+    from gme.budget import load_policy
+    p = load_policy("configs/policy.json")
+    assert p.category_monthly == {"ai": 10.0, "video": 10.0}
+    assert p.at_revenue(50).category_monthly == {"ai": 10.0, "video": 10.0}
+    mid = p.at_revenue(350)
+    assert mid.category_monthly == {"ai": 25.0, "video": 30.0} and mid.portfolio_monthly >= 55
+    assert p.at_revenue(5000).category_monthly["video"] == 80.0
+    assert p.at_revenue(0).category_monthly == p.category_monthly      # the base policy is untouched

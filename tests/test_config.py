@@ -34,6 +34,7 @@ def test_unknown_platform_rejected():
 
 def test_ads_cannot_be_enabled_on_a_draft_app():
     raw = base()
+    raw["status"] = "draft"
     raw["budgets"]["ads_enabled"] = True
     with pytest.raises(ConfigError, match="ads can only be enabled"):
         parse(raw)
