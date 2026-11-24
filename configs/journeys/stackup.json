@@ -1,0 +1,211 @@
+{
+  "app": "stackup",
+  "_note": "Scripted walk-throughs of the real app (web build) recorded by render/capture.mjs into assets/demos/stackup/. Steps: goto, wait (ms), click (data-testid), fill [testid, value]. Every action is followed by a short pause so viewers can read the screen. Only the app's own test ids are used.",
+  "journeys": {
+    "safe_to_spend": [
+      {
+        "goto": "/"
+      },
+      {
+        "wait": 900
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "wait": 700
+      },
+      {
+        "mark": "start"
+      },
+      {
+        "click": "safe-setup-go"
+      },
+      {
+        "wait": 600
+      },
+      {
+        "fill": [
+          "bill-name",
+          "Phone"
+        ]
+      },
+      {
+        "fill": [
+          "bill-amount",
+          "15"
+        ]
+      },
+      {
+        "fill": [
+          "bill-day",
+          "28"
+        ]
+      },
+      {
+        "click": "bill-add"
+      },
+      {
+        "wait": 500
+      },
+      {
+        "click": "pay-save"
+      },
+      {
+        "wait": 700
+      },
+      {
+        "click": "safe-enter-balance"
+      },
+      {
+        "fill": [
+          "balance-input",
+          "500"
+        ]
+      },
+      {
+        "click": "balance-save"
+      },
+      {
+        "wait": 1100
+      },
+      {
+        "click": "safe-afford"
+      },
+      {
+        "fill": [
+          "afford-input",
+          "20"
+        ]
+      },
+      {
+        "wait": 1800
+      }
+    ],
+    "challenge": [
+      {
+        "goto": "/"
+      },
+      {
+        "wait": 900
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "wait": 700
+      },
+      {
+        "mark": "start"
+      },
+      {
+        "click": "today-new-challenge"
+      },
+      {
+        "wait": 600
+      },
+      {
+        "click": "template-week52"
+      },
+      {
+        "wait": 700
+      },
+      {
+        "click": "challenge-start"
+      },
+      {
+        "wait": 900
+      },
+      {
+        "click": "slot-stack-next"
+      },
+      {
+        "wait": 900
+      },
+      {
+        "click": "slot-stack-next"
+      },
+      {
+        "wait": 900
+      },
+      {
+        "click": "slot-stack-next"
+      },
+      {
+        "wait": 1500
+      }
+    ],
+    "lesson": [
+      {
+        "goto": "/"
+      },
+      {
+        "wait": 900
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "wait": 700
+      },
+      {
+        "mark": "start"
+      },
+      {
+        "click": "today-lesson"
+      },
+      {
+        "wait": 2600
+      },
+      {
+        "click": "quiz-1"
+      },
+      {
+        "wait": 2000
+      }
+    ]
+  },
+  "map": {
+    "lesson": [
+      "lesson"
+    ],
+    "card": [
+      "lesson"
+    ]
+  },
+  "atoms": {
+    "stackup:feature-01": "safe_to_spend",
+    "stackup:feature-02": "safe_to_spend",
+    "stackup:feature-04": "challenge",
+    "stackup:feature-05": "lesson",
+    "stackup:usecase": "challenge",
+    "stackup:moment-01": "challenge",
+    "stackup:moment-03": "lesson",
+    "stackup:moment-05": "challenge"
+  },
+  "strict_kinds": [
+    "feature",
+    "usecase",
+    "moment",
+    "game",
+    "activity"
+  ]
+}

@@ -86,7 +86,7 @@ def _letters(options: list[str]) -> str:
 def fixed_lines(fmt: dict, atom: Atom, wps: float) -> dict[str, str]:
     """Lines for deterministic formats, copied from the atom (the quiz format)."""
     q = atom.quiz or {}
-    fill = {"question": q.get("q", ""), "options": _letters(q.get("options", [])),
+    fill = {"greeting": atom.body, "question": q.get("q", ""), "options": _letters(q.get("options", [])),
             "answer": q.get("options", [""])[q.get("answer", 0)].rstrip("."), "explain": q.get("explain", "")}
     out = {}
     for b in fmt["beats"]:
@@ -95,7 +95,7 @@ def fixed_lines(fmt: dict, atom: Atom, wps: float) -> dict[str, str]:
             text = b["fixed"]
             for k, v in fill.items():
                 text = text.replace("{" + k + "}", v)
-            out[b["beat"]] = trim_words(text, limit + (25 if b["beat"] == "payoff" else 8))
+            out[b["beat"]] = text if b.get("notrim") else trim_words(text, limit + (25 if b["beat"] == "payoff" else 8))
     return out
 
 
