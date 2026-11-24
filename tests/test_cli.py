@@ -23,3 +23,11 @@ def test_costume_command_and_apps_are_listed(tmp_path, monkeypatch, capsys):
     assert json.loads(capsys.readouterr().out)["costume"] == "newyear"
     s = cli.status(tmp_path, date(2026, 12, 1))
     assert set(s["apps"]) >= {"stackup", "loopday"} and s["costume"] == "christmas"
+
+
+def test_voice_commands_exist_and_refuse_without_a_chosen_voice(tmp_path, monkeypatch, capsys):
+    monkeypatch.setenv("GME_HOME", str(tmp_path))
+    import gme.voice as voice
+    monkeypatch.setattr(voice, "make_client", lambda *_: object())     # no network, no key needed
+    assert cli.main(["voice", "say", "hello", "--out", str(tmp_path / "x.mp3")]) == 1
+    assert "no voice chosen" in capsys.readouterr().err
