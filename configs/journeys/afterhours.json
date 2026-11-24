@@ -1,0 +1,74 @@
+{
+  "app": "afterhours",
+  "_note": "See stackup.json. NEVER record the spicy or after-dark decks: marketing is hints only (constitution section 5).",
+  "forbidden_testids": [
+    "deck-spicy",
+    "deck-after-dark"
+  ],
+  "journeys": {
+    "couples_deck": [
+      {
+        "goto": "/"
+      },
+      {
+        "wait": 900
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "wait": 800
+      },
+      {
+        "mark": "start"
+      },
+      {
+        "click": "deck-couples"
+      },
+      {
+        "wait": 1800
+      },
+      {
+        "click": "card-next"
+      },
+      {
+        "wait": 1800
+      },
+      {
+        "click": "card-fav"
+      },
+      {
+        "wait": 1500
+      }
+    ]
+  },
+  "map": {
+    "card": [
+      "couples_deck"
+    ],
+    "lesson": [
+      "couples_deck"
+    ]
+  },
+  "atoms": {
+    "afterhours:feature-01": "couples_deck",
+    "afterhours:feature-02": "couples_deck",
+    "afterhours:feature-03": "couples_deck",
+    "afterhours:moment-01": "couples_deck",
+    "afterhours:moment-05": "couples_deck",
+    "afterhours:usecase": "couples_deck"
+  },
+  "strict_kinds": [
+    "feature",
+    "usecase",
+    "moment",
+    "game",
+    "activity"
+  ]
+}

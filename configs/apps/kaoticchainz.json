@@ -1,0 +1,48 @@
+{
+  "app_id": "kaoticchainz",
+  "name": "Kaotic Chainz",
+  "status": "active",
+  "tagline": "A Kaotic Chainz Production",
+  "audience": "Everyone who follows the Kaotic Chainz accounts",
+  "brand_voice": "Warm, respectful and short. Greetings only: no jokes about the occasion and no selling.",
+  "tone": "Playful",
+  "pillars": {
+    "Greetings": 1.0
+  },
+  "platforms": {
+    "tiktok": 1,
+    "instagram": 1,
+    "youtube": 1,
+    "facebook": 1,
+    "threads": 1,
+    "bluesky": 1,
+    "x": 1,
+    "pinterest": 1
+  },
+  "publishing_mode": "automatic",
+  "budgets": {
+    "ai_monthly_gbp": 5.0,
+    "ads_enabled": false,
+    "ads_monthly_gbp": 0
+  },
+  "links": {
+    "web": "https://kaoticchainz.com/",
+    "play": "",
+    "app_store": ""
+  },
+  "approved_claims": [],
+  "banned_phrases": [
+    "guaranteed",
+    "cure",
+    "fix your life",
+    "change your life in",
+    "#1 app",
+    "miracle",
+    "burn fat",
+    "lose weight fast"
+  ],
+  "keywords": [],
+  "competitors": [],
+  "hashtags_max": 2,
+  "min_age": 0
+}

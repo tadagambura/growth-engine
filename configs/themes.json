@@ -1,0 +1,6 @@
+{
+  "_note": "Stage colour per app for the video frame (the app's own theme colour, softened).",
+  "default": "#ffe9a8",
+  "apps": {"stackup": "#bff0d0", "loopday": "#ffd9b0", "afterhours": "#ffc9dd", "thirsty": "#b8efe8", "flipped": "#cfe3ff",
+           "shiftledger": "#d9d4ff", "worthit": "#e3ccff", "kidquest": "#ffe9a8", "reset": "#d8f2c0", "braindump": "#ffe0c2", "grannysvault": "#e6d9f2"}
+}

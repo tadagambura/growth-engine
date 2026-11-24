@@ -1,0 +1,111 @@
+{
+  "app": "loopday",
+  "_note": "See stackup.json.",
+  "journeys": {
+    "tick_a_habit": [
+      {
+        "goto": "/"
+      },
+      {
+        "wait": 900
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "wait": 700
+      },
+      {
+        "mark": "start"
+      },
+      {
+        "click": "starter-Drink water"
+      },
+      {
+        "wait": 1000
+      },
+      {
+        "click": "check-Drink water"
+      },
+      {
+        "wait": 2000
+      }
+    ],
+    "read_pages": [
+      {
+        "goto": "/"
+      },
+      {
+        "wait": 900
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "click": "intro-next"
+      },
+      {
+        "wait": 700
+      },
+      {
+        "mark": "start"
+      },
+      {
+        "click": "starter-Read"
+      },
+      {
+        "wait": 800
+      },
+      {
+        "click": "check-Read"
+      },
+      {
+        "wait": 700
+      },
+      {
+        "fill": [
+          "amount-input",
+          "25"
+        ]
+      },
+      {
+        "click": "amount-save"
+      },
+      {
+        "wait": 1800
+      }
+    ]
+  },
+  "map": {
+    "card": [
+      "tick_a_habit"
+    ],
+    "lesson": [
+      "tick_a_habit"
+    ]
+  },
+  "atoms": {
+    "loopday:feature-01": "tick_a_habit",
+    "loopday:feature-02": "tick_a_habit",
+    "loopday:feature-03": "tick_a_habit",
+    "loopday:feature-06": "read_pages",
+    "loopday:moment-01": "tick_a_habit",
+    "loopday:usecase": "tick_a_habit"
+  },
+  "strict_kinds": [
+    "feature",
+    "usecase",
+    "moment",
+    "game",
+    "activity"
+  ]
+}

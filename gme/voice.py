@@ -56,6 +56,9 @@ class VoiceResult:
     characters: int
     duration: float
     words: tuple[Word, ...]
+    char_starts: tuple[float, ...] = ()      # per-character timings, for locating where each beat begins
+    char_ends: tuple[float, ...] = ()
+    text: str = ""
 
 
 class VoiceUsage:
@@ -142,7 +145,8 @@ def synthesize(text: str, out_path: str | Path, cfg: VoiceConfig, client, usage:
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_bytes(base64.b64decode(resp.audio_base_64))
     usage.add(len(body), today)
-    return VoiceResult(out, len(body), words[-1].end if words else 0.0, words)
+    return VoiceResult(out, len(body), words[-1].end if words else 0.0, words,
+                       tuple(align.character_start_times_seconds), tuple(align.character_end_times_seconds), body)
 
 
 def design_previews(cfg: VoiceConfig, client, out_dir: str | Path) -> list[tuple[str, Path, float]]:

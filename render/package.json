@@ -1,0 +1,7 @@
+{
+  "name": "gme-render",
+  "private": true,
+  "type": "module",
+  "description": "Headless-Chrome and ffmpeg renderer for Kaos videos",
+  "dependencies": { "playwright-core": "^1.49.0" }
+}

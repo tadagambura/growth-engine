@@ -58,6 +58,7 @@ CI-gated PRs, backend health, platform-token expiry, content-accuracy review dat
 | Budget guard | Built (`gme.budget`), tested |
 | Costume calendar (`gme.seasons`), category budgets and revenue tiers (`gme.budget`, `configs/policy.json`), control CLI (`gme.cli`) | Built, tested |
 | Voice step (`gme.voice`) and captions (`gme.captions`) | Built, tested with a fake client. Live test and voice choice pending the owner |
+| Daily video pipeline: planner, script writer, voice, Kaos acts, real-app footage, render, video QA, per-platform posts, systemd timers | Built and run end to end (`docs/VIDEO.md`) |
 | Model router: GPU hours, quiet hours, API fallback | Built (`gme.router`), tested |
 | Content queue with enforced approval flow (`gme.queue`), deterministic QA (`gme.qa`) | Built, tested (SQLite; scheduler loop still to do) |
 | N95 deploy kit (Postiz pinned, engine DB, tunnel, backups) | Built (`deploy/n95`), config validated |

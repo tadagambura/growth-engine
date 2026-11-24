@@ -553,6 +553,36 @@
      "layout": "endcard"
     }
    ]
+  },
+  {
+   "id": "greeting",
+   "name": "Greeting",
+   "day_types": [],
+   "kinds": [],
+   "deterministic": true,
+   "beats": [
+    {
+     "beat": "hook",
+     "seconds": 8,
+     "slot": null,
+     "fixed": "{greeting}",
+     "notrim": true,
+     "acts": [
+      "talk",
+      "nod"
+     ],
+     "layout": "stage"
+    },
+    {
+     "beat": "cta",
+     "seconds": 3,
+     "slot": null,
+     "acts": [
+      "wave"
+     ],
+     "layout": "endcard"
+    }
+   ]
   }
  ]
 }
