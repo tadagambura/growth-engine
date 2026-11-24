@@ -15,6 +15,10 @@ The original brief is summarised in [`docs/SPEC.md`](docs/SPEC.md).
 |---|---|
 | `gme/config.py` | App config schema and strict validation |
 | `gme/budget.py` | Budget guard: deterministic caps no AI can change |
+| `gme/qa.py` | Deterministic post checks: banned phrases, hashtags, length, foreign links |
+| `gme/queue.py` | SQLite content queue with an enforced approval flow |
+| `gme/telegram.py` | Telegram alerts, Approve/Reject buttons, owner-only decisions |
+| `gme/publisher.py` | Publisher seam, dry-run publisher and `publish_due` |
 | `gme/router.py` | Model routing: home GPU first (09:00–21:00, quiet at night), small API for quality |
 | `configs/apps/` | One JSON config per app (StackUp first) |
 | `tests/` | Tests for all of the above |

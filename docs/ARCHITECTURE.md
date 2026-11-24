@@ -57,9 +57,10 @@ CI-gated PRs, backend health, platform-token expiry, content-accuracy review dat
 | App config schema + validation | Built (`gme.config`), tested |
 | Budget guard | Built (`gme.budget`), tested |
 | Model router: GPU hours, quiet hours, API fallback | Built (`gme.router`), tested |
-| Database schema, queue, scheduler | Next |
+| Content queue with enforced approval flow (`gme.queue`), deterministic QA (`gme.qa`) | Built, tested (SQLite; scheduler loop still to do) |
 | N95 deploy kit (Postiz pinned, engine DB, tunnel, backups) | Built (`deploy/n95`), config validated |
-| Postiz integration, Telegram alerts | Next |
+| Telegram alerts and approve/reject buttons (`gme.telegram`), publisher seam with dry run (`gme.publisher`) | Built, tested with fake transport |
+| Postiz publisher | Next: needs a running Postiz on the N95 to check the pinned version's API |
 | GPU worker and creative templates | Next |
 | Analytics collectors, weekly report | Phase 2 |
 | Research, optimisation, app scoring | Phases 3–5 |
