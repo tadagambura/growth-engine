@@ -12,7 +12,7 @@ import statistics
 import subprocess
 from pathlib import Path
 
-from . import qa
+from . import dates, qa
 from .config import AppConfig
 from .scriptwriter import Script
 
@@ -83,4 +83,5 @@ def check_script(script: Script, fmt: dict, cfg: AppConfig, cta_text: str, spoke
         problems.append(f"script is {len(script.spoken.split())} words (max {spoken_limit_words})")
     for label, text in (("spoken text", script.spoken), ("caption", script.caption), ("title", script.title)):
         problems += [f"{label}: {p}" for p in qa.check(text, "youtube", cfg) if "limit" not in p]
+        problems += [f"{label}: mentions the date '{d}' (videos get reused)" for d in dates.find(text)]
     return problems

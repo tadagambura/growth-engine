@@ -35,6 +35,7 @@ for (const [name, steps] of Object.entries(cfg.journeys)) {
   if (only && name !== only) continue;
   const tmp = join(outDir, `.tmp-${name}`); rmSync(tmp, { recursive: true, force: true }); mkdirSync(tmp, { recursive: true });
   const context = await browser.newContext({ viewport: { width: 390, height: 844 }, deviceScaleFactor: 1, recordVideo: { dir: tmp, size: { width: 390, height: 844 } } });
+  await context.addInitScript({ path: join(HERE, "nodates.js") });
   const page = await context.newPage(); const t0 = Date.now(); let mark = 0.7; const errors = [];
   page.on("pageerror", (e) => errors.push(e.message));
   try {
