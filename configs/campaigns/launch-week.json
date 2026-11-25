@@ -1,0 +1,41 @@
+{
+  "_note": "Owner-approved start-up week before the daily engine starts on 1 Dec. Run: python -m gme campaign launch-week",
+  "time_utc": "17:30:00",
+  "posts": [
+    {
+      "date": "2026-11-26",
+      "app": "stackup",
+      "media": "day1-hello.mp4",
+      "short": "Hello! We're Kaotic Chainz 🔗\n\nTwo small Android apps are on the way:\n🪙 StackUp: know what's safe to spend before payday\n🔁 LoopDay: habits that forgive a missed day\n\nHelp test them: kaoticchainz.com/testers",
+      "long": "Hello! We're Kaotic Chainz 🔗\n\nTwo small Android apps are on the way. StackUp shows what's safe to spend before payday. LoopDay is a habit tracker that forgives a missed day.\n\nGoogle asks for real testers before a new app can go public, so every one helps. Join at kaoticchainz.com/testers\n\n#StackUp #LoopDay #androidapp"
+    },
+    {
+      "date": "2026-11-27",
+      "app": "stackup",
+      "media": "day2-safe-to-spend.mp4",
+      "short": "Can you afford it before payday? StackUp works out what's safe to spend from your pay dates and bills. No bank login.\n\nHelp test it: kaoticchainz.com/testers",
+      "long": "Ran out of money before payday? StackUp shows what's safe to spend today, this week and until payday. No bank login, and your numbers stay on your phone. General budgeting tools only. Help test it: kaoticchainz.com/testers\n\n#StackUp #paydayhelp #budgeting"
+    },
+    {
+      "date": "2026-11-28",
+      "app": "loopday",
+      "media": "day3-streak-freeze.mp4",
+      "short": "Many habit apps wipe your streak after one missed day. In LoopDay, a freeze can protect it, and rest days don't count against you.\n\nkaoticchainz.com/testers",
+      "long": "Missed a day? In LoopDay a freeze can protect your streak, and rest days don't count against you. No guilt, just carry on tomorrow. Help test it: kaoticchainz.com/testers\n\n#LoopDay #habittracker #tinyhabits"
+    },
+    {
+      "date": "2026-11-29",
+      "app": "stackup",
+      "media": "day4-testers.mp4",
+      "short": "Got an Android phone? We need at least 12 people to keep our test apps installed for 14 days before Google lets them go public. It's free.\n\nkaoticchainz.com/testers",
+      "long": "Got an Android phone? We need at least 12 people to keep our test apps installed for 14 days before Google lets them go public. It's free: join with your Gmail, tap our invite, and open the app now and then. Join at kaoticchainz.com/testers\n\n#androidtesters #StackUp #LoopDay"
+    },
+    {
+      "date": "2026-11-30",
+      "app": "stackup",
+      "media": "day5-52-week.mp4",
+      "short": "The 52-week challenge starts with £1. Week 2 is £2, and so on. Do all 52 weeks and you've saved £1,378.\n\nStackUp tracks it one tap at a time.",
+      "long": "Week 1 is £1. Week 2 is £2. Keep going for all 52 weeks and you've saved £1,378. StackUp tracks it one tap at a time. Pick a pace that works for you. Help test it: kaoticchainz.com/testers\n\n#savingschallenge #52weekchallenge #StackUp"
+    }
+  ]
+}
