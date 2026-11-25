@@ -25,6 +25,9 @@ planner → script writer → voice → beat timings → captions → demo foota
 ## No dates
 Videos get reused, so none carries a date: recordings are scrubbed (`render/nodates.js`), scripts and captions are rejected if they name a date or year, and content whose facts depend on a date is skipped (`gme/dates.py`). Tracking links in post text still carry the day.
 
+## Public copies
+Postiz stores uploads in Cloudflare R2 (`R2_BUCKET`, `R2_PUBLIC_URL` in the secrets file) so platforms can download them while the Postiz dashboard stays locked. Each daily run deletes `.mp4` copies older than 7 days; originals stay on the host. Never open a path on the Postiz hostname: a path exception was bypassable.
+
 ## Commands
 ```bash
 python -m gme status                 # what the engine is doing
