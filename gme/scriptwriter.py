@@ -122,9 +122,15 @@ ADVICE_KINDS = {"lesson", "card"}
 
 
 def claims_a_feature(text: str, app_name: str) -> bool:
-    verbs = r"(?:shows|tracks|imports|connects|syncs|reads|scans|calculates|adds|lists|finds|pulls|sorts|checks|tells|does)"
-    return bool(re.search(rf"\b{re.escape(app_name)}\s+{verbs}\b(?!\s+(?:me\s+)?(?:(?:a|the|this|today's)\s+)?(?:\w+\s+)?(?:lesson|tip|quiz)\b)",
-                          text, re.I))
+    """True when the app (or "it") is the one doing something: "StackUp walks me through...", "it tracks..."."""
+    doer = rf"(?:\b{re.escape(app_name)}|\bthe app|\bit)"
+    verb = (r"(?:(?:also|then|just|even)\s+)?(?:can|will|has|lets|walks|shows|tracks|imports|connects|syncs|reads|scans|calculates|adds|lists|"
+            r"finds|pulls|sorts|checks|tells|does|helps|gives|breaks|guides|builds|keeps|totals|subtracts|remembers|reminds)\b")
+    return bool(re.search(rf"{doer}\s+{verb}", text, re.I))
+
+
+def advice_opening(kind: str) -> str:
+    return f"The {kind} says"
 
 
 def schema_for(slots: list[str]) -> dict:
@@ -164,6 +170,11 @@ def user_prompt(fmt: dict, atom: Atom, app_name: str, tagline: str, wps: float, 
                 trend: str | None) -> str:
     beats = [{"slot": b["slot"], "role": ROLE_HINTS.get(b["slot"], b["slot"]), "max_words": max_words(b["seconds"], wps)}
              for b in fmt["beats"] if b["slot"]]
+    if atom.kind in ADVICE_KINDS:
+        for b in beats:
+            if b["slot"] == "demo":
+                b["role"] = (f"begin with exactly '{advice_opening(atom.kind)}' and give ATOM's advice in plain words; "
+                             "do not say the app does anything")
     payload = {
         "app": {"name": app_name, "tagline": tagline},
         "format": fmt["name"],
@@ -204,6 +215,8 @@ def validate(lines: dict, slots: list[str], limits: dict[str, int], atom: Atom, 
             problems.append(f"{key} is {len(text.split())} words (max {limit})")
         if URL.search(text) or HASHTAG.search(text) or EMOJI.search(text):
             problems.append(f"{key} has a link, hashtag or emoji")
+        if atom.kind in ADVICE_KINDS and key == "demo" and not text.startswith(advice_opening(atom.kind)):
+            problems.append(f"demo must begin with '{advice_opening(atom.kind)}'")
         if atom.kind in ADVICE_KINDS and claims_a_feature(text, cfg.name):
             problems.append(f"{key} says the app does something this {atom.kind} does not claim")
         if dates.find(text):

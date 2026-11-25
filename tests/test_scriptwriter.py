@@ -126,5 +126,6 @@ def test_lines_must_be_first_person():
 def test_a_lesson_may_not_be_turned_into_an_app_feature():
     assert claims_a_feature("StackUp shows last month's card statement.", "StackUp")
     assert claims_a_feature("StackUp calculates it for me.", "StackUp")
-    assert not claims_a_feature("StackUp shows me today's lesson.", "StackUp")
+    assert claims_a_feature("StackUp walks me through a four-week diary.", "StackUp")
+    assert claims_a_feature("Then it tracks every penny.", "StackUp")
     assert not claims_a_feature("So I opened StackUp to learn it.", "StackUp")
