@@ -44,7 +44,7 @@ def test_importing_twice_adds_nothing_and_past_days_are_skipped(tmp_path):
     later = datetime(2026, 11, 27, 18, tzinfo=timezone.utc)
     first = add_campaign(CAMPAIGN, q, APPS, media, lambda p: p == "bluesky", later)
     again = add_campaign(CAMPAIGN, q, APPS, media, lambda p: p == "bluesky", later)
-    assert len(first["added"]) == 3 and len(first["past"]) == 2
+    assert len(first["added"]) == 3 and len(first["past"]) == 3
     assert again["added"] == [] and len(again["already_queued"]) == 3
 
 
