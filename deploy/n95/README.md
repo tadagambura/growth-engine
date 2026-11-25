@@ -52,5 +52,18 @@ re-run step 4.5.
 | `/srv/gme/engine/` | This repo |
 
 ## Backup to the Inspiron
-Wednesdays and Sundays at noon (London) the N95 copies the videos to the Inspiron (`~/kc-video-backup`), waking it if needed and powering it off again only if it woke it. Run once on the Inspiron: `deploy/inspiron/setup.sh`. Cron line on the N95 (UTC; the script ignores the hour that is not noon in London):
+Wednesdays and Sundays at noon (London) the N95 copies the videos, plus an encrypted copy of the databases and settings, to the Inspiron (`~/kc-video-backup`), waking it if needed and powering it off again only if it woke it. Run once on the Inspiron: `deploy/inspiron/setup.sh`. Cron line on the N95 (UTC; the script ignores the hour that is not noon in London):
 `0 11,12 * * 0,3 bash /srv/gme/engine/deploy/n95/inspiron-backup.sh --if-noon-london >> /srv/gme/data/inspiron-backup.log 2>&1`
+
+### Encrypted databases and settings
+The N95 encrypts them to `/srv/gme/backup-cert.pem` (without that file they are skipped, and the log says so). Make the key pair once on Archie, and keep a copy of the private key in your password manager: without it the backups cannot be read.
+
+```
+d=~/.config/app-portfolio/backup-keys; mkdir -p $d && chmod 700 $d
+openssl req -x509 -newkey rsa:3072 -nodes -days 3650 -subj /CN=gme-backup -keyout $d/gme-backup.key -out $d/gme-backup.pem
+scp $d/gme-backup.pem tada@archie-n95:/srv/gme/backup-cert.pem
+```
+
+Restore: copy a `gme-state-DATE.tar.gz.cms` from the Inspiron (`~/kc-video-backup/state/`), then
+`openssl cms -decrypt -binary -inform DER -in FILE -inkey gme-backup.key | tar -xzf -`.
+The `.dump` files load with `pg_restore`.
