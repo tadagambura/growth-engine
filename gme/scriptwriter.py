@@ -117,6 +117,16 @@ def evergreen_lines(fmt: dict, atom: Atom, app_name: str, wps: float) -> dict[st
 
 
 # ---------- the model call ----------
+# In a lesson or card, the facts are advice, not things the app does: "StackUp shows your statement" is invented.
+ADVICE_KINDS = {"lesson", "card"}
+
+
+def claims_a_feature(text: str, app_name: str) -> bool:
+    verbs = r"(?:shows|tracks|imports|connects|syncs|reads|scans|calculates|adds|lists|finds|pulls|sorts|checks|tells|does)"
+    return bool(re.search(rf"\b{re.escape(app_name)}\s+{verbs}\b(?!\s+(?:me\s+)?(?:(?:a|the|this|today's)\s+)?(?:\w+\s+)?(?:lesson|tip|quiz)\b)",
+                          text, re.I))
+
+
 def schema_for(slots: list[str]) -> dict:
     props = {s: {"type": "string"} for s in slots + ["caption", "title"]}
     return {"type": "object", "properties": props, "required": list(props), "additionalProperties": False}
@@ -133,6 +143,8 @@ def system_prompt(app_name: str, cfg: AppConfig) -> str:
         "Each line is spoken aloud: short sentences, and never more than its max_words. "
         "Use ONLY the facts in ATOM. Never invent numbers, prices, features, results or testimonials. "
         "Never mention a date, month or year: videos get reused. "
+        "The app does only what ATOM says the app does. When ATOM is a lesson or card, its advice is something I do "
+        "myself: never say the app shows, tracks, reads or calculates it. "
         "No hashtags, emojis, links or all-caps shouting. No advice about the viewer's own money, health or relationships. "
         f"Voice and tone: {cfg.brand_voice} "
         "Return only the JSON object."
@@ -192,6 +204,8 @@ def validate(lines: dict, slots: list[str], limits: dict[str, int], atom: Atom, 
             problems.append(f"{key} is {len(text.split())} words (max {limit})")
         if URL.search(text) or HASHTAG.search(text) or EMOJI.search(text):
             problems.append(f"{key} has a link, hashtag or emoji")
+        if atom.kind in ADVICE_KINDS and claims_a_feature(text, cfg.name):
+            problems.append(f"{key} says the app does something this {atom.kind} does not claim")
         if dates.find(text):
             problems.append(f"{key} mentions a date or year")
         for n in NUM.findall(text):
