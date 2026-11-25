@@ -6,7 +6,7 @@ import pytest
 
 from gme.config import load
 from gme.planner import load_json
-from gme.posts import build_post, hashtags, tracked_link
+from gme.posts import build_post, hashtags, tracked_link, fit
 from gme.scriptwriter import BeatText, Script, cta_text
 from gme.videoqa import check_file, check_script
 
@@ -59,3 +59,8 @@ def test_file_checks_catch_wrong_size_blank_and_short_videos(tmp_path):
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-f", "lavfi", "-i", "testsrc2=s=1080x1920:r=30:d=20", "-f", "lavfi", "-i",
                     "sine=frequency=300:duration=20", "-c:v", "libx264", "-b:v", "2M", "-pix_fmt", "yuv420p", "-shortest", str(good)], check=True)
     assert check_file(good, voiced=False, min_s=15, max_s=60) == []
+
+
+def test_a_long_caption_ends_on_a_whole_sentence():
+    assert fit("First one. Second one is much longer than that.", 20) == "First one."
+    assert fit("One single sentence that cannot possibly fit", 20).endswith("\u2026")
