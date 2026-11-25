@@ -50,3 +50,7 @@ re-run step 4.5.
 | `/srv/gme/.env`, `/srv/gme/postiz.override.yaml` | Rendered from the above; don't edit by hand |
 | `/srv/gme/postiz/` | Postiz's official compose files (pinned commit) |
 | `/srv/gme/engine/` | This repo |
+
+## Backup to the Inspiron
+Wednesdays and Sundays at noon (London) the N95 copies the videos to the Inspiron (`~/kc-video-backup`), waking it if needed and powering it off again only if it woke it. Run once on the Inspiron: `deploy/inspiron/setup.sh`. Cron line on the N95 (UTC; the script ignores the hour that is not noon in London):
+`0 11,12 * * 0,3 bash /srv/gme/engine/deploy/n95/inspiron-backup.sh --if-noon-london >> /srv/gme/data/inspiron-backup.log 2>&1`
