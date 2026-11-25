@@ -4,6 +4,7 @@ from pathlib import Path
 from types import SimpleNamespace
 
 from gme import daily
+from gme.postiz import PostizPublisher
 from gme.scriptwriter import BeatText, Script, cta_text
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -94,3 +95,12 @@ def test_safe_mode_rescues_the_day_with_no_model_and_no_voice(tmp_path, monkeypa
     out = daily.run_day(env, date(2026, 12, 1), NOW, producer=producer)
     assert out["status"] == "ok" and seen[2] == (None, None)                 # third attempt: no model, no voice
     assert any("safe mode" in n for n in out["notes"]) and sent
+
+
+def test_a_real_publisher_only_gets_posts_for_connected_channels(tmp_path, monkeypatch):
+    env = make_env(tmp_path, monkeypatch)
+    env.publisher = PostizPublisher({"integrations": {"bluesky": "abc", "x": ""}}, lambda *a, **k: [])
+    prod, _ = fake_producer()
+    monkeypatch.setattr(daily.videoqa, "check_file", lambda *a, **k: [])
+    out = daily.run_day(env, date(2026, 12, 1), NOW, producer=prod)
+    assert [p["platform"] for p in out["posts"]] == ["bluesky"]

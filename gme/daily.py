@@ -169,8 +169,9 @@ def run_day(env: Env, day: date, now: datetime | None = None, producer=video.pro
         return {"status": "failed", "day": day.isoformat(), "problems": problems}
 
     posts = []
+    connected = getattr(env.publisher, "connected", None)           # only a real publisher has channels
     for platform, per_week in cfg.platforms.items():
-        if per_week <= 0 or platform not in VIDEO_PLATFORMS:
+        if per_week <= 0 or platform not in VIDEO_PLATFORMS or (connected and not connected(platform)):
             continue
         text = build_post(platform, result.script, cfg, day.isoformat(), cta)
         try:
