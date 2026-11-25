@@ -87,6 +87,9 @@ class PostizPublisher:
             self._media[path] = {"id": res["id"], "path": res["path"]}
         return self._media[path]
 
+    def connected(self, platform: str) -> bool:
+        return bool(self.cfg.get("integrations", {}).get(platform))
+
     def publish(self, post: Post) -> str:
         channel = self.cfg.get("integrations", {}).get(post.platform, "")
         if not channel:

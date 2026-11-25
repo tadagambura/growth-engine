@@ -3,7 +3,7 @@
   "enabled": false,
   "base_url": "http://127.0.0.1:4007/api/public/v1",
   "send": "now",
-  "integrations": {"tiktok": "", "instagram": "", "youtube": "", "facebook": "", "threads": "", "bluesky": "", "x": "", "pinterest": ""},
+  "integrations": {"tiktok": "", "instagram": "", "youtube": "", "facebook": "", "threads": "", "bluesky": "cmwvdq2vc0001nw7zj14zk5v4", "x": "", "pinterest": ""},
   "pinterest_board": "",
   "tiktok_method": "DIRECT_POST",
   "youtube_visibility": "public"
