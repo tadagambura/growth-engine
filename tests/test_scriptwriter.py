@@ -7,7 +7,7 @@ from gme.atoms import load_atoms
 from gme.budget import BudgetGuard, Policy
 from gme.config import load
 from gme.planner import Slot, load_json
-from gme.scriptwriter import Writer, fixed_lines, max_words, trim_words, validate
+from gme.scriptwriter import Writer, fixed_lines, max_words, trim_words, validate, claims_a_feature
 
 ROOT = Path(__file__).resolve().parent.parent
 CONTENT, MODELS = load_json(ROOT / "configs/content.json"), load_json(ROOT / "configs/models.json")
@@ -121,3 +121,10 @@ def test_lines_must_be_first_person():
     atom = ATOMS[SLOT.atom_id]
     limits = {"hook": 6, "problem": 16, "turn": 9, "demo": 29, "payoff": 13}
     assert any("third person" in p for p in validate(dict(GOOD, turn="Kaos opens StackUp."), list(limits), limits, atom, STACKUP))
+
+
+def test_a_lesson_may_not_be_turned_into_an_app_feature():
+    assert claims_a_feature("StackUp shows last month's card statement.", "StackUp")
+    assert claims_a_feature("StackUp calculates it for me.", "StackUp")
+    assert not claims_a_feature("StackUp shows me today's lesson.", "StackUp")
+    assert not claims_a_feature("So I opened StackUp to learn it.", "StackUp")
