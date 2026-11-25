@@ -23,6 +23,17 @@ DOMAIN=$(s DOMAIN)
 URL="https://postiz.$DOMAIN"
 TUNNEL=$(s CLOUDFLARE_TUNNEL_TOKEN)
 
+# Videos go to Cloudflare R2 when it is set up, so platforms can download them while Postiz stays locked.
+r2_env() {
+  [[ -n "$(s R2_PUBLIC_URL)" ]] || return 0
+  local k v
+  for k in STORAGE_PROVIDER:cloudflare CLOUDFLARE_REGION:auto "CLOUDFLARE_ACCOUNT_ID:$(s CLOUDFLARE_ACCOUNT_ID)" \
+           "CLOUDFLARE_ACCESS_KEY:$(s R2_ACCESS_KEY_ID)" "CLOUDFLARE_SECRET_ACCESS_KEY:$(s R2_SECRET_ACCESS_KEY)" \
+           "CLOUDFLARE_BUCKETNAME:$(s R2_BUCKET)" "CLOUDFLARE_BUCKET_URL:$(s R2_PUBLIC_URL)"; do
+    v="${k#*:}"; printf '      %s: %s\n' "${k%%:*}" "$(q "$v")"
+  done
+}
+
 # .env for Compose variable substitution
 cat > "$GME/.env" <<ENV
 COMPOSE_PROJECT_NAME=gme
@@ -45,6 +56,7 @@ services:
       JWT_SECRET: $(q "$(g JWT_SECRET)")
       DATABASE_URL: $(q "postgresql://postiz-user:$(g POSTIZ_DB_PASSWORD)@postiz-postgres:5432/postiz-db-local")
       DISABLE_REGISTRATION: $(q "$(s POSTIZ_DISABLE_REGISTRATION || echo false)")
+$(r2_env)
       X_API_KEY: $(q "$(s X_API_KEY)")
       X_API_SECRET: $(q "$(s X_API_SECRET)")
       FACEBOOK_APP_ID: $(q "$(s META_APP_ID)")

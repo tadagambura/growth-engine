@@ -21,6 +21,7 @@ from .planner import Slot, load_json, make_plan
 from .posts import build_post
 from .postiz import PostizPublisher, http_transport as postiz_transport
 from .publisher import DryRunPublisher, publish_due
+from .r2 import from_secrets as media_from_secrets
 from .queue import Queue
 from .scriptwriter import Writer, cta_text, evergreen_lines, http_transport
 from .seasons import Calendar
@@ -65,6 +66,7 @@ class Env:
     queue: Queue
     publisher: object
     bot: TelegramBot | None = None
+    media: object | None = None                     # R2 cleanup, when set up
 
 
 def read_secrets(path: str | None = None) -> dict[str, str]:
@@ -97,7 +99,8 @@ def build_env(root: Path = ROOT, home: Path | None = None, secrets: dict | None 
                  if pz.get("enabled") and sec.get("POSTIZ_API_KEY") else LogPublisher(home / "outbox.jsonl"))
     return Env(root, home, content, models, formats, atoms, load_all(root / "configs/apps"), Calendar.load(root / "configs/seasons.json"),
                guard, Writer(models, content, guard, transport), load_voice_config(root / "configs/voice.json"), client,
-               VoiceUsage(home / "voice-usage.json"), Queue(str(home / "queue.db")), publisher, bot)
+               VoiceUsage(home / "voice-usage.json"), Queue(str(home / "queue.db")), publisher, bot,
+               media_from_secrets(sec))
 
 
 def post_time(day: date) -> datetime:
@@ -181,6 +184,11 @@ def run_day(env: Env, day: date, now: datetime | None = None, producer=video.pro
             posts.append({"platform": platform, "error": str(e)})
     apps = {a.app_id: a for a in env.apps.values()}
     published = publish_due(env.queue, env.publisher, apps, now, paused=paused)
+    if env.media:
+        try:
+            env.media.prune(now)                                    # old public copies; originals stay here
+        except Exception as e:                                      # cleanup must never fail the day
+            _alert(env, f"Could not clean old videos from storage: {type(e).__name__}")
 
     (env.home / "history.json").write_text(json.dumps([asdict(s) for s in history + [slot]], indent=1))
     done_marker.parent.mkdir(parents=True, exist_ok=True)
