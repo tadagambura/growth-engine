@@ -73,6 +73,8 @@ def test_channels_and_delete_treat_404_as_already_gone():
     PostizPublisher(CFG, gone).delete("1")
 
 
-def test_the_shipped_config_is_off_until_postiz_is_connected():
+def test_the_shipped_config_is_on_with_only_real_channels():
     cfg = json.loads((Path(__file__).resolve().parent.parent / "configs/postiz.json").read_text())
-    assert cfg["enabled"] is False and set(cfg["integrations"]) == {"tiktok", "instagram", "youtube", "facebook", "threads", "bluesky", "x", "pinterest"}
+    assert cfg["enabled"] is True and set(cfg["integrations"]) == {"tiktok", "instagram", "youtube", "facebook", "threads", "bluesky", "x", "pinterest"}
+    assert {k for k, v in cfg["integrations"].items() if v} >= {"bluesky", "youtube"}
+    assert cfg["youtube_visibility"] == "public"
