@@ -9,6 +9,8 @@
   postiz   `postiz channels` lists the channels connected in Postiz (their ids go in configs/postiz.json)
   voice    Kaos's voice: `voice previews` (makes 3 samples, spends a little credit), `voice save <id>`
            (keeps the one you picked), `voice say "text"` (speaks a line and writes captions)
+  campaign Queue ready-made posts from configs/campaigns/<name>.json (videos in data/campaigns/<name>/).
+           Refuses while real posting is off, because the dry run would use the posts up.
 
 Data lives in $GME_HOME (default ./data): the queue database and the PAUSED flag.
 The CLI cannot change spending limits or the constitution: those are files changed by reviewed commits.
@@ -87,6 +89,7 @@ def main(argv: list[str] | None = None) -> int:
     sub.add_parser("publish-due")
     pz = sub.add_parser("postiz"); pz.add_argument("what", choices=["channels"])
     pl = sub.add_parser("plan"); pl.add_argument("--days", type=int); pl.add_argument("--from", dest="start")
+    cp = sub.add_parser("campaign"); cp.add_argument("name")
     v = sub.add_parser("voice"); vs = v.add_subparsers(dest="vcmd", required=True)
     vs.add_parser("previews"); vsave = vs.add_parser("save"); vsave.add_argument("generated_voice_id")
     vsay = vs.add_parser("say"); vsay.add_argument("text"); vsay.add_argument("--out", default="kaos-line.mp3")
@@ -112,6 +115,28 @@ def main(argv: list[str] | None = None) -> int:
             print("POSTIZ_API_KEY is not in the secrets file", file=sys.stderr); return 1
         for ch in PostizPublisher(cfg, http_transport(cfg["base_url"], sec["POSTIZ_API_KEY"])).channels():
             print(f'{ch.get("identifier", "?"):12} {ch.get("id")}  {ch.get("name", "")}  {"(disabled)" if ch.get("disabled") else ""}')
+    elif a.cmd == "campaign":
+        from datetime import datetime, timezone
+        from .campaign import CampaignError, add_campaign
+        from .daily import build_env
+        from .planner import load_json
+        env = build_env(ROOT, h)
+        connected = getattr(env.publisher, "connected", None)       # only a real publisher has channels
+        if connected is None:
+            print("campaign: real posting is off (configs/postiz.json). Switch it on first.", file=sys.stderr)
+            return 1
+        path = ROOT / "configs/campaigns" / f"{Path(a.name).name}.json"
+        if not path.is_file():
+            print(f"campaign: no {path}", file=sys.stderr)
+            return 1
+        try:
+            out = add_campaign(load_json(path), env.queue, {x.app_id: x for x in env.apps.values()},
+                               h / "campaigns" / Path(a.name).name, connected, datetime.now(timezone.utc))
+        except CampaignError as e:
+            print(f"campaign: {e}", file=sys.stderr)
+            return 1
+        print(json.dumps(out, indent=2))
+        return 1 if out["qa_failed"] else 0
     elif a.cmd == "publish-due":
         from datetime import datetime, timezone
         from .daily import build_env
